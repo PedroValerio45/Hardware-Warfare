@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .centeredText {
+            text-align: center
+        }
+
+        .boardTile {
+            display: inline;
+        }
+    </style>
+    <script>
+        function getPlayerData(playerID) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var data = JSON.parse(xhttp.responseText);
+                    console.log(data);
+                    for(i = 0; i < data.length; i++){
+                        var x = data[i].mpc_tile_x;
+                        var y = data[i].mpc_tile_y;
+                        var tileID = "tile" + y + x
+                        var cha = data[i].mpc_cha_id;
+                        console.log("var cha, before if elses " + cha)
+
+                        if (cha == 1) {
+                            document.getElementById(tileID).innerHTML = '<img src="character_rambow.png">';
+                        } else if (cha == 2) {
+                            document.getElementById(tileID).innerHTML = '<img src="character_elventito.png">';
+                        } else if (cha == 3) {
+                            document.getElementById(tileID).innerHTML = '<img src="character_gipio.png">';
+                        } else if (cha == 4) {
+                            document.getElementById(tileID).innerHTML = '<img src="character_decibelle.png">';
+                        } else if (cha == 5) {
+                            document.getElementById(tileID).innerHTML = '<img src="character_rommy.png">';
+                        }
+                        
+                        console.log("var cha, after if elses " + cha)
+                    }
+                }
+                };
+
+            xhttp.open("GET", "player/" + playerID + "/players", true);
+            xhttp.send();
+        }
+
+        function getTurn(matchID) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var data = JSON.parse(xhttp.responseText);
+                    console.log(data);
+
+                    var turn = data[0].match_turn;
+                    var turnText = "turnText"
+
+                    document.getElementById(turnText).innerHTML = "Turn: " + turn;
+
+                    console.log("Turn: " + turn)
+                }
+            };
+
+            xhttp.open("GET", "turn/" + matchID + "/turns", true);
+            xhttp.send();
+        }
+
+        function moveUp(playerID, matchID, peonID) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var data = JSON.parse(xhttp.responseText);
+                    console.log(data);
+                }
+            };
+
+            var dataToSend = {
+                "playerID": playerID,
+                "matchID": matchID,
+                "peonID": peonID
+            };
+            console.log(dataToSend)
+
+            xhttp.open("PUT", "movement/moveUp", true);
+            xhttp.setRequestHeader("Content-Type", "application/json");
+            xhttp.send(JSON.stringify(dataToSend));
+        }
+
+        function moveLeft(playerID, matchID, peonID) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var data = JSON.parse(xhttp.responseText);
+                    console.log(data);
+                }
+            };
+
+            var dataToSend = {
+                "playerID": playerID,
+                "matchID": matchID,
+                "peonID": peonID
+            };
+            console.log(dataToSend)
+
+            xhttp.open("PUT", "movement/moveLeft", true);
+            xhttp.setRequestHeader("Content-Type", "application/json");
+            xhttp.send(JSON.stringify(dataToSend));
+        }
+
+        function moveRight(playerID, matchID, peonID) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var data = JSON.parse(xhttp.responseText);
+                    console.log(data);
+                }
+            };
+
+            var dataToSend = {
+                "playerID": playerID,
+                "matchID": matchID,
+                "peonID": peonID
+            };
+            console.log(dataToSend)
+
+            xhttp.open("PUT", "movement/moveRight", true);
+            xhttp.setRequestHeader("Content-Type", "application/json");
+            xhttp.send(JSON.stringify(dataToSend));
+        }
+
+        function moveDown(playerID, matchID, peonID) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var data = JSON.parse(xhttp.responseText);
+                    console.log(data);
+                }
+            };
+
+            var dataToSend = {
+                "playerID": playerID,
+                "matchID": matchID,
+                "peonID": peonID
+            };
+            console.log(dataToSend)
+
+            xhttp.open("PUT", "movement/moveDown", true);
+            xhttp.setRequestHeader("Content-Type", "application/json");
+            xhttp.send(JSON.stringify(dataToSend));
+        }
+
+        function attack(playerID, attackerID, targetID, matchID) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var data = JSON.parse(xhttp.responseText);
+                    console.log(data);
+                }
+            };
+
+            var dataToSend = {
+                "playerID": playerID,
+                "attackerID": attackerID,
+                "targetID": targetID,
+                "matchID": matchID,
+            };
+            console.log(dataToSend)
+
+            xhttp.open("PUT", "attack/attackCharacter", true);
+            xhttp.setRequestHeader("Content-Type", "application/json");
+            xhttp.send(JSON.stringify(dataToSend));
+        }
+
+        getPlayerData(1);
+        getPlayerData(2);
+        getTurn(1);
+    </script>
+</head>
+<body>
+    <div class="centeredText">
+        <h1>Hardware Warfare: Prototype</h1>
+        <p>The board is 9x7</p>
+
+        <div id="turnText">
+            Turn: X
+        </div>
+        <br/>
+
+        <div class="boardTile" id="tile11">
+        <img src="empty.png">
+        </div>  
+        <div class="boardTile" id="tile12">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile13">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile14">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile15">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile16">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile17">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile18">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile19">
+            <img src="empty.png">
+        </div><br/>
+        <div class="boardTile" id="tile21">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile22">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile23">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile24">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile25">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile26">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile27">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile28">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile29">
+            <img src="empty.png">
+        </div><br/>
+        <div class="boardTile" id="tile31">
+        <img src="empty.png">
+        </div>  
+        <div class="boardTile" id="tile32">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile33">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile34">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile35">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile36">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile37">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile38">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile39">
+            <img src="empty.png">
+        </div><br/>
+        <div class="boardTile" id="tile41">
+            <img src="empty_cpu.png">
+        </div>
+        <div class="boardTile" id="tile42">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile43">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile44">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile45">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile46">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile47">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile48">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile49">
+            <img src="empty_cpu.png">
+        </div><br/>
+        <div class="boardTile" id="tile51">
+        <img src="empty.png">
+        </div>  
+        <div class="boardTile" id="tile52">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile53">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile54">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile55">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile56">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile57">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile58">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile59">
+            <img src="empty.png">
+        </div><br/>
+        <div class="boardTile" id="tile61">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile62">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile63">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile64">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile65">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile66">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile67">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile68">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile69">
+            <img src="empty.png">
+        </div><br/>
+        <div class="boardTile" id="tile71">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile72">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile73">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile74">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile75">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile76">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile77">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="til478">
+            <img src="empty.png">
+        </div>
+        <div class="boardTile" id="tile79">
+            <img src="empty.png">
+        </div>
+
+        <br>
+        <p>Player 1: | Player 2:</p>
+        <input type="button" onclick="moveUp(1, 1, 1)" value="Move Up"> | <input type="button" onclick="moveUp(2, 1, 1)" value="Move Up"><br>
+        <input type="button" onclick="moveLeft(1, 1, 1)" value="Move Left"> | <input type="button" onclick="moveLeft(2, 1, 1)" value="Move Left"><br>
+        <input type="button" onclick="moveRight(1, 1, 1)" value="Move Right"> | <input type="button" onclick="moveRight(2, 1, 1)" value="Move Right"><br>
+        <input type="button" onclick="moveDown(1, 1, 1)" value="Move Down"> | <input type="button" onclick="moveDown(2, 1, 1)" value="Move Down"><br>
+        <br>
+        <p>Attack if in range (1) | Attack if in range (2)</p>
+        <input type="button" onclick="attack(1, 1, 1, 1)" value="Attack"> | <input type="button" onclick="attack(2, 1, 1, 1)" value="Attack"><br>
+
+        <p>Rambow: <img src="character_rambow.png"> | El Ventito: <img src="character_elventito.png"> | Gipio: <img src="character_gipio.png"> | Decibelle: <img src="character_decibelle.png"> | Rommy: <img src="character_rommy.png"></p>
+    </div>
+
+</body>
+</html>
