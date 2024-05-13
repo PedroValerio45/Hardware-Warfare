@@ -29,6 +29,8 @@ app.use('/attack', attack); // Same but with /attack
 app.use('/movement', movement); // Same but with /movement
 app.use('/store', store) // Same but with /store
 
+//setTimeout(index, 2000)
+
 app.get("/player/:playerID/players", (req,res) => {
     var playerID = req.params.playerID;
     
