@@ -74,6 +74,7 @@ router.put('/moveRight', (req, res) => {
                                                     console.log(rows);
                                                 } else {
                                                     res.send(rows);
+                                                    location.reload();
                                                 };
                                             }
                                         );
@@ -155,6 +156,7 @@ router.put('/moveLeft', (req, res) => {
                                                     console.log(rows);
                                                 } else {
                                                     res.send(rows);
+                                                    location.reload();
                                                 };
                                             }
                                         );
@@ -236,6 +238,7 @@ router.put('/moveUp', (req, res) => {
                                                     console.log(rows);
                                                 } else {
                                                     res.send(rows);
+                                                    location.reload();
                                                 };
                                             }
                                         );
@@ -317,6 +320,7 @@ router.put('/moveDown', (req, res) => {
                                                     console.log(rows);
                                                 } else {
                                                     res.send(rows);
+                                                    location.reload();
                                                 };
                                             }
                                         );
