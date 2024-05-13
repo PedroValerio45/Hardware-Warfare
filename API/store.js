@@ -8,38 +8,40 @@ router.post('/buyRambow', (req, res) => {
     var matchID = req.body.matchID;
     console.log("request.");
 
-    connection.execute("SELECT n_rambow as rambow, bits as bits FROM inventory WHERE inv_match_id = ? AND inv_player_id = ?", [matchID, playerID],
+    connection.execute("SELECT bits FROM inventory WHERE inv_match_id = ? AND inv_player_id = ?", [matchID, playerID],
         function (error, rows, fields) {
             if (error) {
                 res.send(error);
-            }else{
+            } else {
                 console.log("ok");
                 console.log(rows);
 
-                var rambow = rows[0].rambow; // store the value from select in a variable
                 var bits = rows[0].bits; // store the value from select in a variable
+                const cost = 3
 
-                bits = 3;
-                rambow = 1;
-
-                connection.execute("UPDATE inventory SET n_rambow = n_rambow + " + rambow + " WHERE inv_match_id = ? AND inv_player_id = ? AND bits >= 3", [matchID, playerID], // adds one character
-                    function (error, rows, fields) {
-                        if (error){
-                            res.send(error);
-                        }else{
-                            connection.execute("UPDATE inventory SET bits = bits - " + bits + " WHERE inv_match_id = ? AND inv_player_id = ? AND bits >= 3", [matchID, playerID],  // takes from the total of bits the cost of the character
-                                function (error, rows, fields) {
-                                    if (error){
-                                        console.log("Can't buy, not enough bits!");
-                                        res.send(error);
-                                    }else{
-                                        res.send(rows);
+                if (bits < cost){
+                    res.send("You don't have enough bits (lmao broke ass)")
+                } else {
+                    connection.execute("UPDATE inventory SET n_rambow = n_rambow + 1 WHERE inv_match_id = ? AND inv_player_id = ?", [matchID, playerID], // adds one character
+                        function (error, rows, fields) {
+                            if (error){
+                                res.send(error);
+                            } else {
+                                connection.execute("UPDATE inventory SET bits = bits - "+ cost +" WHERE inv_match_id = ? AND inv_player_id = ?", [matchID, playerID],  // takes from the total of bits the cost of the character
+                                    function (error, rows, fields) {
+                                        if (error){
+                                            res.send(error);
+                                        } else {
+                                            res.send(rows);
+                                        };
                                     }
-                                });
+                                );
+                            };
                         }
-                    });
-                }
-            }
+                    );
+                };
+            };
+        }
     )
 });
 
@@ -49,79 +51,83 @@ router.post('/buyDecibelle', (req, res) => {
     var matchID = req.body.matchID;
     console.log("request.");
 
-    connection.execute("SELECT n_decibelle as decibelle, bits as bits FROM inventory WHERE inv_match_id = ? AND inv_player_id = ?", [matchID, playerID],
+    connection.execute("SELECT bits FROM inventory WHERE inv_match_id = ? AND inv_player_id = ?", [matchID, playerID],
         function (error, rows, fields) {
             if (error) {
                 res.send(error);
-            }else{
+            } else {
                 console.log("ok");
                 console.log(rows);
 
-                var decibelle = rows[0].decibelle; // store the value from select in a variable
                 var bits = rows[0].bits; // store the value from select in a variable
+                const cost = 3;
 
-                bits = 3;
-                decibelle = 1;
-
-                connection.execute("UPDATE inventory SET n_decibelle = n_decibelle + " + decibelle + " WHERE inv_match_id = ? AND inv_player_id = ? AND bits >= 3", [matchID, playerID], // adds one character
-                    function (error, rows, fields) {
-                        if (error){
-                            res.send(error);
-                        }else{
-                            connection.execute("UPDATE inventory SET bits = bits - " + bits + " WHERE inv_match_id = ? AND inv_player_id = ? AND bits >= 3", [matchID, playerID], // takes from the total of bits the cost of the character
-                                function (error, rows, fields) {
-                                    if (error){
-                                        console.log("Can't buy, not enough bits!");
-                                        res.send(error);
-                                    }else{
-                                        res.send(rows);
+                if (bits < cost){
+                    res.send("You don't have enough bits (lmao broke ass)")
+                } else {
+                    connection.execute("UPDATE inventory SET n_decibelle = n_decibelle + 1 WHERE inv_match_id = ? AND inv_player_id = ?", [matchID, playerID], // adds one character
+                        function (error, rows, fields) {
+                            if (error){
+                                res.send(error);
+                            } else {
+                                connection.execute("UPDATE inventory SET bits = bits - "+ cost +" WHERE inv_match_id = ? AND inv_player_id = ?", [matchID, playerID],  // takes from the total of bits the cost of the character
+                                    function (error, rows, fields) {
+                                        if (error){
+                                            res.send(error);
+                                        } else {
+                                            res.send(rows);
+                                        };
                                     }
-                                });
+                                );
+                            };
                         }
-                    });
-                }
-            }
+                    );
+                };
+            };
+        }
     )
 });
 
-//buys the character elventito
+//buys the character el ventito
 router.post('/buyElVentito', (req, res) => {
     var playerID = req.body.playerID
     var matchID = req.body.matchID;
     console.log("request.");
 
-    connection.execute("SELECT n_elventito as ventito, bits as bits FROM inventory WHERE inv_match_id = ? AND inv_player_id = ?", [matchID, playerID],
+    connection.execute("SELECT bits FROM inventory WHERE inv_match_id = ? AND inv_player_id = ?", [matchID, playerID],
         function (error, rows, fields) {
             if (error) {
                 res.send(error);
-            }else{
+            } else {
                 console.log("ok");
                 console.log(rows);
 
-                var ventito = rows[0].ventito; // store the value from select in a variable
                 var bits = rows[0].bits; // store the value from select in a variable
+                const cost = 4;
 
-                bits = 4;
-                ventito = 1;
-
-                connection.execute("UPDATE inventory SET n_elventito = n_elventito + " + ventito + " WHERE inv_match_id = ? AND inv_player_id = ? AND bits >= 3", [matchID, playerID], // adds one character
-                    function (error, rows, fields) {
-                        if (error){
-                            res.send(error);
-                        }else{
-                            connection.execute("UPDATE inventory SET bits = bits - " + bits + " WHERE inv_match_id = ? AND inv_player_id = ? AND bits >= 3", [matchID, playerID], // takes from the total of bits the cost of the character
-                                function (error, rows, fields) {
-                                    if (error){
-                                        console.log("Can't buy, not enough bits!");
-                                        res.send(error);
-                                    }else{
-                                        res.send(rows);
+                if (bits < cost){
+                    res.send("You don't have enough bits (someone with a similar name seems disappointed)")
+                } else {
+                    connection.execute("UPDATE inventory SET n_gipio = n_gipio + 1 WHERE inv_match_id = ? AND inv_player_id = ?", [matchID, playerID], // adds one character
+                        function (error, rows, fields) {
+                            if (error){
+                                res.send(error);
+                            } else {
+                                connection.execute("UPDATE inventory SET bits = bits - "+ cost +" WHERE inv_match_id = ? AND inv_player_id = ?", [matchID, playerID],  // takes from the total of bits the cost of the character
+                                    function (error, rows, fields) {
+                                        if (error){
+                                            res.send(error);
+                                        } else {
+                                            res.send(rows);
+                                        };
                                     }
-                                });
+                                );
+                            };
                         }
-                    });
-                }
-            }
+                    );
+                };
+            };
+        }
     )
 });
 
@@ -131,38 +137,40 @@ router.post('/buyGipio', (req, res) => {
     var matchID = req.body.matchID;
     console.log("request.");
 
-    connection.execute("SELECT n_gipio as gipio, bits as bits FROM inventory WHERE inv_match_id = ? AND inv_player_id = ?", [matchID, playerID],
+    connection.execute("SELECT bits FROM inventory WHERE inv_match_id = ? AND inv_player_id = ?", [matchID, playerID],
         function (error, rows, fields) {
             if (error) {
                 res.send(error);
-            }else{
+            } else {
                 console.log("ok");
                 console.log(rows);
 
-                var gipio = rows[0].gipio; // store the value from select in a variable
                 var bits = rows[0].bits; // store the value from select in a variable
+                const cost = 4
 
-                bits = 4;
-                gipio = 1;
-
-                connection.execute("UPDATE inventory SET n_gipio = n_gipio + " + gipio + " WHERE inv_match_id = ? AND inv_player_id = ? AND bits >= 3", [matchID, playerID], // adds one character
-                    function (error, rows, fields) {
-                        if (error){
-                            res.send(error);
-                        }else{
-                            connection.execute("UPDATE inventory SET bits = bits - " + bits + " WHERE inv_match_id = ? AND inv_player_id = ? AND bits >= 3", [matchID, playerID], // takes from the total of bits the cost of the character
-                                function (error, rows, fields) {
-                                    if (error){
-                                        console.log("Can't buy, not enough bits!");
-                                        res.send(error);
-                                    }else{
-                                        res.send(rows);
+                if (bits < cost){
+                    res.send("You don't have enough bits (lmao broke ass)")
+                } else {
+                    connection.execute("UPDATE inventory SET n_gipio = n_gipio + 1 WHERE inv_match_id = ? AND inv_player_id = ?", [matchID, playerID], // adds one character
+                        function (error, rows, fields) {
+                            if (error){
+                                res.send(error);
+                            } else {
+                                connection.execute("UPDATE inventory SET bits = bits - "+ cost +" WHERE inv_match_id = ? AND inv_player_id = ?", [matchID, playerID],  // takes from the total of bits the cost of the character
+                                    function (error, rows, fields) {
+                                        if (error){
+                                            res.send(error);
+                                        } else {
+                                            res.send(rows);
+                                        };
                                     }
-                                });
+                                );
+                            };
                         }
-                    });
-                }
-            }
+                    );
+                };
+            };
+        }
     )
 });
 
@@ -172,38 +180,40 @@ router.post('/buyRommy', (req, res) => {
     var matchID = req.body.matchID;
     console.log("request.");
 
-    connection.execute("SELECT n_rommy as rommy, bits as bits FROM inventory WHERE inv_match_id = ? AND inv_player_id = ?", [matchID, playerID],
+    connection.execute("SELECT bits FROM inventory WHERE inv_match_id = ? AND inv_player_id = ?", [matchID, playerID],
         function (error, rows, fields) {
             if (error) {
                 res.send(error);
-            }else{
+            } else {
                 console.log("ok");
                 console.log(rows);
 
-                var rommy = rows[0].rommy; // store the value from select in a variable
                 var bits = rows[0].bits; // store the value from select in a variable
+                const cost = 2
 
-                bits = 2;
-                rommy = 1;
-
-                connection.execute("UPDATE inventory SET n_rommy = n_rommy + " + rommy + " WHERE inv_match_id = ? AND inv_player_id = ? AND bits >= 3", [matchID, playerID], // adds one character
-                    function (error, rows, fields) {
-                        if (error){
-                            res.send(error);
-                        }else{
-                            connection.execute("UPDATE inventory SET bits = bits - " + bits + " WHERE inv_match_id = ? AND inv_player_id = ? AND bits >= 3", [matchID, playerID], // takes from the total of bits the cost of the character
-                                function (error, rows, fields) {
-                                    if (error){
-                                        console.log("Can't buy, not enough bits!");
-                                        res.send(error);
-                                    }else{
-                                        res.send(rows);
+                if (bits < cost){
+                    res.send("You don't have enough bits (lmao broke ass)")
+                } else {
+                    connection.execute("UPDATE inventory SET n_rommy = n_rommy + 1 WHERE inv_match_id = ? AND inv_player_id = ?", [matchID, playerID], // adds one character
+                        function (error, rows, fields) {
+                            if (error){
+                                res.send(error);
+                            } else {
+                                connection.execute("UPDATE inventory SET bits = bits - "+ cost +" WHERE inv_match_id = ? AND inv_player_id = ?", [matchID, playerID],  // takes from the total of bits the cost of the character
+                                    function (error, rows, fields) {
+                                        if (error){
+                                            res.send(error);
+                                        } else {
+                                            res.send(rows);
+                                        };
                                     }
-                                });
+                                );
+                            };
                         }
-                    });
-                }
-            }
+                    );
+                };
+            };
+        }
     )
 });
 
