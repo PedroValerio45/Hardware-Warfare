@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .centeredText {
+    .centeredText {
         text-align: center
     }
-
+    .CharacterHP1{
+        transform: translateX(-100px);
+    }
+    .CharacterHP2{
+        transform: translate(100px, -18px);
+    }
     .boardTile {
         display: inline;
     }
@@ -23,20 +28,35 @@
                     for(i = 0; i < data.length; i++){
                         var x = data[i].mpc_tile_x;
                         var y = data[i].mpc_tile_y;
+                        var playerCha = data[i].mpc_mp_id
                         var tileID = "tile" + y + x
                         var cha = data[i].mpc_cha_id;
                         console.log("var cha, before if elses " + cha)
 
-                        if (cha == 1) {
-                            document.getElementById(tileID).innerHTML = '<img src="character_rambow.png">';
-                        } else if (cha == 2) {
-                            document.getElementById(tileID).innerHTML = '<img src="character_elventito.png">';
-                        } else if (cha == 3) {
-                            document.getElementById(tileID).innerHTML = '<img src="character_gipio.png">';
-                        } else if (cha == 4) {
-                            document.getElementById(tileID).innerHTML = '<img src="character_decibelle.png">';
-                        } else if (cha == 5) {
-                            document.getElementById(tileID).innerHTML = '<img src="character_rommy.png">';
+                        if (playerCha == 1) {
+                            if (cha == 1) {
+                                document.getElementById(tileID).innerHTML = '<img src="character_rambow_blue.png">';
+                            } else if (cha == 2) {
+                                document.getElementById(tileID).innerHTML = '<img src="character_elventito_blue.png">';
+                            } else if (cha == 3) {
+                                document.getElementById(tileID).innerHTML = '<img src="character_gipio_blue.png">';
+                            } else if (cha == 4) {
+                                document.getElementById(tileID).innerHTML = '<img src="character_decibelle_blue.png">';
+                            } else if (cha == 5) {
+                                document.getElementById(tileID).innerHTML = '<img src="character_rommy_blue.png">';
+                            }
+                        } else {
+                            if (cha == 1) {
+                                document.getElementById(tileID).innerHTML = '<img src="character_rambow_red.png">';
+                            } else if (cha == 2) {
+                                document.getElementById(tileID).innerHTML = '<img src="character_elventito_red.png">';
+                            } else if (cha == 3) {
+                                document.getElementById(tileID).innerHTML = '<img src="character_gipio_red.png">';
+                            } else if (cha == 4) {
+                                document.getElementById(tileID).innerHTML = '<img src="character_decibelle_red.png">';
+                            } else if (cha == 5) {
+                                document.getElementById(tileID).innerHTML = '<img src="character_rommy_red.png">';
+                            }
                         }
                         
                         console.log("var cha, after if elses " + cha)
@@ -68,6 +88,59 @@
             xhttp.send();
         }
 
+        function getChaHP(playerID) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var data = JSON.parse(xhttp.responseText);
+                    console.log(data);
+
+                    for(i = 0; i < data.length; i++){
+                        var chaType = data[i].mpc_cha_id;
+                        var slot = data[i].mpc_board_slot;
+                        var hp = data[i].cha_cur_hp;
+                        var CharacterHP = "CharacterHP"
+                        var HPText = "chaHP" + playerID + slot
+
+                        if (chaType == 1) {
+                            document.getElementById(HPText).innerHTML = "Rambow: " + hp;
+                        } else if (chaType == 2) {
+                            document.getElementById(HPText).innerHTML = "El Ventito: " + hp;
+                        } else if (chaType == 3) {
+                            document.getElementById(HPText).innerHTML = "Gipio: " + hp;
+                        } else if (chaType == 4) {
+                            document.getElementById(HPText).innerHTML = "Decibelle: " + hp;
+                        } else if (chaType == 5) {
+                            document.getElementById(HPText).innerHTML = "Rommy: " + hp;
+                        }
+                        console.log(HPText)
+                    }
+                }
+            };
+
+            var dataToSend = {
+                "playerID": playerID,
+            };
+            console.log(dataToSend)
+
+            xhttp.open("GET", "hp/" + playerID + "/hp", true);
+            xhttp.send();
+        }
+
+        function cleanMap() {
+            for (i = 11; i <= 79; i++){
+                var tileID = "tile" + i
+                var tile = document.getElementById(tileID)
+
+                if (tileID == "tile41" || tileID == "tile49")
+                    continue;
+
+                if (tile != null)
+                    tile.innerHTML = '<img src="empty.png">';
+             
+            }
+        }
+
         function moveUp(playerID, matchID, peonID) {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
@@ -75,6 +148,7 @@
                     var data = JSON.parse(xhttp.responseText);
                     console.log(data);
 
+                    cleanMap();
                     getPlayerData(1);
                     getPlayerData(2);
                     getTurn(1);
@@ -99,6 +173,11 @@
                 if (this.readyState == 4 && this.status == 200) {
                     var data = JSON.parse(xhttp.responseText);
                     console.log(data);
+
+                    cleanMap();
+                    getPlayerData(1);
+                    getPlayerData(2);
+                    getTurn(1);
                 }
             };
 
@@ -120,6 +199,11 @@
                 if (this.readyState == 4 && this.status == 200) {
                     var data = JSON.parse(xhttp.responseText);
                     console.log(data);
+
+                    cleanMap();
+                    getPlayerData(1);
+                    getPlayerData(2);
+                    getTurn(1);
                 }
             };
 
@@ -141,6 +225,11 @@
                 if (this.readyState == 4 && this.status == 200) {
                     var data = JSON.parse(xhttp.responseText);
                     console.log(data);
+
+                    cleanMap();
+                    getPlayerData(1);
+                    getPlayerData(2);
+                    getTurn(1);
                 }
             };
 
@@ -162,6 +251,11 @@
                 if (this.readyState == 4 && this.status == 200) {
                     var data = JSON.parse(xhttp.responseText);
                     console.log(data);
+
+                    cleanMap();
+                    getPlayerData(1);
+                    getPlayerData(2);
+                    getTurn(1);
                 }
             };
 
@@ -181,6 +275,10 @@
         getPlayerData(1);
         getPlayerData(2);
         getTurn(1);
+        getChaHP(1);
+        getChaHP(2);        
+        getChaHP(1);
+        getChaHP(2);
     </script>
 </head>
 <body>
@@ -376,7 +474,7 @@
         <div class="boardTile" id="tile77">
             <img src="empty.png">
         </div>
-        <div class="boardTile" id="til478">
+        <div class="boardTile" id="tile78">
             <img src="empty.png">
         </div>
         <div class="boardTile" id="tile79">
@@ -384,14 +482,53 @@
         </div>
 
         <br>
-        <p>Player 1: | Player 2:</p>
+        <p> <div class= "CharacterHP1" > Player 1: </div> <div class= "CharacterHP2" > Player 2: </div> </p>
+
+        <div class= "CharacterHP1" id="chaHP11">
+            Character HP: X
+        </div>
+        <div class= "CharacterHP2" id="chaHP21">
+            Character HP: X
+        </div>
+        <br/>
+        <div class= "CharacterHP1" id="chaHP12">
+            Character HP: X
+        </div>
+        <div class= "CharacterHP2" id="chaHP22">
+            Character HP: X
+        </div>
+        <br/>
+        <div class= "CharacterHP1" id="chaHP13">
+            Character HP: X
+        </div>
+        <div class= "CharacterHP2" id="chaHP23">
+            Character HP: X
+        </div>
+        <br/>
+        <div class= "CharacterHP1" id="chaHP14">
+            Character HP: X
+        </div>
+        <div class= "CharacterHP2" id="chaHP24">
+            Character HP: X
+        </div>
+        <br/>
+        <div class= "CharacterHP1" id="chaHP15">
+            Character HP: X
+        </div>
+        <div class= "CharacterHP2" id="chaHP25">
+            Character HP: X
+        </div>
+        <br/>
+
         <input type="button" onclick="moveUp(1, 1, 1)" value="Move Up"> | <input type="button" onclick="moveUp(2, 1, 1)" value="Move Up"><br>
         <input type="button" onclick="moveLeft(1, 1, 1)" value="Move Left"> | <input type="button" onclick="moveLeft(2, 1, 1)" value="Move Left"><br>
         <input type="button" onclick="moveRight(1, 1, 1)" value="Move Right"> | <input type="button" onclick="moveRight(2, 1, 1)" value="Move Right"><br>
         <input type="button" onclick="moveDown(1, 1, 1)" value="Move Down"> | <input type="button" onclick="moveDown(2, 1, 1)" value="Move Down"><br>
+        <br/>
         <input type="button" onclick="attack(1, 1, 1, 1)" value="Attack"> | <input type="button" onclick="attack(2, 1, 1, 1)" value="Attack"><br>
-        <p>Attack if in range (1) | Attack if in range (2)</p>
+        <p>Attack with first character (1) | Attack with first character (2)</p>
 
+        <br/>
         <p>Rambow: <img src="character_rambow.png"> | El Ventito: <img src="character_elventito.png"> | Gipio: <img src="character_gipio.png"> | Decibelle: <img src="character_decibelle.png"> | Rommy: <img src="character_rommy.png"></p>
     </div>
 

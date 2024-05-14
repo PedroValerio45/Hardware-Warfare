@@ -61,6 +61,21 @@ app.get("/turn/:matchID/turns", (req,res) => {
     })
 });
 
+app.get("/hp/:playerID/hp", (req,res) => {
+    var playerID = req.params.playerID;
+    
+    connection.execute("SELECT * FROM match_player_character WHERE mpc_mp_id = ?",
+    [playerID],
+    function (err, rows, fields) {
+        if (err){
+            res.send(err);
+            return;
+        } else {
+            res.send(rows);
+        }
+    })
+});
+
 // app.get("/player/:playerID/characters", (req, res) => {
 //     var chaID =  req.params.chaID
 
