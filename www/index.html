@@ -74,6 +74,10 @@
                 if (this.readyState == 4 && this.status == 200) {
                     var data = JSON.parse(xhttp.responseText);
                     console.log(data);
+
+                    getPlayerData(1);
+                    getPlayerData(2);
+                    getTurn(1);
                 }
             };
 
