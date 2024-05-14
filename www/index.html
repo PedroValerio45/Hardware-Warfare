@@ -31,7 +31,7 @@
                         var playerCha = data[i].mpc_mp_id
                         var tileID = "tile" + y + x
                         var cha = data[i].mpc_cha_id;
-                        console.log("var cha, before if elses " + cha)
+                        //console.log("var cha, before if elses " + cha)
 
                         if (playerCha == 1) {
                             if (cha == 1) {
@@ -59,7 +59,7 @@
                             }
                         }
                         
-                        console.log("var cha, after if elses " + cha)
+                        console.log("var cha: " + cha)
                     }
                 }
                 };
@@ -113,7 +113,7 @@
                         } else if (chaType == 5) {
                             document.getElementById(HPText).innerHTML = "Rommy: " + hp;
                         }
-                        console.log(HPText)
+                        //console.log(HPText)
                     }
                 }
             };
@@ -152,6 +152,8 @@
                     getPlayerData(1);
                     getPlayerData(2);
                     getTurn(1);
+                    getChaHP(1);
+                    getChaHP(2);
                 }
             };
 
@@ -178,6 +180,8 @@
                     getPlayerData(1);
                     getPlayerData(2);
                     getTurn(1);
+                    getChaHP(1);
+                    getChaHP(2);
                 }
             };
 
@@ -204,6 +208,8 @@
                     getPlayerData(1);
                     getPlayerData(2);
                     getTurn(1);
+                    getChaHP(1);
+                    getChaHP(2);
                 }
             };
 
@@ -230,6 +236,8 @@
                     getPlayerData(1);
                     getPlayerData(2);
                     getTurn(1);
+                    getChaHP(1);
+                    getChaHP(2);
                 }
             };
 
@@ -256,6 +264,8 @@
                     getPlayerData(1);
                     getPlayerData(2);
                     getTurn(1);
+                    getChaHP(1);
+                    getChaHP(2);
                 }
             };
 
@@ -275,8 +285,6 @@
         getPlayerData(1);
         getPlayerData(2);
         getTurn(1);
-        getChaHP(1);
-        getChaHP(2);        
         getChaHP(1);
         getChaHP(2);
     </script>
@@ -485,38 +493,38 @@
         <p> <div class= "CharacterHP1" > Player 1: </div> <div class= "CharacterHP2" > Player 2: </div> </p>
 
         <div class= "CharacterHP1" id="chaHP11">
-            Character HP: X
+            No Character
         </div>
         <div class= "CharacterHP2" id="chaHP21">
-            Character HP: X
+            No Character
         </div>
         <br/>
         <div class= "CharacterHP1" id="chaHP12">
-            Character HP: X
+            No Character
         </div>
         <div class= "CharacterHP2" id="chaHP22">
-            Character HP: X
+            No Character
         </div>
         <br/>
         <div class= "CharacterHP1" id="chaHP13">
-            Character HP: X
+            No Character
         </div>
         <div class= "CharacterHP2" id="chaHP23">
-            Character HP: X
+            No Character
         </div>
         <br/>
         <div class= "CharacterHP1" id="chaHP14">
-            Character HP: X
+            No Character
         </div>
         <div class= "CharacterHP2" id="chaHP24">
-            Character HP: X
+            No Character
         </div>
         <br/>
         <div class= "CharacterHP1" id="chaHP15">
-            Character HP: X
+            No Character
         </div>
         <div class= "CharacterHP2" id="chaHP25">
-            Character HP: X
+            No Character
         </div>
         <br/>
 
