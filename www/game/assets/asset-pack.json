@@ -1,0 +1,161 @@
+{
+    "section1": {
+        "files": [
+            {
+                "url": "assets/character_decibelle.png",
+                "type": "image",
+                "key": "character_decibelle"
+            },
+            {
+                "url": "assets/character_decibelle_blue.png",
+                "type": "image",
+                "key": "character_decibelle_blue"
+            },
+            {
+                "url": "assets/character_decibelle_red.png",
+                "type": "image",
+                "key": "character_decibelle_red"
+            },
+            {
+                "url": "assets/character_elventito.png",
+                "type": "image",
+                "key": "character_elventito"
+            },
+            {
+                "url": "assets/character_elventito_blue.png",
+                "type": "image",
+                "key": "character_elventito_blue"
+            },
+            {
+                "url": "assets/character_elventito_red.png",
+                "type": "image",
+                "key": "character_elventito_red"
+            },
+            {
+                "url": "assets/character_gipio.png",
+                "type": "image",
+                "key": "character_gipio"
+            },
+            {
+                "url": "assets/character_gipio_blue.png",
+                "type": "image",
+                "key": "character_gipio_blue"
+            },
+            {
+                "url": "assets/character_gipio_red.png",
+                "type": "image",
+                "key": "character_gipio_red"
+            },
+            {
+                "url": "assets/character_rambow.png",
+                "type": "image",
+                "key": "character_rambow"
+            },
+            {
+                "url": "assets/character_rambow_blue.png",
+                "type": "image",
+                "key": "character_rambow_blue"
+            },
+            {
+                "url": "assets/character_rambow_red.png",
+                "type": "image",
+                "key": "character_rambow_red"
+            },
+            {
+                "url": "assets/character_rommy.png",
+                "type": "image",
+                "key": "character_rommy"
+            },
+            {
+                "url": "assets/character_rommy_blue.png",
+                "type": "image",
+                "key": "character_rommy_blue"
+            },
+            {
+                "url": "assets/character_rommy_red.png",
+                "type": "image",
+                "key": "character_rommy_red"
+            },
+            {
+                "url": "assets/decibelle_sprite.png",
+                "type": "image",
+                "key": "decibelle_sprite"
+            },
+            {
+                "url": "assets/dino.png",
+                "key": "dino",
+                "type": "image"
+            },
+            {
+                "url": "assets/elventito.json",
+                "type": "animation",
+                "key": "elventito"
+            },
+            {
+                "url": "assets/elventito_spritesheet.png",
+                "frameConfig": {
+                    "frameWidth": 51,
+                    "frameHeight": 51,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "elventito_spritesheet"
+            },
+            {
+                "url": "assets/empty.png",
+                "type": "image",
+                "key": "empty"
+            },
+            {
+                "url": "assets/empty_cpu.png",
+                "type": "image",
+                "key": "empty_cpu"
+            },
+            {
+                "url": "assets/gipio_sprite.png",
+                "type": "image",
+                "key": "gipio_sprite"
+            },
+            {
+                "url": "assets/hw_bg.png",
+                "type": "image",
+                "key": "hw_bg"
+            },
+            {
+                "url": "assets/HW_Logo.png",
+                "type": "image",
+                "key": "HW_Logo"
+            },
+            {
+                "url": "assets/menu_image.png",
+                "type": "image",
+                "key": "menu_image"
+            },
+            {
+                "url": "assets/rambow_sprite.png",
+                "type": "image",
+                "key": "rambow_sprite"
+            },
+            {
+                "url": "assets/rommy_sprite.png",
+                "type": "image",
+                "key": "rommy_sprite"
+            },
+            {
+                "url": "assets/teste.png",
+                "type": "image",
+                "key": "teste"
+            }
+        ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2,
+        "showAllFilesInBlocks": false
+    }
+}

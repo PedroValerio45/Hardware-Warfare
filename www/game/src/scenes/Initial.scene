@@ -1,0 +1,371 @@
+{
+    "id": "11adddf3-4927-4950-8423-0558575ee5e1",
+    "sceneType": "SCENE",
+    "settings": {
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Initial",
+        "borderWidth": 1280,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "type": "Text",
+            "id": "b848574c-90e8-4fa7-9e1a-5514ee1121c9",
+            "label": "initial_phase",
+            "x": 640,
+            "y": 100,
+            "originX": 0.5,
+            "originY": 0.5,
+            "text": "Initial Phase",
+            "align": "center",
+            "fontFamily": "Arial",
+            "fontSize": "60px",
+            "list": [
+                {
+                    "prefabId": "7028a0e2-cd14-44b7-b2a4-68dac16ece00",
+                    "id": "9892d99a-7c04-460f-ae57-7519e0238972",
+                    "label": "onAwakeScript_1",
+                    "list": [
+                        {
+                            "prefabId": "978fd4e0-a722-4061-a6d9-86748db8a38a",
+                            "id": "1def38b8-ce3e-4807-8f56-2515278acfd8",
+                            "unlock": [
+                                "fadeDirection"
+                            ],
+                            "label": "fadeActionScript",
+                            "fadeDirection": "FadeIn",
+                            "components": [
+                                "DurationConfigComp"
+                            ],
+                            "DurationConfigComp.duration": 1500
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Image",
+            "id": "b4224f03-dd5e-4ab0-84d1-3c4f63d423fa",
+            "label": "hw_bg",
+            "texture": {
+                "key": "hw_bg"
+            },
+            "x": 640,
+            "y": 360
+        },
+        {
+            "type": "Layer",
+            "id": "9efdfd13-82c0-4c05-af40-42cb40dd840b",
+            "label": "layer_1",
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "992d13d9-04e2-4a69-b664-0d011af2c63c",
+                    "label": "rectangle",
+                    "x": 640,
+                    "y": 632,
+                    "scaleX": 1.75,
+                    "scaleY": 0.75,
+                    "isFilled": true,
+                    "fillColor": "#828282",
+                    "width": 128,
+                    "height": 128
+                },
+                {
+                    "type": "Text",
+                    "id": "e175bb2b-6dc4-48c2-9664-d1c81d92efcf",
+                    "label": "gipio_inv_1",
+                    "x": 640,
+                    "y": 630,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Done",
+                    "align": "center",
+                    "fontSize": "80px"
+                }
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "fd1998f6-ff21-4935-b2ec-a03a351d3bf7",
+            "label": "layer_2",
+            "list": [
+                {
+                    "type": "Text",
+                    "id": "cbe28ee3-fb2f-48c0-bfc4-27e35b5e78b6",
+                    "label": "rambow_inv",
+                    "x": 314.5,
+                    "y": 486.5,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "0",
+                    "align": "center",
+                    "fontSize": "80px"
+                },
+                {
+                    "type": "Text",
+                    "id": "17e89ff3-21a4-495a-bd77-db349822a2c2",
+                    "label": "elventito_inv",
+                    "x": 474.5,
+                    "y": 486.5,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "0",
+                    "align": "center",
+                    "fontSize": "80px"
+                },
+                {
+                    "type": "Text",
+                    "id": "2d0ed4ee-1356-4b47-8bb9-660c3f3ca89e",
+                    "label": "gipio_inv",
+                    "x": 634.5,
+                    "y": 486.5,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "0",
+                    "align": "center",
+                    "fontSize": "80px"
+                },
+                {
+                    "type": "Text",
+                    "id": "21268697-4266-4f86-9e1a-a9ac37fbb221",
+                    "label": "decibelle_inv",
+                    "x": 794.5,
+                    "y": 486.5,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "0",
+                    "align": "center",
+                    "fontSize": "80px"
+                },
+                {
+                    "type": "Text",
+                    "id": "223afa3b-7bfe-46d4-a2d9-489cb253fa22",
+                    "label": "rommy_inv",
+                    "x": 954.5,
+                    "y": 486.5,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "0",
+                    "align": "center",
+                    "fontSize": "80px"
+                }
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "23255328-fa66-4f9b-9578-e575d85b97f9",
+            "label": "layer_3",
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "885c8a65-e77a-4734-845f-9a381998cc8a",
+                    "label": "rectangle_1",
+                    "x": 640,
+                    "y": 365,
+                    "scaleX": 6.15,
+                    "scaleY": 0.5,
+                    "isFilled": true,
+                    "fillColor": "#828282",
+                    "width": 128,
+                    "height": 128
+                },
+                {
+                    "type": "Text",
+                    "id": "d454fd42-b9d4-4e02-b693-67e9a5d49357",
+                    "label": "rambow_minus",
+                    "x": 284.5,
+                    "y": 366.5,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "-",
+                    "align": "center",
+                    "fontSize": "80px"
+                },
+                {
+                    "type": "Text",
+                    "id": "cc1ad907-5cf4-47fb-9324-96a920e5563c",
+                    "label": "rambow_plus",
+                    "x": 354.5,
+                    "y": 366.5,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "+",
+                    "align": "center",
+                    "fontSize": "80px"
+                },
+                {
+                    "type": "Text",
+                    "id": "b59a455b-d50c-4d92-8612-437d17e2d4c8",
+                    "label": "elventito_plus",
+                    "x": 514.5,
+                    "y": 366.5,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "+",
+                    "align": "center",
+                    "fontSize": "80px"
+                },
+                {
+                    "type": "Text",
+                    "id": "5aa02818-a696-429d-a593-35a27075f9b1",
+                    "label": "elventito_minus",
+                    "x": 444.5,
+                    "y": 366.5,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "-",
+                    "align": "center",
+                    "fontSize": "80px"
+                },
+                {
+                    "type": "Text",
+                    "id": "50ac8a15-e6e1-48ae-bbda-63d25fa80b6c",
+                    "label": "gipio_plus",
+                    "x": 674.5,
+                    "y": 366.5,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "+",
+                    "align": "center",
+                    "fontSize": "80px"
+                },
+                {
+                    "type": "Text",
+                    "id": "35306c9e-b1e6-4be9-b5e1-cb2aa47ebe5a",
+                    "label": "gipio_minus",
+                    "x": 604.5,
+                    "y": 366.5,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "-",
+                    "align": "center",
+                    "fontSize": "80px"
+                },
+                {
+                    "type": "Text",
+                    "id": "fcca2d5f-3441-45c9-a1db-ea22c1839b70",
+                    "label": "decibelle_plus",
+                    "x": 834.5,
+                    "y": 366.5,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "+",
+                    "align": "center",
+                    "fontSize": "80px"
+                },
+                {
+                    "type": "Text",
+                    "id": "eb34ea95-f1f4-4d9a-9bfd-dc80b52eb094",
+                    "label": "decibelle_minus",
+                    "x": 764.5,
+                    "y": 366.5,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "-",
+                    "align": "center",
+                    "fontSize": "80px"
+                },
+                {
+                    "type": "Text",
+                    "id": "aaa89ec0-3ea8-4a9e-be98-ab619a06e92d",
+                    "label": "rommy_plus",
+                    "x": 994.5,
+                    "y": 366.5,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "+",
+                    "align": "center",
+                    "fontSize": "80px"
+                },
+                {
+                    "type": "Text",
+                    "id": "ea07648a-2428-4734-bc07-b9b965670eb5",
+                    "label": "rommy_minus",
+                    "x": 924.5,
+                    "y": 366.5,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "-",
+                    "align": "center",
+                    "fontSize": "80px"
+                }
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "f838aeb3-792e-45d4-a42a-d2642228f9c1",
+            "label": "layer_4",
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "3608c87e-0e3a-42cc-b772-59a753db8090",
+                    "label": "character_rambow_1",
+                    "texture": {
+                        "key": "character_rambow"
+                    },
+                    "x": 320,
+                    "y": 250,
+                    "scaleX": 3,
+                    "scaleY": 3
+                },
+                {
+                    "type": "Image",
+                    "id": "6b421161-b5c0-476b-9d1f-027d1e8aced8",
+                    "label": "character_decibelle_1",
+                    "texture": {
+                        "key": "character_decibelle"
+                    },
+                    "x": 800,
+                    "y": 250,
+                    "scaleX": 3,
+                    "scaleY": 3
+                },
+                {
+                    "type": "Image",
+                    "id": "6c98f8e1-3092-46f9-ba67-a642f8fe3e0d",
+                    "label": "character_rommy_1",
+                    "texture": {
+                        "key": "character_rommy"
+                    },
+                    "x": 960,
+                    "y": 250,
+                    "scaleX": 3,
+                    "scaleY": 3
+                },
+                {
+                    "type": "Image",
+                    "id": "8839689c-48d0-480c-913c-0c5048660d91",
+                    "label": "character_gipio_1",
+                    "texture": {
+                        "key": "character_gipio"
+                    },
+                    "x": 640,
+                    "y": 250,
+                    "scaleX": 3,
+                    "scaleY": 3
+                },
+                {
+                    "type": "Image",
+                    "id": "4dd49d8a-ee95-4923-be5c-dcd99d665a29",
+                    "label": "character_elventito_1",
+                    "texture": {
+                        "key": "character_elventito"
+                    },
+                    "x": 480,
+                    "y": 250,
+                    "scaleX": 3,
+                    "scaleY": 3
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

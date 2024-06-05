@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function joinMatch() {
+            console.log("joinMatch");
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var data = JSON.parse(xhttp.responseText);
+                    console.log(data);
+                    
+                    if (data.length == 0) {
+                        CreateMatch();
+                    } else {
+                        setTimeout(() => {                            
+                        console.log("joining");
+                            window.location.replace("/game");
+                        }, 2000);
+                    }
+                };
+            };            
+            xhttp.open("PUT", "match/joinMatch", true);
+            xhttp.send();
+        };
+
+        function CreateMatch() {
+            console.log("CreateMatch");
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var data = JSON.parse(xhttp.responseText);
+                    console.log(data);
+
+                    setTimeout(() => {
+                        console.log("creating");
+                            window.location.replace("/game");
+                        }, 2000);
+                };
+            };
+            xhttp.open("POST", "match/CreateMatch", true);
+            xhttp.send();
+        };
+
+    joinMatch()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

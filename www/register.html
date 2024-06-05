@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Warfare - Register</title>
+    <script src="./scripts/main.js"></script>
+    <style>
+        body {
+			background: #000000;
+        	justify-content: space-around;
+        	align-items: center;           
+            text-align: center;
+            font-family:'Courier New', monospace
+		}
+        .button {
+            position: relative;
+            margin: 0px auto 0px auto;
+            width: 200px;
+            min-width: 200px;
+            text-align: center;
+            border: 3px solid green;
+            padding-left: 10px;
+            padding-right: 10px
+        }
+    </style>
+</head>
+<body>
+    <hr>
+    <br/>
+    <img src="../assets/HW_Logo.png" style="width:400px;">
+    <br/>
+    <div class="container">
+        <h style="color:green;font-size:35px;">REGISTER:</h1><a id="underscore" style="color:green;font-size:35px;">&nbsp</a>
+        <br/>
+        <input type="text" id="username" placeholder="Username"><br/>
+        <!-- Email: <input type="text" name="email" placeholder="Email"><br/> -->
+        <input type="password" id="password" placeholder="Password"><br/>
+        <input type="password" id="password2" placeholder="Confirm"><br/>
+        <input type="button" onclick="register()" value="Register">
+        <!-- <hr> -->
+    </div>
+    <br/>
+    <img src="../assets/character_rambow_blue.png" style="width:100px;">   
+    <br/><br/>
+    <div id="message"></div>
+    <br/>
+    <div class="button">
+        <h1 style="color:green;font-size:30px;font-family:'Courier New', monospace" onclick="window.location.href='../index.html';">Back</a>
+    </div>
+    <br/>
+    <hr>
+    <b style="color:green;font-size:10px;font-family:'Courier New', monospace">Game developed by © Clutch Kings Inc.</b>
+
+    <script>
+        let textElement = document.getElementById("underscore");
+        
+        setInterval(() => {
+            textElement.innerHTML = textElement.innerHTML === '_' ? '&nbsp;' : '_';
+        }, 550);
+    </script>
+</body>
+</html>
