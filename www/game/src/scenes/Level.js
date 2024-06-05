@@ -548,7 +548,7 @@ class Level extends Phaser.Scene {
 				}
 			};
 
-			// Send a GET request to the server (just testing with /match/11 endpoint)
+			// Send a GET request to the server (just testing with /match/1 endpoint)
 			xhttp.open("GET", "/match/matches/1/playerStats", true);
 			xhttp.send();
 		}, TIME_BETWEEN_SYNC)
