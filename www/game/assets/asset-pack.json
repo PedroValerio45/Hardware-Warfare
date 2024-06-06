@@ -92,6 +92,11 @@
                 "key": "elventito"
             },
             {
+                "url": "assets/elventito_sprite.png",
+                "type": "image",
+                "key": "elventito_sprite"
+            },
+            {
                 "url": "assets/elventito_spritesheet.png",
                 "frameConfig": {
                     "frameWidth": 51,
@@ -133,6 +138,11 @@
                 "url": "assets/menu_image.png",
                 "type": "image",
                 "key": "menu_image"
+            },
+            {
+                "url": "src/scenes/Prefab.js",
+                "type": "script",
+                "key": "Prefab"
             },
             {
                 "url": "assets/rambow_sprite.png",

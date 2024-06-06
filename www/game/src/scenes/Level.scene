@@ -15,11 +15,13 @@
             "type": "Layer",
             "id": "4b30b33a-98b8-43af-a46c-e805f31a146a",
             "label": "layer_1",
+            "scope": "CLASS",
             "list": [
                 {
                     "type": "Image",
                     "id": "b9ff80ac-0548-4e12-b96d-a32859fac198",
                     "label": "hw_bg",
+                    "scope": "CLASS",
                     "texture": {
                         "key": "hw_bg"
                     },
@@ -30,6 +32,11 @@
                     "type": "Image",
                     "id": "e8117ce7-292a-456f-ab8b-84d5bed10956",
                     "label": "tile45",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -40,6 +47,11 @@
                     "type": "Image",
                     "id": "81571f0e-496b-4005-a97c-6549f73b1f3a",
                     "label": "tile46",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -50,6 +62,11 @@
                     "type": "Image",
                     "id": "cd14def0-3ff2-48e7-80cb-87040e6fdbc2",
                     "label": "tile47",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -60,6 +77,11 @@
                     "type": "Image",
                     "id": "a697647a-d710-4ca1-a1a4-fa9c7cf10215",
                     "label": "tile43",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -70,6 +92,11 @@
                     "type": "Image",
                     "id": "3302a327-f4fd-443a-9c04-8aeac5a5bd57",
                     "label": "tile44",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -80,6 +107,8 @@
                     "type": "Image",
                     "id": "7e5da262-1a1e-4554-a3fb-902f469fea4b",
                     "label": "tile49",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
                     "texture": {
                         "key": "empty_cpu"
                     },
@@ -90,6 +119,11 @@
                     "type": "Image",
                     "id": "ed1d495e-8f43-4afb-ab44-bcebf760a2d7",
                     "label": "tile48",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -100,6 +134,11 @@
                     "type": "Image",
                     "id": "e6b8fd52-6585-4c5b-baea-d63282b10273",
                     "label": "tile42",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -110,6 +149,8 @@
                     "type": "Image",
                     "id": "f807c362-f79d-4e43-8391-f511906ae0e8",
                     "label": "tile41",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
                     "texture": {
                         "key": "empty_cpu"
                     },
@@ -120,6 +161,11 @@
                     "type": "Image",
                     "id": "6121a468-a6d5-44b1-84c3-ec9d55b9fec0",
                     "label": "tile51",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -130,6 +176,11 @@
                     "type": "Image",
                     "id": "ea70aa07-8f30-4e47-b005-90964b18eb1e",
                     "label": "tile55",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -140,6 +191,11 @@
                     "type": "Image",
                     "id": "85f52578-0e86-4343-bb85-92dfcdf09423",
                     "label": "tile56",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -150,6 +206,11 @@
                     "type": "Image",
                     "id": "4c58969f-6f66-4cb3-91f6-57c07d1d88c9",
                     "label": "tile57",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -160,6 +221,11 @@
                     "type": "Image",
                     "id": "88da0c09-69ff-4760-a02d-d82fe5a55bef",
                     "label": "tile53",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -170,6 +236,11 @@
                     "type": "Image",
                     "id": "d571ca01-51bc-4f67-b4cd-6621fb1e7f4d",
                     "label": "tile54",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -180,6 +251,11 @@
                     "type": "Image",
                     "id": "b3b5514e-3e41-4752-83a4-d85e4e1a2014",
                     "label": "tile59",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -190,6 +266,11 @@
                     "type": "Image",
                     "id": "de74b655-dcbe-4b5c-875f-019bcd2012c2",
                     "label": "tile58",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -200,6 +281,11 @@
                     "type": "Image",
                     "id": "f753d2f0-c9aa-4b93-b406-322c87e8c41e",
                     "label": "tile52",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -210,6 +296,11 @@
                     "type": "Image",
                     "id": "08f5e911-c031-4de6-bf92-917f7c20b49c",
                     "label": "tile31",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -220,6 +311,11 @@
                     "type": "Image",
                     "id": "81197147-d839-41c4-b99b-f128a7fa08ca",
                     "label": "tile35",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -230,6 +326,11 @@
                     "type": "Image",
                     "id": "5c47fc3b-ff60-4398-839b-7be316f86f55",
                     "label": "tile36",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -240,6 +341,11 @@
                     "type": "Image",
                     "id": "767661af-e3d8-4989-a08a-0532367b0de9",
                     "label": "tile37",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -250,6 +356,11 @@
                     "type": "Image",
                     "id": "ef8906b5-8883-4b23-ac24-cb7d77a71f24",
                     "label": "tile33",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -260,6 +371,11 @@
                     "type": "Image",
                     "id": "5d8c46f1-1f1a-46fa-b8ea-3464982e31af",
                     "label": "tile34",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -270,6 +386,11 @@
                     "type": "Image",
                     "id": "cb37241b-ce48-4f68-a8c6-9eb6ea5df1fe",
                     "label": "tile39",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -280,6 +401,11 @@
                     "type": "Image",
                     "id": "94706f9a-a5da-40c0-aebc-89fe7b4f2d74",
                     "label": "tile38",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -290,6 +416,11 @@
                     "type": "Image",
                     "id": "30dc9ba6-db48-468e-9895-ad42d0acdc6c",
                     "label": "tile32",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -300,6 +431,11 @@
                     "type": "Image",
                     "id": "b958f7bc-d970-4e90-babd-cae9af5458e9",
                     "label": "tile16",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -310,6 +446,11 @@
                     "type": "Image",
                     "id": "c87c4d85-98b3-4120-80cb-0ce7ea5e2418",
                     "label": "tile27",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -320,6 +461,11 @@
                     "type": "Image",
                     "id": "5d16dc42-cdb4-4ed5-856b-b8d92db71298",
                     "label": "tile26",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -330,6 +476,11 @@
                     "type": "Image",
                     "id": "d2f0fc5b-ea59-4687-85bc-6427fe9c052b",
                     "label": "tile25",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -340,6 +491,11 @@
                     "type": "Image",
                     "id": "a37da286-eb6d-415f-a6b6-bcbb8c4fbb6b",
                     "label": "tile21",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -350,6 +506,11 @@
                     "type": "Image",
                     "id": "45882009-5826-43fc-b160-d1285a961b47",
                     "label": "tile11",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -360,6 +521,11 @@
                     "type": "Image",
                     "id": "fe11029c-56a6-4433-b52f-59cdd33ddb37",
                     "label": "tile12",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -370,6 +536,11 @@
                     "type": "Image",
                     "id": "17e745ac-fa93-4d33-83c2-05d2656dde11",
                     "label": "tile18",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -380,6 +551,11 @@
                     "type": "Image",
                     "id": "0dd4da02-eeb4-4809-bdd2-14232174976f",
                     "label": "tile19",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -390,6 +566,11 @@
                     "type": "Image",
                     "id": "ac917691-9e3f-4475-9a2a-816603e3fc0a",
                     "label": "tile14",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -400,6 +581,11 @@
                     "type": "Image",
                     "id": "d7d75411-b40d-4517-8d72-4b3374fb5b89",
                     "label": "tile13",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -410,6 +596,11 @@
                     "type": "Image",
                     "id": "1a9a89a0-0bb8-46fb-aba8-361e1c48e4b1",
                     "label": "tile17",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -420,6 +611,11 @@
                     "type": "Image",
                     "id": "2ac8db07-d992-48c5-8eee-2d4ddba70e21",
                     "label": "tile28",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -430,6 +626,11 @@
                     "type": "Image",
                     "id": "4b4193f2-b7f7-4e35-afff-7d8ac25f48d4",
                     "label": "tile29",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -440,6 +641,11 @@
                     "type": "Image",
                     "id": "173ed7f7-1327-449d-9da0-cc74ca509c50",
                     "label": "tile24",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -450,6 +656,11 @@
                     "type": "Image",
                     "id": "8c8c8210-42e3-4f7f-980c-37f265a6e353",
                     "label": "tile23",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -460,6 +671,11 @@
                     "type": "Image",
                     "id": "084c053d-6cf7-430f-b389-4a36bd8be4dc",
                     "label": "tile22",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -470,6 +686,11 @@
                     "type": "Image",
                     "id": "cc09c4eb-cc33-4fd7-b296-5c811c155e58",
                     "label": "tile15",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -480,6 +701,11 @@
                     "type": "Image",
                     "id": "c6dcd359-cc4f-4424-950a-1c435e0b4d79",
                     "label": "tile66",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -490,6 +716,11 @@
                     "type": "Image",
                     "id": "c24c8347-1dd0-42f4-8e91-33be96b09fc7",
                     "label": "tile77",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -500,6 +731,11 @@
                     "type": "Image",
                     "id": "65bf02c5-8ab2-4784-8e47-6a13479c85cd",
                     "label": "tile76",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -510,6 +746,11 @@
                     "type": "Image",
                     "id": "270c08f4-4d98-458b-8a7b-5f196cf27cf3",
                     "label": "tile75",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -520,6 +761,11 @@
                     "type": "Image",
                     "id": "a4f34617-225c-4b3b-92f0-c778b04a3399",
                     "label": "tile71",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -530,6 +776,11 @@
                     "type": "Image",
                     "id": "a911d360-a9e4-440c-9163-1e26783c6442",
                     "label": "tile61",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -540,6 +791,11 @@
                     "type": "Image",
                     "id": "5c29416c-4c0b-41a1-a512-016630b6238b",
                     "label": "tile62",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -550,6 +806,11 @@
                     "type": "Image",
                     "id": "2962a2b4-cfbe-4168-b466-b44da139a46d",
                     "label": "tile68",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -560,6 +821,11 @@
                     "type": "Image",
                     "id": "fb92b987-0a60-4c83-b8ae-49ed69a85607",
                     "label": "tile69",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -570,6 +836,11 @@
                     "type": "Image",
                     "id": "9c526f97-f0e0-47ac-b178-be3d989982f2",
                     "label": "tile64",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -580,6 +851,11 @@
                     "type": "Image",
                     "id": "86a9fe9d-6665-47fc-b4c0-2d397c9eb37b",
                     "label": "tile63",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -590,6 +866,11 @@
                     "type": "Image",
                     "id": "435df332-b07e-4754-abd6-4fd032f203e7",
                     "label": "tile67",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -600,6 +881,11 @@
                     "type": "Image",
                     "id": "6ec0e05d-83ab-4c12-bcc9-0e17cbb96efb",
                     "label": "tile78",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -610,6 +896,11 @@
                     "type": "Image",
                     "id": "00f97173-be80-4831-b9e5-9edc1149e06d",
                     "label": "tile79",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -620,6 +911,11 @@
                     "type": "Image",
                     "id": "bde820c8-3cc9-402f-87b2-1ce6337795f1",
                     "label": "tile74",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -630,6 +926,11 @@
                     "type": "Image",
                     "id": "3edf34be-e01b-4afc-922a-9cd782ef6981",
                     "label": "tile73",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -640,6 +941,11 @@
                     "type": "Image",
                     "id": "ed5d3ebc-b73c-4c2b-941c-9cc0a0a6a39b",
                     "label": "tile72",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -650,6 +956,11 @@
                     "type": "Image",
                     "id": "f2a2bea2-e62f-4d99-97c6-6a8edd01bdec",
                     "label": "tile65",
+                    "useGameObjectName": true,
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "empty"
                     },
@@ -662,24 +973,27 @@
             "type": "Layer",
             "id": "ebc9bb92-986c-4e47-b011-527234ce4e4b",
             "label": "layer_2",
+            "scope": "CLASS",
             "list": [
                 {
                     "type": "Text",
                     "id": "670d3657-376e-4862-9c43-b10feadd9915",
                     "label": "inv",
+                    "scope": "CLASS",
                     "x": 150,
-                    "y": 170,
+                    "y": 185,
                     "originX": 0.5,
                     "originY": 0.5,
                     "text": "INV",
                     "align": "center",
                     "fontFamily": "Arial",
-                    "fontSize": "40px"
+                    "fontSize": "30px"
                 },
                 {
                     "type": "Image",
                     "id": "e02e3d68-81ba-4129-95ce-114d85edbef3",
                     "label": "player_slot1",
+                    "scope": "CLASS",
                     "texture": {
                         "key": "empty"
                     },
@@ -692,6 +1006,7 @@
                     "type": "Image",
                     "id": "e051e13c-d964-4540-8aa4-9a2bd10e8368",
                     "label": "player_slot2",
+                    "scope": "CLASS",
                     "texture": {
                         "key": "empty"
                     },
@@ -704,6 +1019,7 @@
                     "type": "Image",
                     "id": "9533723f-c778-4327-ad88-ad5622530275",
                     "label": "player_slot3",
+                    "scope": "CLASS",
                     "texture": {
                         "key": "empty"
                     },
@@ -716,6 +1032,7 @@
                     "type": "Image",
                     "id": "2f2a5773-fa93-49f3-8ec8-0ed10f7e455f",
                     "label": "player_slot5",
+                    "scope": "CLASS",
                     "texture": {
                         "key": "empty"
                     },
@@ -728,6 +1045,7 @@
                     "type": "Image",
                     "id": "a8fb5963-a5b1-4cc5-a370-17102154c06a",
                     "label": "player_slot4",
+                    "scope": "CLASS",
                     "texture": {
                         "key": "empty"
                     },
@@ -748,7 +1066,7 @@
                     "text": "%Player1Name%",
                     "align": "center",
                     "fontFamily": "Arial",
-                    "fontSize": "40px"
+                    "fontSize": "35px"
                 },
                 {
                     "type": "Text",
@@ -759,15 +1077,19 @@
                     "y": 115,
                     "originX": 0.5,
                     "originY": 0.5,
-                    "text": "%Player2Name%",
+                    "text": "Waiting for P2...",
                     "align": "center",
                     "fontFamily": "Arial",
-                    "fontSize": "40px"
+                    "fontSize": "35px"
                 },
                 {
                     "type": "Image",
                     "id": "b8abdb47-a779-4e67-88b7-1b1bfeabcb87",
                     "label": "rambow_sprite_inv",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "rambow_sprite"
                     },
@@ -778,6 +1100,10 @@
                     "type": "Sprite",
                     "id": "8f6cb435-298f-45d1-ad12-943b9fb006c0",
                     "label": "anim_elventito_spritesheet_inv",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "elventito_spritesheet",
                         "frame": 0
@@ -791,6 +1117,10 @@
                     "type": "Image",
                     "id": "1e742ad9-8d60-4279-a9e8-b56e4472d514",
                     "label": "gipio_sprite_inv",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "gipio_sprite"
                     },
@@ -801,6 +1131,10 @@
                     "type": "Image",
                     "id": "de1be14a-4d2b-4e82-93af-7b19b087e9a3",
                     "label": "decibelle_sprite_inv",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "decibelle_sprite"
                     },
@@ -811,6 +1145,10 @@
                     "type": "Image",
                     "id": "9a27fd8a-9007-4fe9-8362-4f79908d0d23",
                     "label": "rommy_sprite_inv",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
                     "texture": {
                         "key": "rommy_sprite"
                     },
@@ -821,6 +1159,7 @@
                     "type": "Text",
                     "id": "f92d5204-d540-449b-9f58-76b631e0d943",
                     "label": "inv_rambow_number",
+                    "scope": "CLASS",
                     "x": 210,
                     "y": 240,
                     "originX": 0.5,
@@ -833,6 +1172,7 @@
                     "type": "Text",
                     "id": "00b8be23-cfe2-40a5-939d-34e86665dde2",
                     "label": "inv_elventito_number",
+                    "scope": "CLASS",
                     "x": 210,
                     "y": 310,
                     "originX": 0.5,
@@ -845,6 +1185,7 @@
                     "type": "Text",
                     "id": "c278b0ef-b639-46c3-b36f-02ca2d12696b",
                     "label": "inv_gipio_number",
+                    "scope": "CLASS",
                     "x": 210,
                     "y": 385,
                     "originX": 0.5,
@@ -857,6 +1198,7 @@
                     "type": "Text",
                     "id": "2bccf890-c1f5-4369-9fd9-930789e71259",
                     "label": "inv_decibelle_number",
+                    "scope": "CLASS",
                     "x": 210,
                     "y": 460,
                     "originX": 0.5,
@@ -869,6 +1211,7 @@
                     "type": "Text",
                     "id": "4a99f232-3bdc-467a-8702-c4cf5cdbb22b",
                     "label": "inv_rommy_number",
+                    "scope": "CLASS",
                     "x": 210,
                     "y": 535,
                     "originX": 0.5,
@@ -932,6 +1275,20 @@
                     "align": "center",
                     "fontFamily": "Arial",
                     "fontSize": "30px"
+                },
+                {
+                    "type": "Text",
+                    "id": "768f0a05-af11-4366-89fc-2f5b5610de31",
+                    "label": "turn",
+                    "scope": "CLASS",
+                    "x": 640,
+                    "y": 120,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Turn: 0",
+                    "align": "center",
+                    "fontFamily": "Arial",
+                    "fontSize": "35px"
                 }
             ]
         },
@@ -939,6 +1296,7 @@
             "type": "Layer",
             "id": "909268d6-be36-471b-8413-722e5d6fe01f",
             "label": "layer_3",
+            "scope": "CLASS",
             "list": [
                 {
                     "type": "Rectangle",
@@ -968,11 +1326,13 @@
             "type": "Layer",
             "id": "e8103453-e329-48a4-924c-cd02356d3f36",
             "label": "layer_4",
+            "scope": "CLASS",
             "list": [
                 {
                     "type": "Text",
                     "id": "b2b3dbd5-2106-41fa-8a04-9b511e3401a9",
                     "label": "title",
+                    "scope": "CLASS",
                     "x": 640,
                     "y": 70,
                     "originX": 0.5,
@@ -1003,6 +1363,78 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "f51f9e89-1748-414b-8927-9130f68e2876",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "place_square_11",
+                    "scope": "CLASS",
+                    "x": 400,
+                    "y": 180
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "392a2ef0-b08f-4faf-b66f-a8d8691ffbeb",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "place_square_21",
+                    "scope": "CLASS",
+                    "x": 400,
+                    "y": 240
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "aaf8f1b8-f111-4771-9194-26d550cda39f",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "place_square_31",
+                    "scope": "CLASS",
+                    "x": 400,
+                    "y": 300
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "9cafebaf-e8c3-4569-bbd1-867fd1123848",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "place_square_51",
+                    "scope": "CLASS",
+                    "x": 400,
+                    "y": 420
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "8c23cfe5-3114-466a-8003-20bea260a967",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "place_square_61",
+                    "scope": "CLASS",
+                    "x": 400,
+                    "y": 480
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "3f742f4f-2a08-48c1-8909-1229f1bd7555",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "place_square_71",
+                    "scope": "CLASS",
+                    "x": 400,
+                    "y": 540
                 }
             ]
         }
@@ -1013,5 +1445,88 @@
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
         "version": 5
-    }
+    },
+    "lists": [
+        {
+            "id": "e2f398f5-c4e1-45ef-81fc-42285603c96e",
+            "label": "listOfTiles",
+            "objectIds": [
+                "e8117ce7-292a-456f-ab8b-84d5bed10956",
+                "f2a2bea2-e62f-4d99-97c6-6a8edd01bdec",
+                "ed5d3ebc-b73c-4c2b-941c-9cc0a0a6a39b",
+                "3edf34be-e01b-4afc-922a-9cd782ef6981",
+                "bde820c8-3cc9-402f-87b2-1ce6337795f1",
+                "00f97173-be80-4831-b9e5-9edc1149e06d",
+                "6ec0e05d-83ab-4c12-bcc9-0e17cbb96efb",
+                "435df332-b07e-4754-abd6-4fd032f203e7",
+                "86a9fe9d-6665-47fc-b4c0-2d397c9eb37b",
+                "9c526f97-f0e0-47ac-b178-be3d989982f2",
+                "fb92b987-0a60-4c83-b8ae-49ed69a85607",
+                "2962a2b4-cfbe-4168-b466-b44da139a46d",
+                "5c29416c-4c0b-41a1-a512-016630b6238b",
+                "a911d360-a9e4-440c-9163-1e26783c6442",
+                "a4f34617-225c-4b3b-92f0-c778b04a3399",
+                "270c08f4-4d98-458b-8a7b-5f196cf27cf3",
+                "65bf02c5-8ab2-4784-8e47-6a13479c85cd",
+                "c24c8347-1dd0-42f4-8e91-33be96b09fc7",
+                "c6dcd359-cc4f-4424-950a-1c435e0b4d79",
+                "cc09c4eb-cc33-4fd7-b296-5c811c155e58",
+                "084c053d-6cf7-430f-b389-4a36bd8be4dc",
+                "8c8c8210-42e3-4f7f-980c-37f265a6e353",
+                "173ed7f7-1327-449d-9da0-cc74ca509c50",
+                "4b4193f2-b7f7-4e35-afff-7d8ac25f48d4",
+                "2ac8db07-d992-48c5-8eee-2d4ddba70e21",
+                "1a9a89a0-0bb8-46fb-aba8-361e1c48e4b1",
+                "d7d75411-b40d-4517-8d72-4b3374fb5b89",
+                "ac917691-9e3f-4475-9a2a-816603e3fc0a",
+                "0dd4da02-eeb4-4809-bdd2-14232174976f",
+                "17e745ac-fa93-4d33-83c2-05d2656dde11",
+                "fe11029c-56a6-4433-b52f-59cdd33ddb37",
+                "45882009-5826-43fc-b160-d1285a961b47",
+                "a37da286-eb6d-415f-a6b6-bcbb8c4fbb6b",
+                "d2f0fc5b-ea59-4687-85bc-6427fe9c052b",
+                "5d16dc42-cdb4-4ed5-856b-b8d92db71298",
+                "c87c4d85-98b3-4120-80cb-0ce7ea5e2418",
+                "b958f7bc-d970-4e90-babd-cae9af5458e9",
+                "30dc9ba6-db48-468e-9895-ad42d0acdc6c",
+                "94706f9a-a5da-40c0-aebc-89fe7b4f2d74",
+                "cb37241b-ce48-4f68-a8c6-9eb6ea5df1fe",
+                "5d8c46f1-1f1a-46fa-b8ea-3464982e31af",
+                "ef8906b5-8883-4b23-ac24-cb7d77a71f24",
+                "767661af-e3d8-4989-a08a-0532367b0de9",
+                "5c47fc3b-ff60-4398-839b-7be316f86f55",
+                "81197147-d839-41c4-b99b-f128a7fa08ca",
+                "08f5e911-c031-4de6-bf92-917f7c20b49c",
+                "f753d2f0-c9aa-4b93-b406-322c87e8c41e",
+                "de74b655-dcbe-4b5c-875f-019bcd2012c2",
+                "b3b5514e-3e41-4752-83a4-d85e4e1a2014",
+                "d571ca01-51bc-4f67-b4cd-6621fb1e7f4d",
+                "88da0c09-69ff-4760-a02d-d82fe5a55bef",
+                "4c58969f-6f66-4cb3-91f6-57c07d1d88c9",
+                "85f52578-0e86-4343-bb85-92dfcdf09423",
+                "ea70aa07-8f30-4e47-b005-90964b18eb1e",
+                "6121a468-a6d5-44b1-84c3-ec9d55b9fec0",
+                "e6b8fd52-6585-4c5b-baea-d63282b10273",
+                "ed1d495e-8f43-4afb-ab44-bcebf760a2d7",
+                "3302a327-f4fd-443a-9c04-8aeac5a5bd57",
+                "a697647a-d710-4ca1-a1a4-fa9c7cf10215",
+                "cd14def0-3ff2-48e7-80cb-87040e6fdbc2",
+                "81571f0e-496b-4005-a97c-6549f73b1f3a",
+                "f807c362-f79d-4e43-8391-f511906ae0e8",
+                "7e5da262-1a1e-4554-a3fb-902f469fea4b"
+            ]
+        },
+        {
+            "id": "7db5a8f1-c23b-4713-ab05-bbc981a0d353",
+            "label": "place_squares",
+            "objectIds": [
+                "aaf8f1b8-f111-4771-9194-26d550cda39f",
+                "f51f9e89-1748-414b-8927-9130f68e2876",
+                "9cafebaf-e8c3-4569-bbd1-867fd1123848",
+                "8c23cfe5-3114-466a-8003-20bea260a967",
+                "3f742f4f-2a08-48c1-8909-1229f1bd7555",
+                "392a2ef0-b08f-4faf-b66f-a8d8691ffbeb"
+            ]
+        }
+    ]
 }

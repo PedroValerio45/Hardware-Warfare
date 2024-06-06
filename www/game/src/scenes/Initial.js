@@ -100,6 +100,7 @@ class Initial extends Phaser.Scene {
 
 		// rambow_minus
 		const rambow_minus = this.add.text(284.5, 366.5, "", {});
+		rambow_minus.setInteractive(new Phaser.Geom.Rectangle(0, 0, 49, 73), Phaser.Geom.Rectangle.Contains);
 		rambow_minus.setOrigin(0.5, 0.5);
 		rambow_minus.text = "-";
 		rambow_minus.setStyle({ "align": "center", "fontSize": "80px" });
@@ -107,6 +108,7 @@ class Initial extends Phaser.Scene {
 
 		// rambow_plus
 		const rambow_plus = this.add.text(354.5, 366.5, "", {});
+		rambow_plus.setInteractive(new Phaser.Geom.Rectangle(0, 0, 49, 73), Phaser.Geom.Rectangle.Contains);
 		rambow_plus.setOrigin(0.5, 0.5);
 		rambow_plus.text = "+";
 		rambow_plus.setStyle({ "align": "center", "fontSize": "80px" });
@@ -114,6 +116,7 @@ class Initial extends Phaser.Scene {
 
 		// elventito_plus
 		const elventito_plus = this.add.text(514.5, 366.5, "", {});
+		elventito_plus.setInteractive(new Phaser.Geom.Rectangle(0, 0, 49, 73), Phaser.Geom.Rectangle.Contains);
 		elventito_plus.setOrigin(0.5, 0.5);
 		elventito_plus.text = "+";
 		elventito_plus.setStyle({ "align": "center", "fontSize": "80px" });
@@ -121,6 +124,7 @@ class Initial extends Phaser.Scene {
 
 		// elventito_minus
 		const elventito_minus = this.add.text(444.5, 366.5, "", {});
+		elventito_minus.setInteractive(new Phaser.Geom.Rectangle(0, 0, 49, 73), Phaser.Geom.Rectangle.Contains);
 		elventito_minus.setOrigin(0.5, 0.5);
 		elventito_minus.text = "-";
 		elventito_minus.setStyle({ "align": "center", "fontSize": "80px" });
@@ -128,6 +132,7 @@ class Initial extends Phaser.Scene {
 
 		// gipio_plus
 		const gipio_plus = this.add.text(674.5, 366.5, "", {});
+		gipio_plus.setInteractive(new Phaser.Geom.Rectangle(0, 0, 49, 73), Phaser.Geom.Rectangle.Contains);
 		gipio_plus.setOrigin(0.5, 0.5);
 		gipio_plus.text = "+";
 		gipio_plus.setStyle({ "align": "center", "fontSize": "80px" });
@@ -135,6 +140,7 @@ class Initial extends Phaser.Scene {
 
 		// gipio_minus
 		const gipio_minus = this.add.text(604.5, 366.5, "", {});
+		gipio_minus.setInteractive(new Phaser.Geom.Rectangle(0, 0, 49, 73), Phaser.Geom.Rectangle.Contains);
 		gipio_minus.setOrigin(0.5, 0.5);
 		gipio_minus.text = "-";
 		gipio_minus.setStyle({ "align": "center", "fontSize": "80px" });
@@ -142,6 +148,7 @@ class Initial extends Phaser.Scene {
 
 		// decibelle_plus
 		const decibelle_plus = this.add.text(834.5, 366.5, "", {});
+		decibelle_plus.setInteractive(new Phaser.Geom.Rectangle(0, 0, 49, 73), Phaser.Geom.Rectangle.Contains);
 		decibelle_plus.setOrigin(0.5, 0.5);
 		decibelle_plus.text = "+";
 		decibelle_plus.setStyle({ "align": "center", "fontSize": "80px" });
@@ -149,6 +156,7 @@ class Initial extends Phaser.Scene {
 
 		// decibelle_minus
 		const decibelle_minus = this.add.text(764.5, 366.5, "", {});
+		decibelle_minus.setInteractive(new Phaser.Geom.Rectangle(0, 0, 49, 73), Phaser.Geom.Rectangle.Contains);
 		decibelle_minus.setOrigin(0.5, 0.5);
 		decibelle_minus.text = "-";
 		decibelle_minus.setStyle({ "align": "center", "fontSize": "80px" });
@@ -156,6 +164,7 @@ class Initial extends Phaser.Scene {
 
 		// rommy_plus
 		const rommy_plus = this.add.text(994.5, 366.5, "", {});
+		rommy_plus.setInteractive(new Phaser.Geom.Rectangle(0, 0, 49, 73), Phaser.Geom.Rectangle.Contains);
 		rommy_plus.setOrigin(0.5, 0.5);
 		rommy_plus.text = "+";
 		rommy_plus.setStyle({ "align": "center", "fontSize": "80px" });
@@ -163,6 +172,7 @@ class Initial extends Phaser.Scene {
 
 		// rommy_minus
 		const rommy_minus = this.add.text(924.5, 366.5, "", {});
+		rommy_minus.setInteractive(new Phaser.Geom.Rectangle(0, 0, 49, 73), Phaser.Geom.Rectangle.Contains);
 		rommy_minus.setOrigin(0.5, 0.5);
 		rommy_minus.text = "-";
 		rommy_minus.setStyle({ "align": "center", "fontSize": "80px" });
@@ -208,8 +218,40 @@ class Initial extends Phaser.Scene {
 		const fadeActionScriptDurationConfigComp = new DurationConfigComp(fadeActionScript);
 		fadeActionScriptDurationConfigComp.duration = 1500;
 
+		this.rambow_minus = rambow_minus;
+		this.rambow_plus = rambow_plus;
+		this.elventito_plus = elventito_plus;
+		this.elventito_minus = elventito_minus;
+		this.gipio_plus = gipio_plus;
+		this.gipio_minus = gipio_minus;
+		this.decibelle_plus = decibelle_plus;
+		this.decibelle_minus = decibelle_minus;
+		this.rommy_plus = rommy_plus;
+		this.rommy_minus = rommy_minus;
+
 		this.events.emit("scene-awake");
 	}
+
+	/** @type {Phaser.GameObjects.Text} */
+	rambow_minus;
+	/** @type {Phaser.GameObjects.Text} */
+	rambow_plus;
+	/** @type {Phaser.GameObjects.Text} */
+	elventito_plus;
+	/** @type {Phaser.GameObjects.Text} */
+	elventito_minus;
+	/** @type {Phaser.GameObjects.Text} */
+	gipio_plus;
+	/** @type {Phaser.GameObjects.Text} */
+	gipio_minus;
+	/** @type {Phaser.GameObjects.Text} */
+	decibelle_plus;
+	/** @type {Phaser.GameObjects.Text} */
+	decibelle_minus;
+	/** @type {Phaser.GameObjects.Text} */
+	rommy_plus;
+	/** @type {Phaser.GameObjects.Text} */
+	rommy_minus;
 
 	/* START-USER-CODE */
 
@@ -218,6 +260,26 @@ class Initial extends Phaser.Scene {
 	create() {
 
 		this.editorCreate();
+		this.rambow_plus.on("pointerdown", () => {
+			console.log("click on rambow_plus");
+			this.rambowBuy(1);
+		})
+		
+		this.rambow_minus.on("pointerdown", () => {
+			console.log("click on rambow_minus");
+			this.rambowBuy(-1);
+		})
+	}
+
+	rambowBuy(quantity) {
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = () => {
+			if (xhttp.readyState == 4) {
+				console.log(xhttp.responseText);
+			}
+		};
+		xhttp.open("POST", "/store/buyRambow/" + quantity, true);
+		xhttp.send();
 	}
 
 	/* END-USER-CODE */

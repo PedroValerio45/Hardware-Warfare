@@ -41,6 +41,7 @@ router.post('/createMatch', (request, response) => {
                         [match, playerID],
                         function (err, results, fields) {
                             if (err){
+                                console.log(err);
                                 response.send(err);
                                 console.log("create match failure 2, match: " + match)
                             }else{
@@ -101,82 +102,100 @@ router.put('/joinMatch', (request, response) =>  {
 
     console.log("Getting data from player: " + playerID)
     // We are checking if the match exists and if match_player2_id is not set. Also, we are checking if match_player1_id is different from the playerID since he can't join his own match.
-    connection.execute('SELECT * FROM match_ WHERE match_player2_id is null AND match_player1_id != ?',
+    connection.execute("SELECT * FROM match_ WHERE match_player2_id is null AND match_player1_id = ?",
     [playerID],
     function (err, results, fields) {
-        if (err){
+        if (err) {
             response.send(err);
-        }else{
-            // If the results.length is 0 means that we don't have any match with the defined criteria.
-            if (results.length == 0){
-                response.send(results);
-                console.log("No match found, must create one.")
-                //the match.html will jump to the /createMatch endpoint here
-            }else{
-                //create var with the match_id value
-                var match = results[0].match_id;
-                //create cookie with the value of the var match (so the match_id value)
-                request.session.matchID = match;
-                console.log("match joining: " + match);
-                // If we have a match, we update match_player2_id with the playerID
-                connection.execute('UPDATE match_ SET match_player2_id = ? WHERE match_id = ?',
-                [playerID, match],
+            return;
+        }
+
+        // If the results length is 0, it means that we don't have any match where the player1 is the player OR all matches have both players
+        if (results.length == 0){
+            connection.execute('SELECT * FROM match_ WHERE match_player2_id is null AND match_player1_id != ?',
+                [playerID],
                 function (err, results, fields) {
                     if (err){
                         response.send(err);
-                        console.log("join match failure 1, match: " + match)
                     }else{
-                        //create row in match_player for this player in this match, to then be able to create an inventory for them
-                        connection.execute("INSERT INTO match_player (mp_match_id, mp_player_id) VALUES (?, ?)",
-                        [match, playerID],
-                        function (err, results, fields) {
-                            if (err){
-                                response.send(err);
-                                console.log("join match failure 2, match: " + match)
-                            }else{
-                                //create row in inventory for this player in this match
-                                connection.execute("INSERT INTO inventory (inv_match_id, inv_player_id, bits, n_rambow, n_elventito, n_gipio, n_decibelle, n_rommy) VALUES (?, ?, 16, 0, 0, 0, 0, 0)",
-                                [match, playerID],
-                                function (err, results, fields) {
-                                    if (err){
-                                        response.send(err);
-                                        console.log("join match inventory failure 1, match: " + match)
-                                    }else{
-                                        //get inv_id to then be put into var inv
-                                        connection.execute("SELECT inv_id FROM inventory WHERE inv_match_id = ? AND inv_player_id = ?",
-                                        [match, playerID],
-                                        function (err, results, fields) {
-                                            if (err){
-                                                response.send(err);
-                                                console.log("join match inventory failure 2, match: " + match)
-                                            }else{
-                                                //create var with the inv_id value
-                                                var inv = results[0].inv_id;
-                                                console.log("inv_id:" + inv)
-                                                connection.execute("UPDATE match_player SET mp_player_inv_id = ? WHERE mp_id = ?",
-                                                [inv, match],
-                                                function (err, results, fields) {
-                                                    if (err){
-                                                        response.send(err);
-                                                        console.log("join match inventory failure 3, match and inv: " + match + " " + inv)
-                                                    }else{                                                
-                                                        response.send(results);
-                                                        console.log("You joined match " + match + " 💩🦄");
-                                                        //success in joining match, setting the player as player 2, assigning an inventory to it, and entering the match
-                                                    }
-                                                })
-                                            }
-                                        })
-                                    }
-                                })
-                            }
-                        })
+                        // If the results.length is 0 means that we don't have any match with the defined criteria.
+                        if (results.length == 0){
+                            response.send(results);
+                            console.log("No match found, must create one.")
+                            //the match.html will jump to the /createMatch endpoint here
+                        }else{
+                            //create var with the match_id value
+                            var match = results[0].match_id;
+                            //create cookie with the value of the var match (so the match_id value)
+                            request.session.matchID = match;
+                            console.log("match joining: " + match);
+                            // If we have a match, we update match_player2_id with the playerID
+                            connection.execute('UPDATE match_ SET match_player2_id = ? WHERE match_id = ?',
+                            [playerID, match],
+                            function (err, results, fields) {
+                                if (err){
+                                    response.send(err);
+                                    console.log("join match failure 1, match: " + match)
+                                }else{
+                                    //create row in match_player for this player in this match, to then be able to create an inventory for them
+                                    connection.execute("INSERT INTO match_player (mp_match_id, mp_player_id) VALUES (?, ?)",
+                                    [match, playerID],
+                                    function (err, results, fields) {
+                                        if (err){
+                                            response.send(err);
+                                            console.log("join match failure 2, match: " + match)
+                                        }else{
+                                            //create row in inventory for this player in this match
+                                            connection.execute("INSERT INTO inventory (inv_match_id, inv_player_id, bits, n_rambow, n_elventito, n_gipio, n_decibelle, n_rommy) VALUES (?, ?, 16, 0, 0, 0, 0, 0)",
+                                            [match, playerID],
+                                            function (err, results, fields) {
+                                                if (err){
+                                                    response.send(err);
+                                                    console.log("join match inventory failure 1, match: " + match)
+                                                }else{
+                                                    //get inv_id to then be put into var inv
+                                                    connection.execute("SELECT inv_id FROM inventory WHERE inv_match_id = ? AND inv_player_id = ?",
+                                                    [match, playerID],
+                                                    function (err, results, fields) {
+                                                        if (err){
+                                                            response.send(err);
+                                                            console.log("join match inventory failure 2, match: " + match)
+                                                        }else{
+                                                            //create var with the inv_id value
+                                                            var inv = results[0].inv_id;
+                                                            console.log("inv_id:" + inv)
+                                                            connection.execute("UPDATE match_player SET mp_player_inv_id = ? WHERE mp_id = ?",
+                                                            [inv, match],
+                                                            function (err, results, fields) {
+                                                                if (err){
+                                                                    response.send(err);
+                                                                    console.log("join match inventory failure 3, match and inv: " + match + " " + inv)
+                                                                }else{                                                
+                                                                    response.send(results);
+                                                                    console.log("You joined match " + match + " 💩🦄");
+                                                                    //success in joining match, setting the player as player 2, assigning an inventory to it, and entering the match
+                                                                }
+                                                            })
+                                                        }
+                                                    })
+                                                }
+                                            })
+                                        }
+                                    })
+                                }
+                            })
+                        }
                     }
-                })
-            }
+                });
+        }else{              
+            var match = results[0].match_id;                                           
+            request.session.matchID = match
+            console.log("You joined match " + match + " 💩🦄");
+            response.send(results);
+            //success in joining your previous match
         }
-    });
-
+    })
+    
     // this.connection.execute("SELECT COUNT(match_id) FROM match_player")
 });
 
@@ -197,7 +216,7 @@ router.get('/matches', (request, response) => {
 // Endpoint for getting a specific match (:id is a parameter that we can use to get the matchID from the URL - e.g. http://localhost:2000/matches/1)
 router.get('/matches/:id', (request, response) => {
     var matchID = request.params.id;
-    connection.execute('SELECT * FROM all_matches WHERE match_id = ?',
+    connection.execute('SELECT * FROM match_ WHERE match_id = ?',
     [matchID],
     function (err, results, fields) {
         if (err)
@@ -210,9 +229,17 @@ router.get('/matches/:id', (request, response) => {
 })
 
 // get player stats from certain match, to use in multiple phaser text objects
-router.get('/matches/:matchID/playerStats', (request, response) => {
-    var matchID = request.params.matchID;
-    console.log("Getting data from " + matchID);
+router.get('/getData', (request, response) => {
+    console.log("/match/matches/playerStats")
+    var matchID = request.session.matchID;
+
+    if (!matchID){
+        response.send("Not allowed");
+        return;
+    }
+
+
+    console.log("Getting data from match " + matchID);
 
     connection.execute('SELECT * FROM player INNER JOIN match_player ON player_id = mp_player_id WHERE mp_match_id = ?',
     [matchID],
