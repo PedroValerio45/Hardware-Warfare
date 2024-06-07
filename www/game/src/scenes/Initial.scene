@@ -88,7 +88,7 @@
                     "y": 486.5,
                     "originX": 0.5,
                     "originY": 0.5,
-                    "text": "0",
+                    "text": "X",
                     "align": "center",
                     "fontSize": "80px"
                 },
@@ -101,7 +101,7 @@
                     "y": 486.5,
                     "originX": 0.5,
                     "originY": 0.5,
-                    "text": "0",
+                    "text": "X",
                     "align": "center",
                     "fontSize": "80px"
                 },
@@ -114,7 +114,7 @@
                     "y": 486.5,
                     "originX": 0.5,
                     "originY": 0.5,
-                    "text": "0",
+                    "text": "X",
                     "align": "center",
                     "fontSize": "80px"
                 },
@@ -127,7 +127,7 @@
                     "y": 486.5,
                     "originX": 0.5,
                     "originY": 0.5,
-                    "text": "0",
+                    "text": "X",
                     "align": "center",
                     "fontSize": "80px"
                 },
@@ -140,7 +140,7 @@
                     "y": 486.5,
                     "originX": 0.5,
                     "originY": 0.5,
-                    "text": "0",
+                    "text": "X",
                     "align": "center",
                     "fontSize": "80px"
                 }
@@ -337,6 +337,19 @@
                     "originX": 0.5,
                     "originY": 0.5,
                     "text": "Done",
+                    "align": "center",
+                    "fontSize": "80px"
+                },
+                {
+                    "type": "Text",
+                    "id": "bb386c00-176f-4a4f-8068-8f5926007cee",
+                    "label": "bits",
+                    "scope": "CLASS",
+                    "x": 640,
+                    "y": 100,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Loading...",
                     "align": "center",
                     "fontSize": "80px"
                 }

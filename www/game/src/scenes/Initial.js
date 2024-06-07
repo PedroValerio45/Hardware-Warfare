@@ -48,35 +48,35 @@ class Initial extends Phaser.Scene {
 		// rambow_inv
 		const rambow_inv = this.add.text(314.5, 486.5, "", {});
 		rambow_inv.setOrigin(0.5, 0.5);
-		rambow_inv.text = "0";
+		rambow_inv.text = "X";
 		rambow_inv.setStyle({ "align": "center", "fontSize": "80px" });
 		layer_2.add(rambow_inv);
 
 		// elventito_inv
 		const elventito_inv = this.add.text(474.5, 486.5, "", {});
 		elventito_inv.setOrigin(0.5, 0.5);
-		elventito_inv.text = "0";
+		elventito_inv.text = "X";
 		elventito_inv.setStyle({ "align": "center", "fontSize": "80px" });
 		layer_2.add(elventito_inv);
 
 		// gipio_inv
 		const gipio_inv = this.add.text(634.5, 486.5, "", {});
 		gipio_inv.setOrigin(0.5, 0.5);
-		gipio_inv.text = "0";
+		gipio_inv.text = "X";
 		gipio_inv.setStyle({ "align": "center", "fontSize": "80px" });
 		layer_2.add(gipio_inv);
 
 		// decibelle_inv
 		const decibelle_inv = this.add.text(794.5, 486.5, "", {});
 		decibelle_inv.setOrigin(0.5, 0.5);
-		decibelle_inv.text = "0";
+		decibelle_inv.text = "X";
 		decibelle_inv.setStyle({ "align": "center", "fontSize": "80px" });
 		layer_2.add(decibelle_inv);
 
 		// rommy_inv
 		const rommy_inv = this.add.text(954.5, 486.5, "", {});
 		rommy_inv.setOrigin(0.5, 0.5);
-		rommy_inv.text = "0";
+		rommy_inv.text = "X";
 		rommy_inv.setStyle({ "align": "center", "fontSize": "80px" });
 		layer_2.add(rommy_inv);
 
@@ -179,6 +179,13 @@ class Initial extends Phaser.Scene {
 		done.setStyle({ "align": "center", "fontSize": "80px" });
 		layer_3.add(done);
 
+		// bits
+		const bits = this.add.text(640, 100, "", {});
+		bits.setOrigin(0.5, 0.5);
+		bits.text = "Loading...";
+		bits.setStyle({ "align": "center", "fontSize": "80px" });
+		layer_3.add(bits);
+
 		// layer_4
 		const layer_4 = this.add.layer();
 
@@ -238,6 +245,7 @@ class Initial extends Phaser.Scene {
 		this.rommy_plus = rommy_plus;
 		this.rommy_minus = rommy_minus;
 		this.done = done;
+		this.bits = bits;
 		this.buttons = buttons;
 
 		this.events.emit("scene-awake");
@@ -275,6 +283,8 @@ class Initial extends Phaser.Scene {
 	rommy_minus;
 	/** @type {Phaser.GameObjects.Text} */
 	done;
+	/** @type {Phaser.GameObjects.Text} */
+	bits;
 	/** @type {Phaser.GameObjects.Text[]} */
 	buttons;
 
@@ -439,17 +449,24 @@ class Initial extends Phaser.Scene {
 					var data = JSON.parse(xhttp.responseText);
 					console.log(data);
 
+					var invBits = data[0].bits
+
 					var invRambow = data[0].n_rambow
 					var invElVentito = data[0].n_elventito
 					var invGipio = data[0].n_gipio
 					var invDecibelle = data[0].n_decibelle
 					var invRommy = data[0].n_rommy
 
+					
+					console.log("Bits: " + invBits)
+
 					console.log("invRambow: " + invRambow)
 					console.log("invElVentito: " + invElVentito)
 					console.log("invGipio: " + invGipio)
 					console.log("invDecibelle: " + invDecibelle)
 					console.log("invRommy: " + invRommy)
+					
+					this.bits.text = "Bits: " + invBits;
 
 					this.rambow_inv.text = invRambow;
 					this.elventito_inv.text = invElVentito;
