@@ -1,5 +1,6 @@
 
 // You can write more code here
+var selectedChar = null	
 
 /* START OF COMPILED CODE */
 
@@ -458,12 +459,6 @@ class Level extends Phaser.Scene {
 		rambow_sprite_inv.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
 		layer_2.add(rambow_sprite_inv);
 
-		// anim_elventito_spritesheet_inv
-		const anim_elventito_spritesheet_inv = this.add.sprite(150, 310, "elventito_spritesheet", 0);
-		anim_elventito_spritesheet_inv.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
-		anim_elventito_spritesheet_inv.play("anim_elventito_spritesheet");
-		layer_2.add(anim_elventito_spritesheet_inv);
-
 		// gipio_sprite_inv
 		const gipio_sprite_inv = this.add.image(150, 384, "gipio_sprite");
 		gipio_sprite_inv.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
@@ -549,6 +544,11 @@ class Level extends Phaser.Scene {
 		turn.setStyle({ "align": "center", "fontFamily": "Arial", "fontSize": "35px" });
 		layer_2.add(turn);
 
+		// elventito_sprite_inv
+		const elventito_sprite_inv = this.add.image(150, 310, "elventito_sprite");
+		elventito_sprite_inv.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
+		layer_2.add(elventito_sprite_inv);
+
 		// layer_3
 		const layer_3 = this.add.layer();
 
@@ -566,15 +566,12 @@ class Level extends Phaser.Scene {
 		text_desc_hover.text = "desc";
 		layer_3.add(text_desc_hover);
 
-		// layer_4
-		const layer_4 = this.add.layer();
-
 		// title
 		const title = this.add.text(640, 70, "", {});
 		title.setOrigin(0.5, 0.5);
 		title.text = "HARDWARE WARFARE";
 		title.setStyle({ "align": "center", "fontFamily": "Arial", "fontSize": "60px" });
-		layer_4.add(title);
+		layer_3.add(title);
 
 		// onAwakeScript_1
 		const onAwakeScript_1 = new OnAwakeScript(title);
@@ -582,28 +579,37 @@ class Level extends Phaser.Scene {
 		// fadeActionScript
 		const fadeActionScript = new FadeActionScript(onAwakeScript_1);
 
+		// layer_4
+		const layer_4 = this.add.layer();
+
 		// place_square_11
 		const place_square_11 = new Prefab(this, 400, 180);
+		place_square_11.visible = false;
 		layer_4.add(place_square_11);
 
 		// place_square_21
 		const place_square_21 = new Prefab(this, 400, 240);
+		place_square_21.visible = false;
 		layer_4.add(place_square_21);
 
 		// place_square_31
 		const place_square_31 = new Prefab(this, 400, 300);
+		place_square_31.visible = false;
 		layer_4.add(place_square_31);
 
 		// place_square_51
 		const place_square_51 = new Prefab(this, 400, 420);
+		place_square_51.visible = false;
 		layer_4.add(place_square_51);
 
 		// place_square_61
 		const place_square_61 = new Prefab(this, 400, 480);
+		place_square_61.visible = false;
 		layer_4.add(place_square_61);
 
 		// place_square_71
 		const place_square_71 = new Prefab(this, 400, 540);
+		place_square_71.visible = false;
 		layer_4.add(place_square_71);
 
 		// lists
@@ -691,7 +697,6 @@ class Level extends Phaser.Scene {
 		this.player1 = player1;
 		this.player2 = player2;
 		this.rambow_sprite_inv = rambow_sprite_inv;
-		this.anim_elventito_spritesheet_inv = anim_elventito_spritesheet_inv;
 		this.gipio_sprite_inv = gipio_sprite_inv;
 		this.decibelle_sprite_inv = decibelle_sprite_inv;
 		this.rommy_sprite_inv = rommy_sprite_inv;
@@ -705,9 +710,10 @@ class Level extends Phaser.Scene {
 		this.player2_losses = player2_losses;
 		this.player2_wins = player2_wins;
 		this.turn = turn;
+		this.elventito_sprite_inv = elventito_sprite_inv;
 		this.layer_2 = layer_2;
-		this.layer_3 = layer_3;
 		this.title = title;
+		this.layer_3 = layer_3;
 		this.place_square_11 = place_square_11;
 		this.place_square_21 = place_square_21;
 		this.place_square_31 = place_square_31;
@@ -869,8 +875,6 @@ class Level extends Phaser.Scene {
 	player2;
 	/** @type {Phaser.GameObjects.Image} */
 	rambow_sprite_inv;
-	/** @type {Phaser.GameObjects.Sprite} */
-	anim_elventito_spritesheet_inv;
 	/** @type {Phaser.GameObjects.Image} */
 	gipio_sprite_inv;
 	/** @type {Phaser.GameObjects.Image} */
@@ -897,12 +901,14 @@ class Level extends Phaser.Scene {
 	player2_wins;
 	/** @type {Phaser.GameObjects.Text} */
 	turn;
+	/** @type {Phaser.GameObjects.Image} */
+	elventito_sprite_inv;
 	/** @type {Phaser.GameObjects.Layer} */
 	layer_2;
-	/** @type {Phaser.GameObjects.Layer} */
-	layer_3;
 	/** @type {Phaser.GameObjects.Text} */
 	title;
+	/** @type {Phaser.GameObjects.Layer} */
+	layer_3;
 	/** @type {Prefab} */
 	place_square_11;
 	/** @type {Prefab} */
@@ -934,83 +940,114 @@ class Level extends Phaser.Scene {
 
 		// Sync the game state every 2 seconds
 		var TIME_BETWEEN_SYNC = 2000;
-		var selectedChar = null		
+
+		this.place_squares.forEach((square) => {
+			square.on("pointerdown", () => {
+			console.log(square.name + "clicked");
+			});
+		})
 
 		this.rambow_sprite_inv.on("pointerdown", () => {
-			selectedChar = "rambow"
+			this.regginFunction(1)
 			console.log("clicked on rambow_sprite_inv: " + selectedChar);
-
-			const placeSquare_instance = this.add.image(tile.x, tile.y, "rommy_sprite");
-			placeSquare_instance.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
-			this.layer_2.add(placeSquare_instance);
-			console.log(placeSquare_instance + " " + selectedChar)
 		});
 
-		this.anim_elventito_spritesheet_inv.on("pointerdown", () => {		
-			selectedChar = "elventito"	
-			console.log("clicked on anim_elventito_spritesheet_inv: " + selectedChar);
+		this.elventito_sprite_inv.on("pointerdown", () => {		
+			this.regginFunction(2)
+			console.log("clicked on elventito_sprite: " + selectedChar);
 		});
 
 		this.gipio_sprite_inv.on("pointerdown", () => {
-			selectedChar = "gipio"
+			this.regginFunction(3)
 			console.log("clicked on gipio_sprite_inv: " + selectedChar);
 		});
 
 		this.decibelle_sprite_inv.on("pointerdown", () => {
-			selectedChar = "decibelle"		
+			this.regginFunction(4)
 			console.log("clicked on decibelle_sprite_inv " + selectedChar);
 		});
 
 		this.rommy_sprite_inv.on("pointerdown", () => {
-			selectedChar = "rommy"					
+			this.regginFunction(5)
 			console.log("clicked on rommy_sprite_inv " + selectedChar);
 		});
 
 		this.listOfTiles.forEach((tile) => {
 			tile.on("pointerdown", () => {
 			console.log(tile.name + " clicked");
-			if (selectedChar == "rambow") {
+
+			var whiteSquare = this.children.list[this.children.list.length - 1];
+
+			for (let i = 0; i < whiteSquare.length; i++){
+				whiteSquare.list[i].visible = false;
+			}
+
+			if (selectedChar == 1) {
 				// rambow_sprite_inv
 				const rambow_instance = this.add.image(tile.x, tile.y, "rambow_sprite");
 				rambow_instance.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
 				this.layer_2.add(rambow_instance);
 				console.log(rambow_instance + " " + selectedChar)
-			} else if (selectedChar == "elventito") {
+
+			} else if (selectedChar == 2) {
 				// elventito_sprite_inv
 				const elventito_instance = this.add.image(tile.x, tile.y, "elventito_sprite");
 				elventito_instance.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
 				this.layer_2.add(elventito_instance);
 				console.log(elventito_instance + " " + selectedChar)
-			} else if (selectedChar == "gipio") {
+
+			} else if (selectedChar == 3) {
 				// gipio_sprite_inv
 				const gipio_instance = this.add.image(tile.x, tile.y, "gipio_sprite");
 				gipio_instance.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
 				this.layer_2.add(gipio_instance);
 				console.log(gipio_instance + " " + selectedChar)
-			} else if (selectedChar == "decibelle") {
+
+			} else if (selectedChar == 4) {
 				// decibelle_sprite_inv
 				const decibelle_instance = this.add.image(tile.x, tile.y, "decibelle_sprite");
 				decibelle_instance.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
 				this.layer_2.add(decibelle_instance);
 				console.log(decibelle_instance + " " + selectedChar)
-			} else if (selectedChar == "rommy") {
+
+			} else if (selectedChar == 5) {
 				// rommy_sprite_inv
 				const rommy_instance = this.add.image(tile.x, tile.y, "rommy_sprite");
 				rommy_instance.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
 				this.layer_2.add(rommy_instance);
 				console.log(rommy_instance + " " + selectedChar)
-			}});
-		});
+			}
 
-		
+			selectedChar = null;
+		});
+	});
 
 		// call function every 2 seconds (TIME_BETWEEN_SYNC milliseconds)
 		setInterval(() => {
-			this.getGameState();
+			this.getGamePlayerState();
+			this.getGameInvState();
+			this.getGameTurnState();
 		}, TIME_BETWEEN_SYNC)
 	}
 
-	getGameState() {
+	//set the placement squares visible or not
+	regginFunction(charID) {	
+		var whiteSquare = this.children.list[this.children.list.length - 1];
+
+		if(selectedChar == charID){
+			for (let i = 0; i < whiteSquare.length; i++){
+				whiteSquare.list[i].visible = false;
+			}
+			selectedChar = null
+		}else{
+			for (let i = 0; i < whiteSquare.length; i++){
+				whiteSquare.list[i].visible = true;
+			}
+			selectedChar = charID
+		}
+	}
+
+	getGamePlayerState() {
 		var xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = () => {
 				if (xhttp.readyState == 4) {
@@ -1021,7 +1058,7 @@ class Level extends Phaser.Scene {
 					console.log(data);
 
 					if (data.length == 0){
-						console.log("Opsi opsi, nao devia acontecer --by prof. Cesar")
+						console.log("Oopsi doopsi, nao devia acontecer --by prof. Cesar")
 						return;
 					}
 
@@ -1051,32 +1088,86 @@ class Level extends Phaser.Scene {
 					this.player2_losses.text = player2Losses;
 				}
 					return;
-					// !!! If the tiles were added manually in the editor, you can use the following code:
-					this.tile1.setTexture("character_rambow_blue");
-					this.tile8.setTexture("character_decibelle_red");
+					// // !!! If the tiles were added manually in the editor, you can use the following code:
+					// this.tile1.setTexture("character_rambow_blue");
+					// this.tile8.setTexture("character_decibelle_red");
 
-					// !!! If the tiles were added dynamically, you can use the following code:
-					// Cleans the previous position of the characters
-					this.tiles[(this.char1_posX-1)  + (this.char1_posY-1) * 7].setTexture("empty");
-					this.tiles[(this.char2_posX-1)  + (this.char2_posY-1) * 7].setTexture("empty");
+					// // !!! If the tiles were added dynamically, you can use the following code:
+					// // Cleans the previous position of the characters
+					// this.tiles[(this.char1_posX-1)  + (this.char1_posY-1) * 7].setTexture("empty");
+					// this.tiles[(this.char2_posX-1)  + (this.char2_posY-1) * 7].setTexture("empty");
 
-					// Move the characters
-					this.char1_posX++;
-					if (this.char1_posX > 7)
-						this.char1_posX = 1;
-					this.char2_posX--;
-					if (this.char2_posX < 1)
-						this.char2_posX = 7;
+					// // Move the characters
+					// this.char1_posX++;
+					// if (this.char1_posX > 7)
+					// 	this.char1_posX = 1;
+					// this.char2_posX--;
+					// if (this.char2_posX < 1)
+					// 	this.char2_posX = 7;
 
-					// Set the new position of the characters
-					this.tiles[(this.char1_posX-1)  + (this.char1_posY-1) * 7].setTexture("character_rambow_blue");
-					this.tiles[(this.char2_posX-1)  + (this.char2_posY-1) * 7].setTexture("character_decibelle_red");
+					// // Set the new position of the characters
+					// this.tiles[(this.char1_posX-1)  + (this.char1_posY-1) * 7].setTexture("character_rambow_blue");
+					// this.tiles[(this.char2_posX-1)  + (this.char2_posY-1) * 7].setTexture("character_decibelle_red");
 				}
 			};
 
-			// Send a GET request to the server (just testing with /match/1 endpoint)
+			// Send a GET request to the server to get info about both players in a certain match
 			xhttp.open("GET", "/match/getData", true);
 			xhttp.send();
+	}
+
+	getGameTurnState() {
+		var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = () => {
+				if (xhttp.readyState == 4) {
+					console.log(xhttp.responseText)
+
+					// Parse the JSON response
+					var data = JSON.parse(xhttp.responseText);
+					console.log(data);
+
+					var turn = data[0].match_turn
+
+					console.log("turn: " + turn)
+
+					this.turn.text = "Turn: " + turn;
+				}
+			}
+
+			// Send a GET request to the server to all info about a specific match
+			xhttp.open("GET", "/match/thisMatch", true);
+			xhttp.send();
+	}
+
+	getGameInvState() {
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = () => {
+			if (xhttp.readyState == 4) {
+				console.log(xhttp.responseText)
+
+				// Parse the JSON response
+				var data = JSON.parse(xhttp.responseText);
+				console.log(data);
+
+				var invRambow = data[0].n_rambow
+				var invElVentito = data[0].n_elventito
+				var invGipio = data[0].n_gipio
+				var invDecibelle = data[0].n_decibelle
+				var invRommy = data[0].n_rommy
+
+				console.log("invRambow: " + invRambow)
+
+				this.inv_rambow_number.text = invRambow;
+				this.inv_elventito_number.text = invElVentito;
+				this.inv_gipio_number.text = invGipio;
+				this.inv_decibelle_number.text = invDecibelle;
+				this.inv_rommy_number.text = invRommy;
+			}
+		}
+
+		// Send a GET request to the server to all info about a specific match
+		xhttp.open("GET", "/store/checkInv", true);
+		xhttp.send();
 	}
 
 	// 💩 Disclaimer: If you found this hard to understand/handle, add the tiles manually in the editor and use them!

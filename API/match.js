@@ -200,7 +200,7 @@ router.put('/joinMatch', (request, response) =>  {
 });
 
 // Endpoint for getting all matches
-router.get('/matches', (request, response) => {
+router.get('/allMatches', (request, response) => {
     connection.execute('SELECT * FROM match_',
     [],
     function (err, results, fields) {
@@ -214,8 +214,8 @@ router.get('/matches', (request, response) => {
 });
 
 // Endpoint for getting a specific match (:id is a parameter that we can use to get the matchID from the URL - e.g. http://localhost:2000/matches/1)
-router.get('/matches/:id', (request, response) => {
-    var matchID = request.params.id;
+router.get('/thisMatch', (request, response) => {
+    var matchID = request.session.matchID;
     connection.execute('SELECT * FROM match_ WHERE match_id = ?',
     [matchID],
     function (err, results, fields) {

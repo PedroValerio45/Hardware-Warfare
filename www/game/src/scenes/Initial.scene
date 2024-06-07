@@ -71,18 +71,6 @@
                     "fillColor": "#828282",
                     "width": 128,
                     "height": 128
-                },
-                {
-                    "type": "Text",
-                    "id": "e175bb2b-6dc4-48c2-9664-d1c81d92efcf",
-                    "label": "gipio_inv_1",
-                    "x": 640,
-                    "y": 630,
-                    "originX": 0.5,
-                    "originY": 0.5,
-                    "text": "Done",
-                    "align": "center",
-                    "fontSize": "80px"
                 }
             ]
         },
@@ -95,6 +83,7 @@
                     "type": "Text",
                     "id": "cbe28ee3-fb2f-48c0-bfc4-27e35b5e78b6",
                     "label": "rambow_inv",
+                    "scope": "CLASS",
                     "x": 314.5,
                     "y": 486.5,
                     "originX": 0.5,
@@ -107,6 +96,7 @@
                     "type": "Text",
                     "id": "17e89ff3-21a4-495a-bd77-db349822a2c2",
                     "label": "elventito_inv",
+                    "scope": "CLASS",
                     "x": 474.5,
                     "y": 486.5,
                     "originX": 0.5,
@@ -119,6 +109,7 @@
                     "type": "Text",
                     "id": "2d0ed4ee-1356-4b47-8bb9-660c3f3ca89e",
                     "label": "gipio_inv",
+                    "scope": "CLASS",
                     "x": 634.5,
                     "y": 486.5,
                     "originX": 0.5,
@@ -131,6 +122,7 @@
                     "type": "Text",
                     "id": "21268697-4266-4f86-9e1a-a9ac37fbb221",
                     "label": "decibelle_inv",
+                    "scope": "CLASS",
                     "x": 794.5,
                     "y": 486.5,
                     "originX": 0.5,
@@ -143,6 +135,7 @@
                     "type": "Text",
                     "id": "223afa3b-7bfe-46d4-a2d9-489cb253fa22",
                     "label": "rommy_inv",
+                    "scope": "CLASS",
                     "x": 954.5,
                     "y": 486.5,
                     "originX": 0.5,
@@ -330,6 +323,22 @@
                     "text": "-",
                     "align": "center",
                     "fontSize": "80px"
+                },
+                {
+                    "type": "Text",
+                    "id": "e175bb2b-6dc4-48c2-9664-d1c81d92efcf",
+                    "label": "done",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 193,
+                    "hitArea.height": 73,
+                    "x": 640,
+                    "y": 630,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Done",
+                    "align": "center",
+                    "fontSize": "80px"
                 }
             ]
         },
@@ -407,5 +416,23 @@
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
         "version": 5
-    }
+    },
+    "lists": [
+        {
+            "id": "db6254df-83c5-464f-91e4-8c2020dac15e",
+            "label": "buttons",
+            "objectIds": [
+                "ea07648a-2428-4734-bc07-b9b965670eb5",
+                "aaa89ec0-3ea8-4a9e-be98-ab619a06e92d",
+                "eb34ea95-f1f4-4d9a-9bfd-dc80b52eb094",
+                "fcca2d5f-3441-45c9-a1db-ea22c1839b70",
+                "35306c9e-b1e6-4be9-b5e1-cb2aa47ebe5a",
+                "50ac8a15-e6e1-48ae-bbda-63d25fa80b6c",
+                "5aa02818-a696-429d-a593-35a27075f9b1",
+                "b59a455b-d50c-4d92-8612-437d17e2d4c8",
+                "cc1ad907-5cf4-47fb-9324-96a920e5563c",
+                "d454fd42-b9d4-4e02-b693-67e9a5d49357"
+            ]
+        }
+    ]
 }

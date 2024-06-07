@@ -42,13 +42,6 @@ class Initial extends Phaser.Scene {
 		rectangle.fillColor = 8553090;
 		layer_1.add(rectangle);
 
-		// gipio_inv_1
-		const gipio_inv_1 = this.add.text(640, 630, "", {});
-		gipio_inv_1.setOrigin(0.5, 0.5);
-		gipio_inv_1.text = "Done";
-		gipio_inv_1.setStyle({ "align": "center", "fontSize": "80px" });
-		layer_1.add(gipio_inv_1);
-
 		// layer_2
 		const layer_2 = this.add.layer();
 
@@ -178,6 +171,14 @@ class Initial extends Phaser.Scene {
 		rommy_minus.setStyle({ "align": "center", "fontSize": "80px" });
 		layer_3.add(rommy_minus);
 
+		// done
+		const done = this.add.text(640, 630, "", {});
+		done.setInteractive(new Phaser.Geom.Rectangle(0, 0, 193, 73), Phaser.Geom.Rectangle.Contains);
+		done.setOrigin(0.5, 0.5);
+		done.text = "Done";
+		done.setStyle({ "align": "center", "fontSize": "80px" });
+		layer_3.add(done);
+
 		// layer_4
 		const layer_4 = this.add.layer();
 
@@ -211,6 +212,9 @@ class Initial extends Phaser.Scene {
 		character_elventito_1.scaleY = 3;
 		layer_4.add(character_elventito_1);
 
+		// lists
+		const buttons = [rommy_minus, rommy_plus, decibelle_minus, decibelle_plus, gipio_minus, gipio_plus, elventito_minus, elventito_plus, rambow_plus, rambow_minus];
+
 		// fadeActionScript (prefab fields)
 		fadeActionScript.fadeDirection = "FadeIn";
 
@@ -218,6 +222,11 @@ class Initial extends Phaser.Scene {
 		const fadeActionScriptDurationConfigComp = new DurationConfigComp(fadeActionScript);
 		fadeActionScriptDurationConfigComp.duration = 1500;
 
+		this.rambow_inv = rambow_inv;
+		this.elventito_inv = elventito_inv;
+		this.gipio_inv = gipio_inv;
+		this.decibelle_inv = decibelle_inv;
+		this.rommy_inv = rommy_inv;
 		this.rambow_minus = rambow_minus;
 		this.rambow_plus = rambow_plus;
 		this.elventito_plus = elventito_plus;
@@ -228,10 +237,22 @@ class Initial extends Phaser.Scene {
 		this.decibelle_minus = decibelle_minus;
 		this.rommy_plus = rommy_plus;
 		this.rommy_minus = rommy_minus;
+		this.done = done;
+		this.buttons = buttons;
 
 		this.events.emit("scene-awake");
 	}
 
+	/** @type {Phaser.GameObjects.Text} */
+	rambow_inv;
+	/** @type {Phaser.GameObjects.Text} */
+	elventito_inv;
+	/** @type {Phaser.GameObjects.Text} */
+	gipio_inv;
+	/** @type {Phaser.GameObjects.Text} */
+	decibelle_inv;
+	/** @type {Phaser.GameObjects.Text} */
+	rommy_inv;
 	/** @type {Phaser.GameObjects.Text} */
 	rambow_minus;
 	/** @type {Phaser.GameObjects.Text} */
@@ -252,6 +273,10 @@ class Initial extends Phaser.Scene {
 	rommy_plus;
 	/** @type {Phaser.GameObjects.Text} */
 	rommy_minus;
+	/** @type {Phaser.GameObjects.Text} */
+	done;
+	/** @type {Phaser.GameObjects.Text[]} */
+	buttons;
 
 	/* START-USER-CODE */
 
@@ -260,16 +285,70 @@ class Initial extends Phaser.Scene {
 	create() {
 
 		this.editorCreate();
+
+		// Sync the game state every 2 seconds
+		var TIME_BETWEEN_SYNC = 2000;
+
 		this.rambow_plus.on("pointerdown", () => {
 			console.log("click on rambow_plus");
 			this.rambowBuy(1);
 		})
-		
+
 		this.rambow_minus.on("pointerdown", () => {
 			console.log("click on rambow_minus");
 			this.rambowBuy(-1);
 		})
-	}
+
+		this.elventito_plus.on("pointerdown", () => {
+			console.log("click on elventito_plus");
+			this.elVentitoBuy(1);
+		})
+
+		this.elventito_minus.on("pointerdown", () => {
+			console.log("click on elventito_minus");
+			this.elVentitoBuy(-1);
+		})
+
+		this.gipio_plus.on("pointerdown", () => {
+			console.log("click on gipio_plus");
+			this.gipioBuy(1);
+		})
+
+		this.gipio_minus.on("pointerdown", () => {
+			console.log("click on gipio_minus");
+			this.gipioBuy(-1);
+		})
+
+		this.decibelle_plus.on("pointerdown", () => {
+			console.log("click on decibelle_plus");
+			this.decibelleBuy(1);
+		})
+
+		this.decibelle_minus.on("pointerdown", () => {
+			console.log("click on decibelle_minus");
+			this.decibelleBuy(-1);
+		})
+
+		this.rommy_plus.on("pointerdown", () => {
+			console.log("click on rommy_plus");
+			this.rommyBuy(1);
+		})
+
+		this.rommy_minus.on("pointerdown", () => {
+			console.log("click on rommy_minus");
+			this.rommyBuy(-1);
+		})
+
+		this.done.on("pointerdown", () => {
+			console.log("click on done");
+			this.clickDone()
+		})
+
+		// call function every 2 seconds (TIME_BETWEEN_SYNC milliseconds)
+		setInterval(() => {
+			this.getGameInvState();
+		}, TIME_BETWEEN_SYNC)
+	};
 
 	rambowBuy(quantity) {
 		var xhttp = new XMLHttpRequest();
@@ -278,8 +357,107 @@ class Initial extends Phaser.Scene {
 				console.log(xhttp.responseText);
 			}
 		};
+
 		xhttp.open("POST", "/store/buyRambow/" + quantity, true);
 		xhttp.send();
+	}
+
+	elVentitoBuy(quantity) {
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = () => {
+			if (xhttp.readyState == 4) {
+				console.log(xhttp.responseText);
+			}
+		};
+
+		xhttp.open("POST", "/store/buyElVentito/" + quantity, true);
+		xhttp.send();
+	}
+
+	gipioBuy(quantity) {
+		console.log("gipiobuy working1")
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = () => {
+			if (xhttp.readyState == 4) {
+				console.log(xhttp.responseText);
+			}
+		};
+
+		console.log("gipiobuy working2")
+		xhttp.open("POST", "/store/BuyGipio/" + quantity, true);
+		xhttp.send();
+	}
+
+	decibelleBuy(quantity) {
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = () => {
+			if (xhttp.readyState == 4) {
+				console.log(xhttp.responseText);
+			}
+		};
+
+		xhttp.open("POST", "/store/buyDecibelle/" + quantity, true);
+		xhttp.send();
+	}
+
+	rommyBuy(quantity) {
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = () => {
+			if (xhttp.readyState == 4) {
+				console.log(xhttp.responseText);
+			}
+		};
+
+		xhttp.open("POST", "/store/buyRommy/" + quantity, true);
+		xhttp.send();
+	}
+
+	clickDone() {
+		this.rambow_plus.visible = false;
+		this.rambow_minus.visible = false;
+		this.elventito_plus.visible = false;
+		this.elventito_minus.visible = false;
+		this.gipio_plus.visible = false;
+		this.gipio_minus.visible = false;
+		this.decibelle_plus.visible = false;
+		this.decibelle_minus.visible = false;
+		this.rommy_plus.visible = false;
+		this.rommy_minus.visible = false;
+	}
+
+	getGameInvState() {
+		var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = () => {
+				if (xhttp.readyState == 4) {
+					console.log(xhttp.responseText)
+
+					// Parse the JSON response
+					var data = JSON.parse(xhttp.responseText);
+					console.log(data);
+
+					var invRambow = data[0].n_rambow
+					var invElVentito = data[0].n_elventito
+					var invGipio = data[0].n_gipio
+					var invDecibelle = data[0].n_decibelle
+					var invRommy = data[0].n_rommy
+
+					console.log("invRambow: " + invRambow)
+					console.log("invElVentito: " + invElVentito)
+					console.log("invGipio: " + invGipio)
+					console.log("invDecibelle: " + invDecibelle)
+					console.log("invRommy: " + invRommy)
+
+					this.rambow_inv.text = invRambow;
+					this.elventito_inv.text = invElVentito;
+					this.gipio_inv.text = invGipio;
+					this.decibelle_inv.text = invDecibelle;
+					this.rommy_inv.text = invRommy;
+				}
+			}
+
+			// Send a GET request to the server to all info about a specific match
+			xhttp.open("GET", "/store/checkInv", true);
+			xhttp.send();
 	}
 
 	/* END-USER-CODE */

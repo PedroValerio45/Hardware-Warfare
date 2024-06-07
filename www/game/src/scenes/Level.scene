@@ -1097,23 +1097,6 @@
                     "y": 235
                 },
                 {
-                    "type": "Sprite",
-                    "id": "8f6cb435-298f-45d1-ad12-943b9fb006c0",
-                    "label": "anim_elventito_spritesheet_inv",
-                    "scope": "CLASS",
-                    "hitArea.shape": "RECTANGLE",
-                    "hitArea.width": 51,
-                    "hitArea.height": 51,
-                    "texture": {
-                        "key": "elventito_spritesheet",
-                        "frame": 0
-                    },
-                    "x": 150,
-                    "y": 310,
-                    "animationPlayMethod": 1,
-                    "animationKey": "anim_elventito_spritesheet"
-                },
-                {
                     "type": "Image",
                     "id": "1e742ad9-8d60-4279-a9e8-b56e4472d514",
                     "label": "gipio_sprite_inv",
@@ -1289,6 +1272,20 @@
                     "align": "center",
                     "fontFamily": "Arial",
                     "fontSize": "35px"
+                },
+                {
+                    "type": "Image",
+                    "id": "3026b2c1-5d11-4f3c-8679-1311e114ae6b",
+                    "label": "elventito_sprite_inv",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 51,
+                    "hitArea.height": 51,
+                    "texture": {
+                        "key": "elventito_sprite"
+                    },
+                    "x": 150,
+                    "y": 310
                 }
             ]
         },
@@ -1319,15 +1316,7 @@
                     "x": 1325,
                     "y": 372,
                     "text": "desc"
-                }
-            ]
-        },
-        {
-            "type": "Layer",
-            "id": "e8103453-e329-48a4-924c-cd02356d3f36",
-            "label": "layer_4",
-            "scope": "CLASS",
-            "list": [
+                },
                 {
                     "type": "Text",
                     "id": "b2b3dbd5-2106-41fa-8a04-9b511e3401a9",
@@ -1363,78 +1352,98 @@
                             ]
                         }
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "e8103453-e329-48a4-924c-cd02356d3f36",
+            "label": "layer_4",
+            "scope": "CLASS",
+            "list": [
                 {
                     "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
                     "id": "f51f9e89-1748-414b-8927-9130f68e2876",
                     "unlock": [
                         "x",
-                        "y"
+                        "y",
+                        "visible"
                     ],
                     "label": "place_square_11",
                     "scope": "CLASS",
                     "x": 400,
-                    "y": 180
+                    "y": 180,
+                    "visible": false
                 },
                 {
                     "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
                     "id": "392a2ef0-b08f-4faf-b66f-a8d8691ffbeb",
                     "unlock": [
                         "x",
-                        "y"
+                        "y",
+                        "visible"
                     ],
                     "label": "place_square_21",
                     "scope": "CLASS",
                     "x": 400,
-                    "y": 240
+                    "y": 240,
+                    "visible": false
                 },
                 {
                     "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
                     "id": "aaf8f1b8-f111-4771-9194-26d550cda39f",
                     "unlock": [
                         "x",
-                        "y"
+                        "y",
+                        "visible"
                     ],
                     "label": "place_square_31",
                     "scope": "CLASS",
                     "x": 400,
-                    "y": 300
+                    "y": 300,
+                    "visible": false
                 },
                 {
                     "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
                     "id": "9cafebaf-e8c3-4569-bbd1-867fd1123848",
                     "unlock": [
                         "x",
-                        "y"
+                        "y",
+                        "visible"
                     ],
                     "label": "place_square_51",
                     "scope": "CLASS",
                     "x": 400,
-                    "y": 420
+                    "y": 420,
+                    "visible": false
                 },
                 {
                     "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
                     "id": "8c23cfe5-3114-466a-8003-20bea260a967",
                     "unlock": [
                         "x",
-                        "y"
+                        "y",
+                        "visible"
                     ],
                     "label": "place_square_61",
                     "scope": "CLASS",
                     "x": 400,
-                    "y": 480
+                    "y": 480,
+                    "visible": false
                 },
                 {
                     "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
                     "id": "3f742f4f-2a08-48c1-8909-1229f1bd7555",
                     "unlock": [
                         "x",
-                        "y"
+                        "y",
+                        "visible"
                     ],
                     "label": "place_square_71",
                     "scope": "CLASS",
                     "x": 400,
-                    "y": 540
+                    "y": 540,
+                    "visible": false
                 }
             ]
         }
