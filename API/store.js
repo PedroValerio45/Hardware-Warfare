@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const connection = require('../database');
 
-//buys the character rambow
+// buys the character rambow
 router.post('/buyRambow/:quantity', (req, res) => {
     var playerID = req.session.playerID;
     var matchID = req.session.matchID;
@@ -31,26 +31,37 @@ router.post('/buyRambow/:quantity', (req, res) => {
             if (bits < finalCost){
                 res.send("You don't have enough bits (lmao broke ass)")
             } else {
-                console.log("buying rambow")
-                connection.execute("UPDATE inventory SET n_rambow = n_rambow + ? WHERE inv_match_id = ? AND inv_player_id = ?",
-                [quantity, matchID, playerID], // adds one character
+                // check if the number of this character in the player's inv, to see if its 0 or higher
+                connection.execute("SELECT n_rambow FROM inventory WHERE inv_match_id = ? AND inv_player_id = ?",
+                    [matchID, playerID],
                     function (error, rows, fields) {
-                        if (error){
+                        if (error) {
                             res.send(error);
                         } else {
-                            connection.execute("UPDATE inventory SET bits = bits - "+ finalCost +" WHERE inv_match_id = ? AND inv_player_id = ?",
-                            [matchID, playerID],  // takes from the total of bits the cost of the character
-                                function (error, rows, fields) {
-                                    if (error){
-                                        res.send(error);
-                                    } else {
-                                        res.send(rows);
-                                    };
-                                }
-                            );
-                        };
+                            var numberOfChar = rows[0].n_rambow;
+                            console.log("checked number of character: " + numberOfChar);
+                            console.log(rows);
+
+                            if (numberOfChar <= 0 && quantity < 0) {
+                                res.send("You don't have any rambows")
+                                console.log(numberOfChar)
+                            } else {
+                                console.log("buying rambow and taking bits")
+                                // add/remove 1 character to player's inv and refund/remove the right ammount of bits
+                                connection.execute("UPDATE inventory SET n_rambow = n_rambow + ?, bits = bits - "+ finalCost +" WHERE inv_match_id = ? AND inv_player_id = ?",
+                                [quantity, matchID, playerID],
+                                    function (error, rows, fields) {
+                                        if (error){
+                                            res.send(error);
+                                        } else {
+                                            res.send(rows);
+                                        };
+                                    }
+                                );
+                            }
+                        }
                     }
-                );
+                )
             };
         };
     })
