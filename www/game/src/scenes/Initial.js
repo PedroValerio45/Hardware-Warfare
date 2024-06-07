@@ -423,6 +423,10 @@ class Initial extends Phaser.Scene {
 		this.decibelle_minus.visible = false;
 		this.rommy_plus.visible = false;
 		this.rommy_minus.visible = false;
+
+		// buttons.forEach(text => {
+		// 	text.visible = false;
+		// });
 	}
 
 	getGameInvState() {

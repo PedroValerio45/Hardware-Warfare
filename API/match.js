@@ -37,8 +37,8 @@ router.post('/createMatch', (request, response) => {
                         request.session.matchID = match;
                         console.log("match creating: " + match);
                         //create row in match_player for this player in this match, to then be able to create an inventory for them
-                        connection.execute("INSERT INTO match_player (mp_match_id, mp_player_id) VALUES (?, ?)",
-                        [match, playerID],
+                        connection.execute("INSERT INTO match_player (mp_match_id, mp_player_id, mp_current_cpu_hp) VALUES (?, ?, ?)",
+                        [match, playerID, 10],
                         function (err, results, fields) {
                             if (err){
                                 console.log(err);
@@ -138,8 +138,8 @@ router.put('/joinMatch', (request, response) =>  {
                                     console.log("join match failure 1, match: " + match)
                                 }else{
                                     //create row in match_player for this player in this match, to then be able to create an inventory for them
-                                    connection.execute("INSERT INTO match_player (mp_match_id, mp_player_id) VALUES (?, ?)",
-                                    [match, playerID],
+                                    connection.execute("INSERT INTO match_player (mp_match_id, mp_player_id, mp_current_cpu_hp) VALUES (?, ?, ?)",
+                                    [match, playerID, 10],
                                     function (err, results, fields) {
                                         if (err){
                                             response.send(err);
