@@ -39,6 +39,7 @@ router.post('/buyRambow/:quantity', (req, res) => {
                             res.send(error);
                         } else {
                             var numberOfChar = rows[0].n_rambow;
+
                             console.log("checked number of character: " + numberOfChar);
                             console.log(rows);
 
@@ -47,6 +48,7 @@ router.post('/buyRambow/:quantity', (req, res) => {
                                 console.log(numberOfChar)
                             } else {
                                 console.log("buying rambow and taking bits")
+
                                 // add/remove 1 character to player's inv and refund/remove the right ammount of bits
                                 connection.execute("UPDATE inventory SET n_rambow = n_rambow + ?, bits = bits - "+ finalCost +" WHERE inv_match_id = ? AND inv_player_id = ?",
                                 [quantity, matchID, playerID],
@@ -95,17 +97,27 @@ router.post('/buyElVentito/:quantity', (req, res) => {
 
             if (bits < finalCost){
                 res.send("You don't have enough bits (someone with a similar name seems disappointed)")
-            } else {                
-                console.log("ok2");
-                connection.execute("UPDATE inventory SET n_elventito = n_elventito + ? WHERE inv_match_id = ? AND inv_player_id = ?",
-                [quantity, matchID, playerID], // adds one character
+            } else {
+                // check if the number of this character in the player's inv, to see if its 0 or higher
+                connection.execute("SELECT n_elventito FROM inventory WHERE inv_match_id = ? AND inv_player_id = ?",
+                    [matchID, playerID],
                     function (error, rows, fields) {
-                        if (error){
+                        if (error) {
                             res.send(error);
                         } else {
-                            console.log("ok3");
-                            connection.execute("UPDATE inventory SET bits = bits - "+ finalCost +" WHERE inv_match_id = ? AND inv_player_id = ?",
-                            [matchID, playerID],  // takes from the total of bits the cost of the character
+                            var numberOfChar = rows[0].n_elventito;
+                            console.log("checked number of character: " + numberOfChar);
+                            console.log(rows);
+
+                            if (numberOfChar <= 0 && quantity < 0) {
+                                res.send("You don't have any el ventitos (boowomp)")
+                                console.log(numberOfChar)
+                            } else {
+
+                                console.log("buying el ventito and taking bits");
+                                // add/remove 1 character to player's inv and refund/remove the right ammount of bits
+                                connection.execute("UPDATE inventory SET n_elventito = n_elventito + ?, bits = bits - "+ finalCost +" WHERE inv_match_id = ? AND inv_player_id = ?",
+                                [quantity, matchID, playerID],
                                 function (error, rows, fields) {
                                     if (error){
                                         res.send(error);
@@ -113,8 +125,8 @@ router.post('/buyElVentito/:quantity', (req, res) => {
                                         res.send(rows);
                                     };
                                 }
-                            );
-                        };
+                            )};
+                        }
                     }
                 );
             };
@@ -151,14 +163,26 @@ router.post('/buyGipio/:quantity', (req, res) => {
             if (bits < finalCost){
                 res.send("You don't have enough bits (lmao broke ass)")
             } else {
-                connection.execute("UPDATE inventory SET n_gipio = n_gipio + ? WHERE inv_match_id = ? AND inv_player_id = ?",
-                [quantity, matchID, playerID], // adds one character
+                // check if the number of this character in the player's inv, to see if its 0 or higher
+                connection.execute("SELECT n_gipio FROM inventory WHERE inv_match_id = ? AND inv_player_id = ?",
+                    [matchID, playerID],
                     function (error, rows, fields) {
-                        if (error){
+                        if (error) {
                             res.send(error);
                         } else {
-                            connection.execute("UPDATE inventory SET bits = bits - "+ finalCost +" WHERE inv_match_id = ? AND inv_player_id = ?",
-                            [matchID, playerID],  // takes from the total of bits the cost of the character
+                            var numberOfChar = rows[0].n_gipio;
+                            console.log("checked number of character: " + numberOfChar);
+                            console.log(rows);
+
+                            if (numberOfChar <= 0 && quantity < 0) {
+                                res.send("You don't have any gipios")
+                                console.log(numberOfChar)
+                            } else {
+                                
+                                console.log("buying el ventito and taking bits");
+                                // add/remove 1 character to player's inv and refund/remove the right ammount of bits
+                                connection.execute("UPDATE inventory SET n_gipio = n_gipio + ?, bits = bits - "+ finalCost +" WHERE inv_match_id = ? AND inv_player_id = ?",
+                                [quantity, matchID, playerID],
                                 function (error, rows, fields) {
                                     if (error){
                                         res.send(error);
@@ -166,8 +190,8 @@ router.post('/buyGipio/:quantity', (req, res) => {
                                         res.send(rows);
                                     };
                                 }
-                            );
-                        };
+                            )};
+                        }
                     }
                 );
             };
@@ -204,14 +228,26 @@ router.post('/buyDecibelle/:quantity', (req, res) => {
             if (bits < finalCost){
                 res.send("You don't have enough bits (lmao broke ass)")
             } else {
-                connection.execute("UPDATE inventory SET n_decibelle = n_decibelle + ? WHERE inv_match_id = ? AND inv_player_id = ?",
-                [quantity, matchID, playerID], // adds one character
+                // check if the number of this character in the player's inv, to see if its 0 or higher
+                connection.execute("SELECT n_decibelle FROM inventory WHERE inv_match_id = ? AND inv_player_id = ?",
+                    [matchID, playerID],
                     function (error, rows, fields) {
-                        if (error){
+                        if (error) {
                             res.send(error);
                         } else {
-                            connection.execute("UPDATE inventory SET bits = bits - "+ finalCost +" WHERE inv_match_id = ? AND inv_player_id = ?",
-                            [matchID, playerID],  // takes from the total of bits the cost of the character
+                            var numberOfChar = rows[0].n_decibelle;
+                            console.log("checked number of character: " + numberOfChar);
+                            console.log(rows);
+
+                            if (numberOfChar <= 0 && quantity < 0) {
+                                res.send("You don't have any decibelle")
+                                console.log(numberOfChar)
+                            } else {
+                                
+                                console.log("buying decibelle and taking bits");
+                                // add/remove 1 character to player's inv and refund/remove the right ammount of bits
+                                connection.execute("UPDATE inventory SET n_decibelle = n_decibelle + ?, bits = bits - "+ finalCost +" WHERE inv_match_id = ? AND inv_player_id = ?",
+                                [quantity, matchID, playerID],
                                 function (error, rows, fields) {
                                     if (error){
                                         res.send(error);
@@ -219,8 +255,8 @@ router.post('/buyDecibelle/:quantity', (req, res) => {
                                         res.send(rows);
                                     };
                                 }
-                            );
-                        };
+                            )};
+                        }
                     }
                 );
             };
@@ -256,26 +292,37 @@ router.post('/buyRommy/:quantity', (req, res) => {
                 if (bits < finalCost){
                     res.send("You don't have enough bits (lmao broke ass)")
                 } else {
-                    console.log("buying rommy")
-                    connection.execute("UPDATE inventory SET n_rommy = n_rommy + ? WHERE inv_match_id = ? AND inv_player_id = ?",
-                    [quantity, matchID, playerID], // adds one character
-                        function (error, rows, fields) {
-                            if (error){
-                                res.send(error);
+                    // check if the number of this character in the player's inv, to see if its 0 or higher
+                connection.execute("SELECT n_rommy FROM inventory WHERE inv_match_id = ? AND inv_player_id = ?",
+                    [matchID, playerID],
+                    function (error, rows, fields) {
+                        if (error) {
+                            res.send(error);
+                        } else {
+                            var numberOfChar = rows[0].n_rommy;
+                            console.log("checked number of character: " + numberOfChar);
+                            console.log(rows);
+
+                            if (numberOfChar <= 0 && quantity < 0) {
+                                res.send("You don't have any rommy")
+                                console.log(numberOfChar)
                             } else {
-                                connection.execute("UPDATE inventory SET bits = bits - "+ finalCost +" WHERE inv_match_id = ? AND inv_player_id = ?",
-                                [matchID, playerID],  // takes from the total of bits the cost of the character
-                                    function (error, rows, fields) {
-                                        if (error){
-                                            res.send(error);
-                                        } else {
-                                            res.send(rows);
-                                        };
-                                    }
-                                );
-                            };
+                                
+                                console.log("buying rommy and taking bits");
+                                // add/remove 1 character to player's inv and refund/remove the right ammount of bits
+                                connection.execute("UPDATE inventory SET n_rommy = n_rommy + ?, bits = bits - "+ finalCost +" WHERE inv_match_id = ? AND inv_player_id = ?",
+                                [quantity, matchID, playerID],
+                                function (error, rows, fields) {
+                                    if (error){
+                                        res.send(error);
+                                    } else {
+                                        res.send(rows);
+                                    };
+                                }
+                            )};
                         }
-                    );
+                    }
+                );
                 };
             };
         }

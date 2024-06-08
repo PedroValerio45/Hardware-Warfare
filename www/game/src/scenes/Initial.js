@@ -1,4 +1,3 @@
-
 // You can write more code here
 
 /* START OF COMPILED CODE */
@@ -34,13 +33,11 @@ class Initial extends Phaser.Scene {
 		// layer_1
 		const layer_1 = this.add.layer();
 
-		// rectangle
-		const rectangle = this.add.rectangle(640, 632, 128, 128);
-		rectangle.scaleX = 1.75;
-		rectangle.scaleY = 0.75;
-		rectangle.isFilled = true;
-		rectangle.fillColor = 8553090;
-		layer_1.add(rectangle);
+		// square_done
+		const square_done = this.add.image(640, 630, "empty");
+		square_done.scaleX = 5;
+		square_done.scaleY = 2;
+		layer_1.add(square_done);
 
 		// layer_2
 		const layer_2 = this.add.layer();
@@ -173,6 +170,7 @@ class Initial extends Phaser.Scene {
 
 		// done
 		const done = this.add.text(640, 630, "", {});
+		done.name = "done";
 		done.setInteractive(new Phaser.Geom.Rectangle(0, 0, 193, 73), Phaser.Geom.Rectangle.Contains);
 		done.setOrigin(0.5, 0.5);
 		done.text = "Done";
@@ -180,44 +178,76 @@ class Initial extends Phaser.Scene {
 		layer_3.add(done);
 
 		// bits
-		const bits = this.add.text(640, 100, "", {});
+		const bits = this.add.text(640, 120, "", {});
 		bits.setOrigin(0.5, 0.5);
-		bits.text = "Loading...";
-		bits.setStyle({ "align": "center", "fontSize": "80px" });
+		bits.text = "Waiting for other player...";
+		bits.setStyle({ "align": "center", "fontSize": "70px" });
 		layer_3.add(bits);
 
 		// layer_4
 		const layer_4 = this.add.layer();
 
 		// character_rambow_1
-		const character_rambow_1 = this.add.image(320, 250, "character_rambow");
+		const character_rambow_1 = this.add.image(320, 250, "empty");
 		character_rambow_1.scaleX = 3;
 		character_rambow_1.scaleY = 3;
 		layer_4.add(character_rambow_1);
 
 		// character_decibelle_1
-		const character_decibelle_1 = this.add.image(800, 250, "character_decibelle");
+		const character_decibelle_1 = this.add.image(800, 250, "empty");
 		character_decibelle_1.scaleX = 3;
 		character_decibelle_1.scaleY = 3;
 		layer_4.add(character_decibelle_1);
 
 		// character_rommy_1
-		const character_rommy_1 = this.add.image(960, 250, "character_rommy");
+		const character_rommy_1 = this.add.image(960, 250, "empty");
 		character_rommy_1.scaleX = 3;
 		character_rommy_1.scaleY = 3;
 		layer_4.add(character_rommy_1);
 
 		// character_gipio_1
-		const character_gipio_1 = this.add.image(640, 250, "character_gipio");
+		const character_gipio_1 = this.add.image(640, 250, "empty");
 		character_gipio_1.scaleX = 3;
 		character_gipio_1.scaleY = 3;
 		layer_4.add(character_gipio_1);
 
 		// character_elventito_1
-		const character_elventito_1 = this.add.image(480, 250, "character_elventito");
+		const character_elventito_1 = this.add.image(480, 250, "empty");
 		character_elventito_1.scaleX = 3;
 		character_elventito_1.scaleY = 3;
 		layer_4.add(character_elventito_1);
+
+		// rambow_sprite
+		const rambow_sprite = this.add.image(320, 250, "rambow_sprite");
+		rambow_sprite.scaleX = 3;
+		rambow_sprite.scaleY = 3;
+		layer_4.add(rambow_sprite);
+
+		// decibelle_sprite
+		const decibelle_sprite = this.add.image(800, 250, "decibelle_sprite");
+		decibelle_sprite.scaleX = 3;
+		decibelle_sprite.scaleY = 3;
+		decibelle_sprite.flipX = true;
+		layer_4.add(decibelle_sprite);
+
+		// elventito_sprite
+		const elventito_sprite = this.add.image(480, 250, "elventito_sprite");
+		elventito_sprite.scaleX = 3;
+		elventito_sprite.scaleY = 3;
+		layer_4.add(elventito_sprite);
+
+		// gipio_sprite
+		const gipio_sprite = this.add.image(640, 250, "gipio_sprite");
+		gipio_sprite.scaleX = 3;
+		gipio_sprite.scaleY = 3;
+		layer_4.add(gipio_sprite);
+
+		// rommy_sprite
+		const rommy_sprite = this.add.image(960, 250, "rommy_sprite");
+		rommy_sprite.scaleX = 3;
+		rommy_sprite.scaleY = 3;
+		rommy_sprite.flipX = true;
+		layer_4.add(rommy_sprite);
 
 		// lists
 		const buttons = [rommy_minus, rommy_plus, decibelle_minus, decibelle_plus, gipio_minus, gipio_plus, elventito_minus, elventito_plus, rambow_plus, rambow_minus];
@@ -290,10 +320,12 @@ class Initial extends Phaser.Scene {
 
 	/* START-USER-CODE */
 
+	matchState = null;
+	intervalID = null;
+
 	// Write your code here
 
 	create() {
-
 		this.editorCreate();
 
 		// Sync the game state every 2 seconds
@@ -350,15 +382,24 @@ class Initial extends Phaser.Scene {
 		})
 
 		this.done.on("pointerdown", () => {
-			console.log("click on done");
-			this.clickDone()
+			clearInterval(this.intervalID);
+			var newLevelScene = this.scene.switch("Level");
+			console.log(newLevelScene);
+			// this.updateMatchState(4);
+			// this.clickDone();
 		})
 
+		if (this.matchState == 4) {
+			this.bits.text = "Waiting for other player...";
+		}
+
 		// call function every 2 seconds (TIME_BETWEEN_SYNC milliseconds)
-		setInterval(() => {
+
+		this.intervalID = setInterval(() => {
+			this.getMatchState();
 			this.getGameInvState();
 		}, TIME_BETWEEN_SYNC)
-	};
+	}
 
 	rambowBuy(quantity) {
 		var xhttp = new XMLHttpRequest();
@@ -434,9 +475,77 @@ class Initial extends Phaser.Scene {
 		this.rommy_plus.visible = false;
 		this.rommy_minus.visible = false;
 
+		this.done.visible = false;
+
 		// buttons.forEach(text => {
 		// 	text.visible = false;
 		// });
+
+		if (this.matchState == 3) {
+			console.log("match state (done): "+ this.matchState)
+			this.updateMatchState(4)
+			this.bits.text = "Waiting for other player...";
+		} else if (this.matchState == 4) {
+			console.log("match state (done): "+ this.matchState + "OK")
+			this.updateMatchState(5)
+			this.scene.switch("Level");
+		} else {
+			console.log("unexpected match state value: " + this.matchState)
+		}
+	}
+
+	updateMatchState(stateNumber) {
+		var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = () => {
+				if (xhttp.readyState == 4) {
+					console.log(xhttp.responseText)
+
+					// Parse the JSON response
+					var data = JSON.parse(xhttp.responseText);
+					console.log(data);
+
+					// NOTE: because this is commented, the game will softlock if both players press "Done" too quickly, due to the global variable this.matchState not changing from 3 to 4 in time! (We commented this because it was causing another error in the website's console)
+					// this.matchState = data[0].match_state_id;
+					// console.log("match state (update): " + this.matchState)
+				}
+			}
+			// Send a PUT request to the server to change all info about a specific match
+			xhttp.open("PUT", "/match/updateMatchState/" + stateNumber, true);
+			xhttp.send();
+	}
+
+	getMatchState() {
+		var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = () => {
+				if (xhttp.readyState == 4) {
+					console.log(xhttp.responseText)
+
+					// Parse the JSON response
+					var data = JSON.parse(xhttp.responseText);
+					console.log(data);
+
+					this.matchState = data[0].match_state_id;
+					var player2 = data[0].match_player2_id;
+					console.log("match state (get): " + this.matchState)
+					console.log("match player 2 (get): " + player2)
+
+					// if (this.matchState == 4 && player2 == null) {
+					// 	this.bits.text = "Waiting for other player to join match...";
+					// } else if (this.matchState == 4 && player2 != null) {
+					// 	this.bits.text = "Waiting for other player to choose team...";
+					// } else if (this.matchState == 5) {
+					// 	this.scene.switch("Level");
+					// }
+
+					if (this.matchState == 5) {
+						var newLevelScene = this.scene.switch("Level");
+						console.log(newLevelScene);
+					}
+				}
+			}
+			// Send a GET request to the server to get info about this match
+			xhttp.open("GET", "/match/thisMatch", true);
+			xhttp.send();
 	}
 
 	getGameInvState() {
@@ -457,7 +566,7 @@ class Initial extends Phaser.Scene {
 					var invDecibelle = data[0].n_decibelle
 					var invRommy = data[0].n_rommy
 
-					
+
 					console.log("Bits: " + invBits)
 
 					console.log("invRambow: " + invRambow)
@@ -465,8 +574,10 @@ class Initial extends Phaser.Scene {
 					console.log("invGipio: " + invGipio)
 					console.log("invDecibelle: " + invDecibelle)
 					console.log("invRommy: " + invRommy)
-					
-					this.bits.text = "Bits: " + invBits;
+
+					if (this.matchState != 4) {
+						this.bits.text = "Bits: " + invBits;
+					}
 
 					this.rambow_inv.text = invRambow;
 					this.elventito_inv.text = invElVentito;

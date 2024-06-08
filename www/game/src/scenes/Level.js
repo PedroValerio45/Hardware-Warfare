@@ -1,4 +1,3 @@
-
 // You can write more code here
 var selectedChar = null	
 
@@ -612,9 +611,328 @@ class Level extends Phaser.Scene {
 		place_square_71.visible = false;
 		layer_4.add(place_square_71);
 
+		// layer_5
+		const layer_5 = this.add.layer();
+
+		// moveOrRange_square_71
+		const moveOrRange_square_71 = new Prefab(this, 400, 540);
+		moveOrRange_square_71.visible = false;
+		layer_5.add(moveOrRange_square_71);
+
+		// moveOrRange_square_61
+		const moveOrRange_square_61 = new Prefab(this, 400, 480);
+		moveOrRange_square_61.visible = false;
+		layer_5.add(moveOrRange_square_61);
+
+		// moveOrRange_square_51
+		const moveOrRange_square_51 = new Prefab(this, 400, 420);
+		moveOrRange_square_51.visible = false;
+		layer_5.add(moveOrRange_square_51);
+
+		// moveOrRange_square_31
+		const moveOrRange_square_31 = new Prefab(this, 400, 300);
+		moveOrRange_square_31.visible = false;
+		layer_5.add(moveOrRange_square_31);
+
+		// moveOrRange_square_21
+		const moveOrRange_square_21 = new Prefab(this, 400, 240);
+		moveOrRange_square_21.visible = false;
+		layer_5.add(moveOrRange_square_21);
+
+		// moveOrRange_square_11
+		const moveOrRange_square_11 = new Prefab(this, 400, 180);
+		moveOrRange_square_11.visible = false;
+		layer_5.add(moveOrRange_square_11);
+
+		// moveOrRange_square_41
+		const moveOrRange_square_41 = new Prefab(this, 400, 360);
+		moveOrRange_square_41.visible = false;
+		layer_5.add(moveOrRange_square_41);
+
+		// moveOrRange_square_72
+		const moveOrRange_square_72 = new Prefab(this, 460, 540);
+		moveOrRange_square_72.visible = false;
+		layer_5.add(moveOrRange_square_72);
+
+		// moveOrRange_square_42
+		const moveOrRange_square_42 = new Prefab(this, 460, 360);
+		moveOrRange_square_42.visible = false;
+		layer_5.add(moveOrRange_square_42);
+
+		// moveOrRange_square_12
+		const moveOrRange_square_12 = new Prefab(this, 460, 180);
+		moveOrRange_square_12.visible = false;
+		layer_5.add(moveOrRange_square_12);
+
+		// moveOrRange_square_22
+		const moveOrRange_square_22 = new Prefab(this, 460, 240);
+		moveOrRange_square_22.visible = false;
+		layer_5.add(moveOrRange_square_22);
+
+		// moveOrRange_square_32
+		const moveOrRange_square_32 = new Prefab(this, 460, 300);
+		moveOrRange_square_32.visible = false;
+		layer_5.add(moveOrRange_square_32);
+
+		// moveOrRange_square_52
+		const moveOrRange_square_52 = new Prefab(this, 460, 420);
+		moveOrRange_square_52.visible = false;
+		layer_5.add(moveOrRange_square_52);
+
+		// moveOrRange_square_62
+		const moveOrRange_square_62 = new Prefab(this, 460, 480);
+		moveOrRange_square_62.visible = false;
+		layer_5.add(moveOrRange_square_62);
+
+		// moveOrRange_square_73
+		const moveOrRange_square_73 = new Prefab(this, 520, 540);
+		moveOrRange_square_73.visible = false;
+		layer_5.add(moveOrRange_square_73);
+
+		// moveOrRange_square_43
+		const moveOrRange_square_43 = new Prefab(this, 520, 360);
+		moveOrRange_square_43.visible = false;
+		layer_5.add(moveOrRange_square_43);
+
+		// moveOrRange_square_13
+		const moveOrRange_square_13 = new Prefab(this, 520, 180);
+		moveOrRange_square_13.visible = false;
+		layer_5.add(moveOrRange_square_13);
+
+		// moveOrRange_square_23
+		const moveOrRange_square_23 = new Prefab(this, 520, 240);
+		moveOrRange_square_23.visible = false;
+		layer_5.add(moveOrRange_square_23);
+
+		// moveOrRange_square_33
+		const moveOrRange_square_33 = new Prefab(this, 520, 300);
+		moveOrRange_square_33.visible = false;
+		layer_5.add(moveOrRange_square_33);
+
+		// moveOrRange_square_53
+		const moveOrRange_square_53 = new Prefab(this, 520, 420);
+		moveOrRange_square_53.visible = false;
+		layer_5.add(moveOrRange_square_53);
+
+		// moveOrRange_square_63
+		const moveOrRange_square_63 = new Prefab(this, 520, 480);
+		moveOrRange_square_63.visible = false;
+		layer_5.add(moveOrRange_square_63);
+
+		// moveOrRange_square_76
+		const moveOrRange_square_76 = new Prefab(this, 700, 540);
+		moveOrRange_square_76.visible = false;
+		layer_5.add(moveOrRange_square_76);
+
+		// moveOrRange_square_46
+		const moveOrRange_square_46 = new Prefab(this, 700, 360);
+		moveOrRange_square_46.visible = false;
+		layer_5.add(moveOrRange_square_46);
+
+		// moveOrRange_square_16
+		const moveOrRange_square_16 = new Prefab(this, 700, 180);
+		moveOrRange_square_16.visible = false;
+		layer_5.add(moveOrRange_square_16);
+
+		// moveOrRange_square_26
+		const moveOrRange_square_26 = new Prefab(this, 700, 240);
+		moveOrRange_square_26.visible = false;
+		layer_5.add(moveOrRange_square_26);
+
+		// moveOrRange_square_36
+		const moveOrRange_square_36 = new Prefab(this, 700, 300);
+		moveOrRange_square_36.visible = false;
+		layer_5.add(moveOrRange_square_36);
+
+		// moveOrRange_square_56
+		const moveOrRange_square_56 = new Prefab(this, 700, 420);
+		moveOrRange_square_56.visible = false;
+		layer_5.add(moveOrRange_square_56);
+
+		// moveOrRange_square_66
+		const moveOrRange_square_66 = new Prefab(this, 700, 480);
+		moveOrRange_square_66.visible = false;
+		layer_5.add(moveOrRange_square_66);
+
+		// moveOrRange_square_65
+		const moveOrRange_square_65 = new Prefab(this, 640, 480);
+		moveOrRange_square_65.visible = false;
+		layer_5.add(moveOrRange_square_65);
+
+		// moveOrRange_square_55
+		const moveOrRange_square_55 = new Prefab(this, 640, 420);
+		moveOrRange_square_55.visible = false;
+		layer_5.add(moveOrRange_square_55);
+
+		// moveOrRange_square_35
+		const moveOrRange_square_35 = new Prefab(this, 640, 300);
+		moveOrRange_square_35.visible = false;
+		layer_5.add(moveOrRange_square_35);
+
+		// moveOrRange_square_25
+		const moveOrRange_square_25 = new Prefab(this, 640, 240);
+		moveOrRange_square_25.visible = false;
+		layer_5.add(moveOrRange_square_25);
+
+		// moveOrRange_square_15
+		const moveOrRange_square_15 = new Prefab(this, 640, 180);
+		moveOrRange_square_15.visible = false;
+		layer_5.add(moveOrRange_square_15);
+
+		// moveOrRange_square_45
+		const moveOrRange_square_45 = new Prefab(this, 640, 360);
+		moveOrRange_square_45.visible = false;
+		layer_5.add(moveOrRange_square_45);
+
+		// moveOrRange_square_75
+		const moveOrRange_square_75 = new Prefab(this, 640, 540);
+		moveOrRange_square_75.visible = false;
+		layer_5.add(moveOrRange_square_75);
+
+		// moveOrRange_square_44
+		const moveOrRange_square_44 = new Prefab(this, 580, 360);
+		moveOrRange_square_44.visible = false;
+		layer_5.add(moveOrRange_square_44);
+
+		// moveOrRange_square_14
+		const moveOrRange_square_14 = new Prefab(this, 580, 180);
+		moveOrRange_square_14.visible = false;
+		layer_5.add(moveOrRange_square_14);
+
+		// moveOrRange_square_24
+		const moveOrRange_square_24 = new Prefab(this, 580, 240);
+		moveOrRange_square_24.visible = false;
+		layer_5.add(moveOrRange_square_24);
+
+		// moveOrRange_square_34
+		const moveOrRange_square_34 = new Prefab(this, 580, 300);
+		moveOrRange_square_34.visible = false;
+		layer_5.add(moveOrRange_square_34);
+
+		// moveOrRange_square_54
+		const moveOrRange_square_54 = new Prefab(this, 580, 420);
+		moveOrRange_square_54.visible = false;
+		layer_5.add(moveOrRange_square_54);
+
+		// moveOrRange_square_64
+		const moveOrRange_square_64 = new Prefab(this, 580, 480);
+		moveOrRange_square_64.visible = false;
+		layer_5.add(moveOrRange_square_64);
+
+		// moveOrRange_square_74
+		const moveOrRange_square_74 = new Prefab(this, 580, 540);
+		moveOrRange_square_74.visible = false;
+		layer_5.add(moveOrRange_square_74);
+
+		// moveOrRange_square_79
+		const moveOrRange_square_79 = new Prefab(this, 880, 540);
+		moveOrRange_square_79.visible = false;
+		layer_5.add(moveOrRange_square_79);
+
+		// moveOrRange_square_49
+		const moveOrRange_square_49 = new Prefab(this, 880, 360);
+		moveOrRange_square_49.visible = false;
+		layer_5.add(moveOrRange_square_49);
+
+		// moveOrRange_square_19
+		const moveOrRange_square_19 = new Prefab(this, 880, 180);
+		moveOrRange_square_19.visible = false;
+		layer_5.add(moveOrRange_square_19);
+
+		// moveOrRange_square_29
+		const moveOrRange_square_29 = new Prefab(this, 880, 240);
+		moveOrRange_square_29.visible = false;
+		layer_5.add(moveOrRange_square_29);
+
+		// moveOrRange_square_39
+		const moveOrRange_square_39 = new Prefab(this, 880, 300);
+		moveOrRange_square_39.visible = false;
+		layer_5.add(moveOrRange_square_39);
+
+		// moveOrRange_square_59
+		const moveOrRange_square_59 = new Prefab(this, 880, 420);
+		moveOrRange_square_59.visible = false;
+		layer_5.add(moveOrRange_square_59);
+
+		// moveOrRange_square_69
+		const moveOrRange_square_69 = new Prefab(this, 880, 480);
+		moveOrRange_square_69.visible = false;
+		layer_5.add(moveOrRange_square_69);
+
+		// moveOrRange_square_68
+		const moveOrRange_square_68 = new Prefab(this, 820, 480);
+		moveOrRange_square_68.visible = false;
+		layer_5.add(moveOrRange_square_68);
+
+		// moveOrRange_square_58
+		const moveOrRange_square_58 = new Prefab(this, 820, 420);
+		moveOrRange_square_58.visible = false;
+		layer_5.add(moveOrRange_square_58);
+
+		// moveOrRange_square_38
+		const moveOrRange_square_38 = new Prefab(this, 820, 300);
+		moveOrRange_square_38.visible = false;
+		layer_5.add(moveOrRange_square_38);
+
+		// moveOrRange_square_28
+		const moveOrRange_square_28 = new Prefab(this, 820, 240);
+		moveOrRange_square_28.visible = false;
+		layer_5.add(moveOrRange_square_28);
+
+		// moveOrRange_square_18
+		const moveOrRange_square_18 = new Prefab(this, 820, 180);
+		moveOrRange_square_18.visible = false;
+		layer_5.add(moveOrRange_square_18);
+
+		// moveOrRange_square_48
+		const moveOrRange_square_48 = new Prefab(this, 820, 360);
+		moveOrRange_square_48.visible = false;
+		layer_5.add(moveOrRange_square_48);
+
+		// moveOrRange_square_78
+		const moveOrRange_square_78 = new Prefab(this, 820, 540);
+		moveOrRange_square_78.visible = false;
+		layer_5.add(moveOrRange_square_78);
+
+		// moveOrRange_square_47
+		const moveOrRange_square_47 = new Prefab(this, 760, 360);
+		moveOrRange_square_47.visible = false;
+		layer_5.add(moveOrRange_square_47);
+
+		// moveOrRange_square_17
+		const moveOrRange_square_17 = new Prefab(this, 760, 180);
+		moveOrRange_square_17.visible = false;
+		layer_5.add(moveOrRange_square_17);
+
+		// moveOrRange_square_27
+		const moveOrRange_square_27 = new Prefab(this, 760, 240);
+		moveOrRange_square_27.visible = false;
+		layer_5.add(moveOrRange_square_27);
+
+		// moveOrRange_square_37
+		const moveOrRange_square_37 = new Prefab(this, 760, 300);
+		moveOrRange_square_37.visible = false;
+		layer_5.add(moveOrRange_square_37);
+
+		// moveOrRange_square_57
+		const moveOrRange_square_57 = new Prefab(this, 760, 420);
+		moveOrRange_square_57.visible = false;
+		layer_5.add(moveOrRange_square_57);
+
+		// moveOrRange_square_67
+		const moveOrRange_square_67 = new Prefab(this, 760, 480);
+		moveOrRange_square_67.visible = false;
+		layer_5.add(moveOrRange_square_67);
+
+		// moveOrRange_square_77
+		const moveOrRange_square_77 = new Prefab(this, 760, 540);
+		moveOrRange_square_77.visible = false;
+		layer_5.add(moveOrRange_square_77);
+
 		// lists
 		const listOfTiles = [tile45, tile65, tile72, tile73, tile74, tile79, tile78, tile67, tile63, tile64, tile69, tile68, tile62, tile61, tile71, tile75, tile76, tile77, tile66, tile15, tile22, tile23, tile24, tile29, tile28, tile17, tile13, tile14, tile19, tile18, tile12, tile11, tile21, tile25, tile26, tile27, tile16, tile32, tile38, tile39, tile34, tile33, tile37, tile36, tile35, tile31, tile52, tile58, tile59, tile54, tile53, tile57, tile56, tile55, tile51, tile42, tile48, tile44, tile43, tile47, tile46, tile41, tile49];
 		const place_squares = [place_square_31, place_square_11, place_square_51, place_square_61, place_square_71, place_square_21];
+		const moreOrRange_tiles = [moveOrRange_square_71, moveOrRange_square_77, moveOrRange_square_67, moveOrRange_square_57, moveOrRange_square_37, moveOrRange_square_27, moveOrRange_square_17, moveOrRange_square_47, moveOrRange_square_78, moveOrRange_square_48, moveOrRange_square_18, moveOrRange_square_28, moveOrRange_square_38, moveOrRange_square_58, moveOrRange_square_68, moveOrRange_square_69, moveOrRange_square_59, moveOrRange_square_39, moveOrRange_square_29, moveOrRange_square_19, moveOrRange_square_49, moveOrRange_square_79, moveOrRange_square_74, moveOrRange_square_64, moveOrRange_square_54, moveOrRange_square_34, moveOrRange_square_24, moveOrRange_square_14, moveOrRange_square_44, moveOrRange_square_75, moveOrRange_square_45, moveOrRange_square_15, moveOrRange_square_25, moveOrRange_square_35, moveOrRange_square_55, moveOrRange_square_65, moveOrRange_square_66, moveOrRange_square_56, moveOrRange_square_36, moveOrRange_square_26, moveOrRange_square_16, moveOrRange_square_46, moveOrRange_square_76, moveOrRange_square_63, moveOrRange_square_53, moveOrRange_square_33, moveOrRange_square_23, moveOrRange_square_13, moveOrRange_square_43, moveOrRange_square_73, moveOrRange_square_62, moveOrRange_square_52, moveOrRange_square_32, moveOrRange_square_22, moveOrRange_square_12, moveOrRange_square_42, moveOrRange_square_72, moveOrRange_square_41, moveOrRange_square_11, moveOrRange_square_21, moveOrRange_square_31, moveOrRange_square_51, moveOrRange_square_61];
 
 		// fadeActionScript (prefab fields)
 		fadeActionScript.fadeDirection = "FadeIn";
@@ -721,8 +1039,72 @@ class Level extends Phaser.Scene {
 		this.place_square_61 = place_square_61;
 		this.place_square_71 = place_square_71;
 		this.layer_4 = layer_4;
+		this.moveOrRange_square_71 = moveOrRange_square_71;
+		this.moveOrRange_square_61 = moveOrRange_square_61;
+		this.moveOrRange_square_51 = moveOrRange_square_51;
+		this.moveOrRange_square_31 = moveOrRange_square_31;
+		this.moveOrRange_square_21 = moveOrRange_square_21;
+		this.moveOrRange_square_11 = moveOrRange_square_11;
+		this.moveOrRange_square_41 = moveOrRange_square_41;
+		this.moveOrRange_square_72 = moveOrRange_square_72;
+		this.moveOrRange_square_42 = moveOrRange_square_42;
+		this.moveOrRange_square_12 = moveOrRange_square_12;
+		this.moveOrRange_square_22 = moveOrRange_square_22;
+		this.moveOrRange_square_32 = moveOrRange_square_32;
+		this.moveOrRange_square_52 = moveOrRange_square_52;
+		this.moveOrRange_square_62 = moveOrRange_square_62;
+		this.moveOrRange_square_73 = moveOrRange_square_73;
+		this.moveOrRange_square_43 = moveOrRange_square_43;
+		this.moveOrRange_square_13 = moveOrRange_square_13;
+		this.moveOrRange_square_23 = moveOrRange_square_23;
+		this.moveOrRange_square_33 = moveOrRange_square_33;
+		this.moveOrRange_square_53 = moveOrRange_square_53;
+		this.moveOrRange_square_63 = moveOrRange_square_63;
+		this.moveOrRange_square_76 = moveOrRange_square_76;
+		this.moveOrRange_square_46 = moveOrRange_square_46;
+		this.moveOrRange_square_16 = moveOrRange_square_16;
+		this.moveOrRange_square_26 = moveOrRange_square_26;
+		this.moveOrRange_square_36 = moveOrRange_square_36;
+		this.moveOrRange_square_56 = moveOrRange_square_56;
+		this.moveOrRange_square_66 = moveOrRange_square_66;
+		this.moveOrRange_square_65 = moveOrRange_square_65;
+		this.moveOrRange_square_55 = moveOrRange_square_55;
+		this.moveOrRange_square_35 = moveOrRange_square_35;
+		this.moveOrRange_square_25 = moveOrRange_square_25;
+		this.moveOrRange_square_15 = moveOrRange_square_15;
+		this.moveOrRange_square_45 = moveOrRange_square_45;
+		this.moveOrRange_square_75 = moveOrRange_square_75;
+		this.moveOrRange_square_44 = moveOrRange_square_44;
+		this.moveOrRange_square_14 = moveOrRange_square_14;
+		this.moveOrRange_square_24 = moveOrRange_square_24;
+		this.moveOrRange_square_34 = moveOrRange_square_34;
+		this.moveOrRange_square_54 = moveOrRange_square_54;
+		this.moveOrRange_square_64 = moveOrRange_square_64;
+		this.moveOrRange_square_74 = moveOrRange_square_74;
+		this.moveOrRange_square_79 = moveOrRange_square_79;
+		this.moveOrRange_square_49 = moveOrRange_square_49;
+		this.moveOrRange_square_19 = moveOrRange_square_19;
+		this.moveOrRange_square_29 = moveOrRange_square_29;
+		this.moveOrRange_square_39 = moveOrRange_square_39;
+		this.moveOrRange_square_59 = moveOrRange_square_59;
+		this.moveOrRange_square_69 = moveOrRange_square_69;
+		this.moveOrRange_square_68 = moveOrRange_square_68;
+		this.moveOrRange_square_58 = moveOrRange_square_58;
+		this.moveOrRange_square_38 = moveOrRange_square_38;
+		this.moveOrRange_square_28 = moveOrRange_square_28;
+		this.moveOrRange_square_18 = moveOrRange_square_18;
+		this.moveOrRange_square_48 = moveOrRange_square_48;
+		this.moveOrRange_square_78 = moveOrRange_square_78;
+		this.moveOrRange_square_47 = moveOrRange_square_47;
+		this.moveOrRange_square_17 = moveOrRange_square_17;
+		this.moveOrRange_square_27 = moveOrRange_square_27;
+		this.moveOrRange_square_37 = moveOrRange_square_37;
+		this.moveOrRange_square_57 = moveOrRange_square_57;
+		this.moveOrRange_square_67 = moveOrRange_square_67;
+		this.moveOrRange_square_77 = moveOrRange_square_77;
 		this.listOfTiles = listOfTiles;
 		this.place_squares = place_squares;
+		this.moreOrRange_tiles = moreOrRange_tiles;
 
 		this.events.emit("scene-awake");
 	}
@@ -923,16 +1305,145 @@ class Level extends Phaser.Scene {
 	place_square_71;
 	/** @type {Phaser.GameObjects.Layer} */
 	layer_4;
+	/** @type {Prefab} */
+	moveOrRange_square_71;
+	/** @type {Prefab} */
+	moveOrRange_square_61;
+	/** @type {Prefab} */
+	moveOrRange_square_51;
+	/** @type {Prefab} */
+	moveOrRange_square_31;
+	/** @type {Prefab} */
+	moveOrRange_square_21;
+	/** @type {Prefab} */
+	moveOrRange_square_11;
+	/** @type {Prefab} */
+	moveOrRange_square_41;
+	/** @type {Prefab} */
+	moveOrRange_square_72;
+	/** @type {Prefab} */
+	moveOrRange_square_42;
+	/** @type {Prefab} */
+	moveOrRange_square_12;
+	/** @type {Prefab} */
+	moveOrRange_square_22;
+	/** @type {Prefab} */
+	moveOrRange_square_32;
+	/** @type {Prefab} */
+	moveOrRange_square_52;
+	/** @type {Prefab} */
+	moveOrRange_square_62;
+	/** @type {Prefab} */
+	moveOrRange_square_73;
+	/** @type {Prefab} */
+	moveOrRange_square_43;
+	/** @type {Prefab} */
+	moveOrRange_square_13;
+	/** @type {Prefab} */
+	moveOrRange_square_23;
+	/** @type {Prefab} */
+	moveOrRange_square_33;
+	/** @type {Prefab} */
+	moveOrRange_square_53;
+	/** @type {Prefab} */
+	moveOrRange_square_63;
+	/** @type {Prefab} */
+	moveOrRange_square_76;
+	/** @type {Prefab} */
+	moveOrRange_square_46;
+	/** @type {Prefab} */
+	moveOrRange_square_16;
+	/** @type {Prefab} */
+	moveOrRange_square_26;
+	/** @type {Prefab} */
+	moveOrRange_square_36;
+	/** @type {Prefab} */
+	moveOrRange_square_56;
+	/** @type {Prefab} */
+	moveOrRange_square_66;
+	/** @type {Prefab} */
+	moveOrRange_square_65;
+	/** @type {Prefab} */
+	moveOrRange_square_55;
+	/** @type {Prefab} */
+	moveOrRange_square_35;
+	/** @type {Prefab} */
+	moveOrRange_square_25;
+	/** @type {Prefab} */
+	moveOrRange_square_15;
+	/** @type {Prefab} */
+	moveOrRange_square_45;
+	/** @type {Prefab} */
+	moveOrRange_square_75;
+	/** @type {Prefab} */
+	moveOrRange_square_44;
+	/** @type {Prefab} */
+	moveOrRange_square_14;
+	/** @type {Prefab} */
+	moveOrRange_square_24;
+	/** @type {Prefab} */
+	moveOrRange_square_34;
+	/** @type {Prefab} */
+	moveOrRange_square_54;
+	/** @type {Prefab} */
+	moveOrRange_square_64;
+	/** @type {Prefab} */
+	moveOrRange_square_74;
+	/** @type {Prefab} */
+	moveOrRange_square_79;
+	/** @type {Prefab} */
+	moveOrRange_square_49;
+	/** @type {Prefab} */
+	moveOrRange_square_19;
+	/** @type {Prefab} */
+	moveOrRange_square_29;
+	/** @type {Prefab} */
+	moveOrRange_square_39;
+	/** @type {Prefab} */
+	moveOrRange_square_59;
+	/** @type {Prefab} */
+	moveOrRange_square_69;
+	/** @type {Prefab} */
+	moveOrRange_square_68;
+	/** @type {Prefab} */
+	moveOrRange_square_58;
+	/** @type {Prefab} */
+	moveOrRange_square_38;
+	/** @type {Prefab} */
+	moveOrRange_square_28;
+	/** @type {Prefab} */
+	moveOrRange_square_18;
+	/** @type {Prefab} */
+	moveOrRange_square_48;
+	/** @type {Prefab} */
+	moveOrRange_square_78;
+	/** @type {Prefab} */
+	moveOrRange_square_47;
+	/** @type {Prefab} */
+	moveOrRange_square_17;
+	/** @type {Prefab} */
+	moveOrRange_square_27;
+	/** @type {Prefab} */
+	moveOrRange_square_37;
+	/** @type {Prefab} */
+	moveOrRange_square_57;
+	/** @type {Prefab} */
+	moveOrRange_square_67;
+	/** @type {Prefab} */
+	moveOrRange_square_77;
 	/** @type {Phaser.GameObjects.Image[]} */
 	listOfTiles;
 	/** @type {Prefab[]} */
 	place_squares;
+	/** @type {Prefab[]} */
+	moreOrRange_tiles;
 
 	/* START-USER-CODE */
 
 	// Write more your code here
 
 	create() {
+
 		// This generates a map with 7x9 tiles.
 		// this.generateMap(7,9);
 
@@ -1019,8 +1530,10 @@ class Level extends Phaser.Scene {
 			}
 
 			selectedChar = null;
+			});
 		});
-	});
+
+		this.updateMatchState(5);
 
 		// call function every 2 seconds (TIME_BETWEEN_SYNC milliseconds)
 		setInterval(() => {
@@ -1045,6 +1558,22 @@ class Level extends Phaser.Scene {
 			}
 			selectedChar = charID
 		}
+	}
+
+	updateMatchState(stateNumber) {
+		var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = () => {
+				if (xhttp.readyState == 4) {
+					console.log(xhttp.responseText)
+
+					// Parse the JSON response
+					var data = JSON.parse(xhttp.responseText);
+					console.log(data);
+				}
+			}
+			// Send a PUT request to the server to change all info about a specific match
+			xhttp.open("PUT", "/match/updateMatchState/" + stateNumber, true);
+			xhttp.send();
 	}
 
 	getGamePlayerState() {

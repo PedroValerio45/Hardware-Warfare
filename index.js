@@ -43,18 +43,10 @@ app.use('/store', store) // Same but with /store
 app.post('/register', (req, res) => {
     var username = req.body.username;
     var password = req.body.password;
-    var password2 = req.body.password2;
 
-    if (!username || !password || !password2){
+    if (!username){
         res.status(400).send({
-            "error": "Missing username, password or confirm password! 💩"
-        });
-        return;
-    }
-
-    if (password != password2){
-        res.status(400).send({
-            "error": "Passwords do not match! 💩"
+            "error": "Missing username! 💩"
         });
         return;
     }

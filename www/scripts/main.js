@@ -4,6 +4,8 @@ function tryLogin() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
+    var encryptedPassword = encryptPassword(password);
+
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = () => {
         if (xhttp.readyState == 4) {
@@ -26,10 +28,10 @@ function tryLogin() {
         }
     };
 
-    // Send the username and password to the server
+    // Send the username and encrypted password to the server
     var data = {
         "username": username,
-        "password": password
+        "password": encryptedPassword
     }
 
     // Send a POST request to the server (we are sending as post because we are sending a body with the data to the server)
@@ -38,12 +40,25 @@ function tryLogin() {
     xhttp.send(JSON.stringify(data));
 }
 
+function encryptPassword(password) {
+    const hashedPassword = CryptoJS.SHA256(password).toString();
+    return hashedPassword;
+}
+
 function register() {
     var message = document.getElementById("message");
     message.innerHTML = "";
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
     var password2 = document.getElementById("password2").value;
+
+    
+    if(password != password2){
+        message.innerHTML += "<br> Sorry, but passwords don't match";
+        return;
+    }
+
+    var encryptedPassword = encryptPassword(password);
 
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = () => {
@@ -67,11 +82,10 @@ function register() {
         }
     };
 
-    // Send the username, password and confirmation password to the server
+    // Send the username, encrypted password to the server
     var data = {
         "username": username,
-        "password": password,
-        "password2": password2
+        "password": encryptedPassword
     }
 
     // Send a POST request to the server

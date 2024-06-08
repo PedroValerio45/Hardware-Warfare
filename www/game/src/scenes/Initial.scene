@@ -60,17 +60,16 @@
             "label": "layer_1",
             "list": [
                 {
-                    "type": "Rectangle",
-                    "id": "992d13d9-04e2-4a69-b664-0d011af2c63c",
-                    "label": "rectangle",
+                    "type": "Image",
+                    "id": "927db7a9-e5df-4a0c-a448-4ae3b353a97b",
+                    "label": "square_done",
+                    "texture": {
+                        "key": "empty"
+                    },
                     "x": 640,
-                    "y": 632,
-                    "scaleX": 1.75,
-                    "scaleY": 0.75,
-                    "isFilled": true,
-                    "fillColor": "#828282",
-                    "width": 128,
-                    "height": 128
+                    "y": 630,
+                    "scaleX": 5,
+                    "scaleY": 2
                 }
             ]
         },
@@ -328,6 +327,7 @@
                     "type": "Text",
                     "id": "e175bb2b-6dc4-48c2-9664-d1c81d92efcf",
                     "label": "done",
+                    "useGameObjectName": true,
                     "scope": "CLASS",
                     "hitArea.shape": "RECTANGLE",
                     "hitArea.width": 193,
@@ -346,12 +346,12 @@
                     "label": "bits",
                     "scope": "CLASS",
                     "x": 640,
-                    "y": 100,
+                    "y": 120,
                     "originX": 0.5,
                     "originY": 0.5,
-                    "text": "Loading...",
+                    "text": "Waiting for other player...",
                     "align": "center",
-                    "fontSize": "80px"
+                    "fontSize": "70px"
                 }
             ]
         },
@@ -365,7 +365,7 @@
                     "id": "3608c87e-0e3a-42cc-b772-59a753db8090",
                     "label": "character_rambow_1",
                     "texture": {
-                        "key": "character_rambow"
+                        "key": "empty"
                     },
                     "x": 320,
                     "y": 250,
@@ -377,7 +377,7 @@
                     "id": "6b421161-b5c0-476b-9d1f-027d1e8aced8",
                     "label": "character_decibelle_1",
                     "texture": {
-                        "key": "character_decibelle"
+                        "key": "empty"
                     },
                     "x": 800,
                     "y": 250,
@@ -389,7 +389,7 @@
                     "id": "6c98f8e1-3092-46f9-ba67-a642f8fe3e0d",
                     "label": "character_rommy_1",
                     "texture": {
-                        "key": "character_rommy"
+                        "key": "empty"
                     },
                     "x": 960,
                     "y": 250,
@@ -401,7 +401,7 @@
                     "id": "8839689c-48d0-480c-913c-0c5048660d91",
                     "label": "character_gipio_1",
                     "texture": {
-                        "key": "character_gipio"
+                        "key": "empty"
                     },
                     "x": 640,
                     "y": 250,
@@ -413,12 +413,74 @@
                     "id": "4dd49d8a-ee95-4923-be5c-dcd99d665a29",
                     "label": "character_elventito_1",
                     "texture": {
-                        "key": "character_elventito"
+                        "key": "empty"
                     },
                     "x": 480,
                     "y": 250,
                     "scaleX": 3,
                     "scaleY": 3
+                },
+                {
+                    "type": "Image",
+                    "id": "70d512b4-2080-48df-b0ce-6e2faf18a025",
+                    "label": "rambow_sprite",
+                    "texture": {
+                        "key": "rambow_sprite"
+                    },
+                    "x": 320,
+                    "y": 250,
+                    "scaleX": 3,
+                    "scaleY": 3
+                },
+                {
+                    "type": "Image",
+                    "id": "04316031-078c-4f94-9f55-6d491299d8c3",
+                    "label": "decibelle_sprite",
+                    "texture": {
+                        "key": "decibelle_sprite"
+                    },
+                    "x": 800,
+                    "y": 250,
+                    "scaleX": 3,
+                    "scaleY": 3,
+                    "flipX": true
+                },
+                {
+                    "type": "Image",
+                    "id": "903278dc-7172-4b13-89a7-a03f885e5a0b",
+                    "label": "elventito_sprite",
+                    "texture": {
+                        "key": "elventito_sprite"
+                    },
+                    "x": 480,
+                    "y": 250,
+                    "scaleX": 3,
+                    "scaleY": 3
+                },
+                {
+                    "type": "Image",
+                    "id": "f0d23607-518d-4eea-9240-167b59c86e78",
+                    "label": "gipio_sprite",
+                    "texture": {
+                        "key": "gipio_sprite"
+                    },
+                    "x": 640,
+                    "y": 250,
+                    "scaleX": 3,
+                    "scaleY": 3
+                },
+                {
+                    "type": "Image",
+                    "id": "46d5a4db-86d5-476c-840c-a6b83d60143a",
+                    "label": "rommy_sprite",
+                    "texture": {
+                        "key": "rommy_sprite"
+                    },
+                    "x": 960,
+                    "y": 250,
+                    "scaleX": 3,
+                    "scaleY": 3,
+                    "flipX": true
                 }
             ]
         }

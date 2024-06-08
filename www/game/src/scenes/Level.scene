@@ -1446,6 +1446,895 @@
                     "visible": false
                 }
             ]
+        },
+        {
+            "type": "Layer",
+            "id": "00f7f4b9-7d4f-4325-acf4-cc1a4c17d6b1",
+            "label": "layer_5",
+            "list": [
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "8d19eae9-220b-44c1-8ff3-acd7e09a37df",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_71",
+                    "scope": "CLASS",
+                    "x": 400,
+                    "y": 540,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "80cf31b9-8f32-48f5-b3b1-f2cd72facd38",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_61",
+                    "scope": "CLASS",
+                    "x": 400,
+                    "y": 480,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "0cca46fd-f555-4780-a654-7048608ec642",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_51",
+                    "scope": "CLASS",
+                    "x": 400,
+                    "y": 420,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "da4222ad-8804-4eb1-a1d8-a4b27bd18c6d",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_31",
+                    "scope": "CLASS",
+                    "x": 400,
+                    "y": 300,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "5d8e696c-42f7-4041-9ba8-d8e547abe6d9",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_21",
+                    "scope": "CLASS",
+                    "x": 400,
+                    "y": 240,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "6a4bec92-11f0-4581-9f52-5c424a801545",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_11",
+                    "scope": "CLASS",
+                    "x": 400,
+                    "y": 180,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "1cc14dcb-ba66-4176-8961-825fb7a61826",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_41",
+                    "scope": "CLASS",
+                    "x": 400,
+                    "y": 360,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "60345a35-0919-4308-ab36-c837ec34db47",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_72",
+                    "scope": "CLASS",
+                    "x": 460,
+                    "y": 540,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "2b53fe81-9a2f-4be7-8cd8-4c117108ad82",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_42",
+                    "scope": "CLASS",
+                    "x": 460,
+                    "y": 360,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "effffdbf-9727-4119-ae1a-baeca971ccb3",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_12",
+                    "scope": "CLASS",
+                    "x": 460,
+                    "y": 180,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "a1f55582-96b2-487b-a9bd-cf403fadc63c",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_22",
+                    "scope": "CLASS",
+                    "x": 460,
+                    "y": 240,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "0f0a72c5-df86-4e70-ad75-c5cad99b5fd4",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_32",
+                    "scope": "CLASS",
+                    "x": 460,
+                    "y": 300,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "4c279630-67cf-4771-9e6c-e90f7f5169b2",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_52",
+                    "scope": "CLASS",
+                    "x": 460,
+                    "y": 420,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "ed226811-f83e-4052-9d1f-bf4e6b7e21d3",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_62",
+                    "scope": "CLASS",
+                    "x": 460,
+                    "y": 480,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "8d2f58f6-75f9-4436-8681-7838935e9585",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_73",
+                    "scope": "CLASS",
+                    "x": 520,
+                    "y": 540,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "f53659d0-7c34-40e9-8f0f-901862c1acf8",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_43",
+                    "scope": "CLASS",
+                    "x": 520,
+                    "y": 360,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "a8410d23-1c85-4263-b79a-03d594b48e58",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_13",
+                    "scope": "CLASS",
+                    "x": 520,
+                    "y": 180,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "5581ee7c-f04f-4b4d-8a91-e159c89e01e1",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_23",
+                    "scope": "CLASS",
+                    "x": 520,
+                    "y": 240,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "1b814d76-6694-4971-8a2e-407fb6db3daa",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_33",
+                    "scope": "CLASS",
+                    "x": 520,
+                    "y": 300,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "52a0bae4-128e-4647-937d-0bfdb5792cc2",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_53",
+                    "scope": "CLASS",
+                    "x": 520,
+                    "y": 420,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "bd8a447e-b172-43d1-bc5b-f77a18d74600",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_63",
+                    "scope": "CLASS",
+                    "x": 520,
+                    "y": 480,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "2f9698b0-a446-406e-8bfe-e06ead97ec39",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_76",
+                    "scope": "CLASS",
+                    "x": 700,
+                    "y": 540,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "1c69f211-5bec-4fcd-bd69-5499587cb0b8",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_46",
+                    "scope": "CLASS",
+                    "x": 700,
+                    "y": 360,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "0ace711a-356d-409e-9537-56354954d43b",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_16",
+                    "scope": "CLASS",
+                    "x": 700,
+                    "y": 180,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "0a2db685-eed5-4fab-8a5d-ea63e22885ec",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_26",
+                    "scope": "CLASS",
+                    "x": 700,
+                    "y": 240,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "29fe99c4-3be8-4477-b081-46876315de5c",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_36",
+                    "scope": "CLASS",
+                    "x": 700,
+                    "y": 300,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "f3de255f-2983-407e-9c7a-9f021ab7cea0",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_56",
+                    "scope": "CLASS",
+                    "x": 700,
+                    "y": 420,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "cbb6a9c1-a849-457e-8a7f-31b6a655c255",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_66",
+                    "scope": "CLASS",
+                    "x": 700,
+                    "y": 480,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "dc33e210-4791-4458-883c-47941c91010d",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_65",
+                    "scope": "CLASS",
+                    "x": 640,
+                    "y": 480,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "ad930abb-73fe-4218-b872-de0dd7e60cd8",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_55",
+                    "scope": "CLASS",
+                    "x": 640,
+                    "y": 420,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "3d25e2cc-7fb8-461a-9538-5f2b5ee2d820",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_35",
+                    "scope": "CLASS",
+                    "x": 640,
+                    "y": 300,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "6b1aeff3-4a14-4769-8811-795c18532e81",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_25",
+                    "scope": "CLASS",
+                    "x": 640,
+                    "y": 240,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "ab19c6b3-97cf-4e98-a4be-25c6fd6d270f",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_15",
+                    "scope": "CLASS",
+                    "x": 640,
+                    "y": 180,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "8420e1d7-1593-4962-aeee-7880af21fb13",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_45",
+                    "scope": "CLASS",
+                    "x": 640,
+                    "y": 360,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "a554efc0-a5fa-45af-88e4-60757a570777",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_75",
+                    "scope": "CLASS",
+                    "x": 640,
+                    "y": 540,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "d1da4acf-d02e-4684-a9ca-728ec669777f",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_44",
+                    "scope": "CLASS",
+                    "x": 580,
+                    "y": 360,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "a8c918b1-64ba-4a59-808e-c558ab8e90ae",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_14",
+                    "scope": "CLASS",
+                    "x": 580,
+                    "y": 180,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "3dc6ad02-8d70-4337-a659-04083f9d7ddd",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_24",
+                    "scope": "CLASS",
+                    "x": 580,
+                    "y": 240,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "0b1142ae-ef5d-45a6-b61e-bf2c408921d0",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_34",
+                    "scope": "CLASS",
+                    "x": 580,
+                    "y": 300,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "9b0b7d6f-ef2c-49e4-a2e7-c52f838357dd",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_54",
+                    "scope": "CLASS",
+                    "x": 580,
+                    "y": 420,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "28b5943d-a1cf-428a-846e-8c2d44fe6dd9",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_64",
+                    "scope": "CLASS",
+                    "x": 580,
+                    "y": 480,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "22d4e2e8-8f32-4706-9a08-9fe7af6a586e",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_74",
+                    "scope": "CLASS",
+                    "x": 580,
+                    "y": 540,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "278acd04-993c-4dae-a869-10f80a918644",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_79",
+                    "scope": "CLASS",
+                    "x": 880,
+                    "y": 540,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "dbfda5de-0e16-4bb1-a7e5-f4ac43c14fe8",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_49",
+                    "scope": "CLASS",
+                    "x": 880,
+                    "y": 360,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "fe992252-6fdb-43bf-bf09-f2b1c5bbbec0",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_19",
+                    "scope": "CLASS",
+                    "x": 880,
+                    "y": 180,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "4a83a5a1-a659-4300-ad30-9d4e7aae1bc3",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_29",
+                    "scope": "CLASS",
+                    "x": 880,
+                    "y": 240,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "b80ef8e7-79a6-4051-850d-19550388ba2e",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_39",
+                    "scope": "CLASS",
+                    "x": 880,
+                    "y": 300,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "ee5e8e5e-ed97-495b-8461-d845062cd346",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_59",
+                    "scope": "CLASS",
+                    "x": 880,
+                    "y": 420,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "2da23cec-85d6-41d7-afa5-903423c118ba",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_69",
+                    "scope": "CLASS",
+                    "x": 880,
+                    "y": 480,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "9d9fb858-07d5-4e57-86f8-e6b0aba47d66",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_68",
+                    "scope": "CLASS",
+                    "x": 820,
+                    "y": 480,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "f4c37dc5-1d53-4d9c-a107-acc9f00e2582",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_58",
+                    "scope": "CLASS",
+                    "x": 820,
+                    "y": 420,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "7ae579c1-6384-4f44-9810-42667be580e1",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_38",
+                    "scope": "CLASS",
+                    "x": 820,
+                    "y": 300,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "4befa404-cbe9-46d0-9ae7-49dd1bd51dab",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_28",
+                    "scope": "CLASS",
+                    "x": 820,
+                    "y": 240,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "5ba63df1-3c51-40dc-9704-19a40326ed66",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_18",
+                    "scope": "CLASS",
+                    "x": 820,
+                    "y": 180,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "4cae35e9-2a0a-4d19-bfcf-bcdcc72e2fdf",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_48",
+                    "scope": "CLASS",
+                    "x": 820,
+                    "y": 360,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "110f0c42-81f3-4176-9311-78424c39ae97",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_78",
+                    "scope": "CLASS",
+                    "x": 820,
+                    "y": 540,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "20983314-d9bb-406c-a40d-c2544becbb91",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_47",
+                    "scope": "CLASS",
+                    "x": 760,
+                    "y": 360,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "f4e4597c-aa3e-45b3-a297-03b45a165107",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_17",
+                    "scope": "CLASS",
+                    "x": 760,
+                    "y": 180,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "d5ef4867-8ad4-4d03-b44a-157b02e43440",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_27",
+                    "scope": "CLASS",
+                    "x": 760,
+                    "y": 240,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "0fc05404-8a19-47f1-894f-00dc3fb17e00",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_37",
+                    "scope": "CLASS",
+                    "x": 760,
+                    "y": 300,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "349b0e8e-c8d0-4387-b891-c35f8475ba71",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_57",
+                    "scope": "CLASS",
+                    "x": 760,
+                    "y": 420,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "2096037f-00cd-4039-8532-e58da8ec2428",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_67",
+                    "scope": "CLASS",
+                    "x": 760,
+                    "y": 480,
+                    "visible": false
+                },
+                {
+                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
+                    "id": "760feb56-0b0e-4f97-a038-6c12a3d78349",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "moveOrRange_square_77",
+                    "scope": "CLASS",
+                    "x": 760,
+                    "y": 540,
+                    "visible": false
+                }
+            ]
         }
     ],
     "plainObjects": [],
@@ -1535,6 +2424,75 @@
                 "8c23cfe5-3114-466a-8003-20bea260a967",
                 "3f742f4f-2a08-48c1-8909-1229f1bd7555",
                 "392a2ef0-b08f-4faf-b66f-a8d8691ffbeb"
+            ]
+        },
+        {
+            "id": "f3fdae23-e831-41f1-96c6-1e50989a6dd3",
+            "label": "moreOrRange_tiles",
+            "objectIds": [
+                "8d19eae9-220b-44c1-8ff3-acd7e09a37df",
+                "760feb56-0b0e-4f97-a038-6c12a3d78349",
+                "2096037f-00cd-4039-8532-e58da8ec2428",
+                "349b0e8e-c8d0-4387-b891-c35f8475ba71",
+                "0fc05404-8a19-47f1-894f-00dc3fb17e00",
+                "d5ef4867-8ad4-4d03-b44a-157b02e43440",
+                "f4e4597c-aa3e-45b3-a297-03b45a165107",
+                "20983314-d9bb-406c-a40d-c2544becbb91",
+                "110f0c42-81f3-4176-9311-78424c39ae97",
+                "4cae35e9-2a0a-4d19-bfcf-bcdcc72e2fdf",
+                "5ba63df1-3c51-40dc-9704-19a40326ed66",
+                "4befa404-cbe9-46d0-9ae7-49dd1bd51dab",
+                "7ae579c1-6384-4f44-9810-42667be580e1",
+                "f4c37dc5-1d53-4d9c-a107-acc9f00e2582",
+                "9d9fb858-07d5-4e57-86f8-e6b0aba47d66",
+                "2da23cec-85d6-41d7-afa5-903423c118ba",
+                "ee5e8e5e-ed97-495b-8461-d845062cd346",
+                "b80ef8e7-79a6-4051-850d-19550388ba2e",
+                "4a83a5a1-a659-4300-ad30-9d4e7aae1bc3",
+                "fe992252-6fdb-43bf-bf09-f2b1c5bbbec0",
+                "dbfda5de-0e16-4bb1-a7e5-f4ac43c14fe8",
+                "278acd04-993c-4dae-a869-10f80a918644",
+                "22d4e2e8-8f32-4706-9a08-9fe7af6a586e",
+                "28b5943d-a1cf-428a-846e-8c2d44fe6dd9",
+                "9b0b7d6f-ef2c-49e4-a2e7-c52f838357dd",
+                "0b1142ae-ef5d-45a6-b61e-bf2c408921d0",
+                "3dc6ad02-8d70-4337-a659-04083f9d7ddd",
+                "a8c918b1-64ba-4a59-808e-c558ab8e90ae",
+                "d1da4acf-d02e-4684-a9ca-728ec669777f",
+                "a554efc0-a5fa-45af-88e4-60757a570777",
+                "8420e1d7-1593-4962-aeee-7880af21fb13",
+                "ab19c6b3-97cf-4e98-a4be-25c6fd6d270f",
+                "6b1aeff3-4a14-4769-8811-795c18532e81",
+                "3d25e2cc-7fb8-461a-9538-5f2b5ee2d820",
+                "ad930abb-73fe-4218-b872-de0dd7e60cd8",
+                "dc33e210-4791-4458-883c-47941c91010d",
+                "cbb6a9c1-a849-457e-8a7f-31b6a655c255",
+                "f3de255f-2983-407e-9c7a-9f021ab7cea0",
+                "29fe99c4-3be8-4477-b081-46876315de5c",
+                "0a2db685-eed5-4fab-8a5d-ea63e22885ec",
+                "0ace711a-356d-409e-9537-56354954d43b",
+                "1c69f211-5bec-4fcd-bd69-5499587cb0b8",
+                "2f9698b0-a446-406e-8bfe-e06ead97ec39",
+                "bd8a447e-b172-43d1-bc5b-f77a18d74600",
+                "52a0bae4-128e-4647-937d-0bfdb5792cc2",
+                "1b814d76-6694-4971-8a2e-407fb6db3daa",
+                "5581ee7c-f04f-4b4d-8a91-e159c89e01e1",
+                "a8410d23-1c85-4263-b79a-03d594b48e58",
+                "f53659d0-7c34-40e9-8f0f-901862c1acf8",
+                "8d2f58f6-75f9-4436-8681-7838935e9585",
+                "ed226811-f83e-4052-9d1f-bf4e6b7e21d3",
+                "4c279630-67cf-4771-9e6c-e90f7f5169b2",
+                "0f0a72c5-df86-4e70-ad75-c5cad99b5fd4",
+                "a1f55582-96b2-487b-a9bd-cf403fadc63c",
+                "effffdbf-9727-4119-ae1a-baeca971ccb3",
+                "2b53fe81-9a2f-4be7-8cd8-4c117108ad82",
+                "60345a35-0919-4308-ab36-c837ec34db47",
+                "1cc14dcb-ba66-4176-8961-825fb7a61826",
+                "6a4bec92-11f0-4581-9f52-5c424a801545",
+                "5d8e696c-42f7-4041-9ba8-d8e547abe6d9",
+                "da4222ad-8804-4eb1-a1d8-a4b27bd18c6d",
+                "0cca46fd-f555-4780-a654-7048608ec642",
+                "80cf31b9-8f32-48f5-b3b1-f2cd72facd38"
             ]
         }
     ]

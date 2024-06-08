@@ -14,7 +14,7 @@ router.post('/createMatch', (request, response) => {
 
     // We are inserting into the table match_ the id of player1, and also setting the match state to 2 (matchmaking) and the turns to 0. match_winner and match_player2_id are currently NULL
     connection.execute('INSERT INTO match_ (match_state_id, match_player1_id, match_turn) VALUES (?,?,?)',
-        [2, playerID, 0],
+        [3, playerID, 0],
         function (err, results, fields) {
             if (err){
                 response.send(err);
@@ -199,13 +199,35 @@ router.put('/joinMatch', (request, response) =>  {
     // this.connection.execute("SELECT COUNT(match_id) FROM match_player")
 });
 
+router.put("/updateMatchState/:state", (request, response) => {
+    var matchID = request.session.matchID;
+    var state = request.params.state;
+
+    if (!matchID){
+        response.send("missing matchID, SOMEHOW");
+        return;
+    }
+
+    console.log("state: " + state)
+    connection.execute("UPDATE match_ SET match_state_id = ? WHERE match_id = ?",
+        [state, matchID],
+        function (err, results, fields) {
+            if (err) {
+                response.send(err);
+            }else{
+                console.log("match " + matchID + " state changed to " + state)
+                response.send(results);
+            }
+        }
+    )
+})
+
 // Endpoint for getting all matches
 router.get('/allMatches', (request, response) => {
     connection.execute('SELECT * FROM match_',
     [],
     function (err, results, fields) {
-        if (err)
-        {
+        if (err) {
             response.send(err);
         }else{
             response.send(results);
@@ -219,8 +241,7 @@ router.get('/thisMatch', (request, response) => {
     connection.execute('SELECT * FROM match_ WHERE match_id = ?',
     [matchID],
     function (err, results, fields) {
-        if (err)
-        {
+        if (err) {
             response.send(err);
         }else{
             response.send(results);
