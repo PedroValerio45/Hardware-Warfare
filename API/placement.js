@@ -115,50 +115,64 @@ router.put("/place", (req, res) => {
                                                                 res.send(error);
                                                                 return;
                                                             } else {
-                                                                connection.execute("SELECT cha_hp, max(mpc_board_slot) AS board_slot FROM character_, match_player_character WHERE cha_id = ? AND mpc_mp_id = ? GROUP BY cha_hp",
-                                                                    [chaID, playerID],
+                                                                connection.execute("SELECT cha_hp FROM character_ WHERE cha_id = ?",
+                                                                    [chaID],
                                                                     function (error, rows, fields){
                                                                         if (error){
                                                                             res.send(error);
                                                                             return;
                                                                         } else {
-                                                                            console.log("HP and Board Slot of the character type collected");
+                                                                            console.log("HP of the character type collected.");
                                                                             var cha_hp = rows[0].cha_hp;
-                                                                            var board_slot = rows[0].board_slot;
-                                                                            connection.execute("INSERT INTO match_player_character (mpc_match_id, mpc_mp_id, mpc_board_slot, mpc_cha_id, cha_cur_hp, mpc_tile_x, mpc_tile_y) VALUES (?, ?, ?, ?, ?, ?, ?)",
-                                                                                [matchID, playerID, board_slot+1, chaID, cha_hp, placeX, placeY],
+                                                                            connection.execute("SELECT max(mpc_board_slot) AS board_slot FROM match_player_character WHERE mpc_match_id = ? AND mpc_mp_id = ?",
+                                                                                [matchID, playerID],
                                                                                 function (error, rows, fields){
                                                                                     if (error){
                                                                                         res.send(error);
                                                                                         return;
                                                                                     } else {
-                                                                                        console.log("Character placed into board!");
-                                                                                        connection.execute("SELECT match_turn FROM match_ WHERE match_id = ?", //get match turn value
-                                                                                            [matchID],
+                                                                                        if (rows.length == 0){
+                                                                                            var board_slot = 0;
+                                                                                        } else {
+                                                                                            var board_slot = rows[0].board_slot;
+                                                                                        }
+                                                                                        connection.execute("INSERT INTO match_player_character (mpc_match_id, mpc_mp_id, mpc_board_slot, mpc_cha_id, cha_cur_hp, mpc_tile_x, mpc_tile_y) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                                                                                            [matchID, playerID, board_slot+1, chaID, cha_hp, placeX, placeY],
                                                                                             function (error, rows, fields){
                                                                                                 if (error){
                                                                                                     res.send(error);
+                                                                                                    return;
                                                                                                 } else {
-                                                                                                    console.log(rows);
-                                                                                                    var Turn = rows[0].match_turn; //store value in a variable
-                                                                                                    console.log("Turn = " + Turn);
-                                                                                                    connection.execute("UPDATE match_ SET match_turn = match_turn + 1 WHERE match_id = ?", //increase match turn by 1
+                                                                                                    console.log("Character placed into board!");
+                                                                                                    connection.execute("SELECT match_turn FROM match_ WHERE match_id = ?", //get match turn value
                                                                                                         [matchID],
                                                                                                         function (error, rows, fields){
                                                                                                             if (error){
                                                                                                                 res.send(error);
-                                                                                                                console.log(rows);
                                                                                                             } else {
-                                                                                                                res.send(rows);
+                                                                                                                console.log(rows);
+                                                                                                                var Turn = rows[0].match_turn; //store value in a variable
+                                                                                                                console.log("Turn = " + Turn);
+                                                                                                                connection.execute("UPDATE match_ SET match_turn = match_turn + 1 WHERE match_id = ?", //increase match turn by 1
+                                                                                                                    [matchID],
+                                                                                                                    function (error, rows, fields){
+                                                                                                                        if (error){
+                                                                                                                            res.send(error);
+                                                                                                                            console.log(rows);
+                                                                                                                        } else {
+                                                                                                                            res.send(rows);
+                                                                                                                        };
+                                                                                                                    }
+                                                                                                                );
                                                                                                             };
                                                                                                         }
                                                                                                     );
                                                                                                 };
                                                                                             }
                                                                                         );
-                                                                                    };
+                                                                                    }
                                                                                 }
-                                                                            );
+                                                                            )
                                                                         };
                                                                     }
                                                                 );
