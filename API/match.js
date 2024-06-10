@@ -283,11 +283,41 @@ router.get('/thisMPC', (request, response) => {
     function (err, results, fields) {
         if (err) {
             response.send(err);
-        }else{
+        } else {
             response.send(results);
-        }
+        } 
     });
 })
+
+//O PINES FEZ ISTO
+//O PINES FEZ ISTO
+//O PINES FEZ ISTO
+//O PINES FEZ ISTO
+//O PINES FEZ ISTO
+//O PINES FEZ ISTO
+//O PINES FEZ ISTO
+//O PINES FEZ ISTO
+router.get('/thisMatchAndMPC', (request, response) => {
+    var matchID = request.session.matchID;
+
+    connection.execute('SELECT * FROM match_, match_player_character WHERE mpc_match_id = ? AND mpc_match_id = match_id',
+    [matchID],
+    function (err, results, fields) {
+        if (err) {
+            response.send(err);
+        } else {
+            response.send(results);
+        } 
+    });
+})
+//O PINES FEZ ISTO
+//O PINES FEZ ISTO
+//O PINES FEZ ISTO
+//O PINES FEZ ISTO
+//O PINES FEZ ISTO
+//O PINES FEZ ISTO
+//O PINES FEZ ISTO
+//O PINES FEZ ISTO
 
 module.exports = router;
 

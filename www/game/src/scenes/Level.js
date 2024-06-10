@@ -1733,7 +1733,8 @@ class Level extends Phaser.Scene {
 			this.getGamePlayerState();
 			this.getGameInvState();
 			this.getGameTurnState();
-			this.getMPC();
+			// this.getMPC();
+			this.getMatchAndMPC();
 			this.boardCharacters();
 		}, TIME_BETWEEN_SYNC)
 	}
@@ -1940,7 +1941,30 @@ class Level extends Phaser.Scene {
 			xhttp.send();
 	}
 
-	getMPC() {
+	// getMPC() {
+	// 	var xhttp = new XMLHttpRequest();
+	// 		xhttp.onreadystatechange = () => {
+	// 			if (xhttp.readyState == 4) {
+	// 				console.log(xhttp.responseText)
+
+	// 				// Parse the JSON response
+	// 				var data = JSON.parse(xhttp.responseText);
+	// 				console.log(data);
+	// 				console.log("IM HERE!!!")
+
+	// 				// this.boardCharacters.forEach(function (c) { c.kill(); });
+
+					
+	// 			}
+	// 		}
+
+	// 		// Send a GET request to the server to all info about a specific match
+	// 		xhttp.open("GET", "/match/thisMPC", true);
+	// 		xhttp.send();
+	// }
+
+	//O PINES FEZ ISTO
+	getMatchAndMPC() {
 		var xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = () => {
 				if (xhttp.readyState == 4) {
@@ -1949,9 +1973,7 @@ class Level extends Phaser.Scene {
 					// Parse the JSON response
 					var data = JSON.parse(xhttp.responseText);
 					console.log(data);
-					console.log("IM HERE!!!")
-
-					// this.boardCharacters.forEach(function (c) { c.kill(); });
+					console.log("IM HERE!!!!!!")
 
 					this.boardCharacters.forEach(char => {
 						console.log("char: " + char);
@@ -1966,8 +1988,8 @@ class Level extends Phaser.Scene {
 						// var currentHP = data[0].cha_cur_hp
 						var charX = data[i].mpc_tile_x
 						var charY = data[i].mpc_tile_y
-
-						var teamSide = data[i].match_player1_id
+						
+						var teamLeft = data[i].match_player1_id
 						var teamOwner = data[i].mpc_mp_id
 
 						var char = {}
@@ -2022,6 +2044,11 @@ class Level extends Phaser.Scene {
 
 						if (instance) {
 							instance.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
+							if (teamLeft == teamOwner) {
+								instance.setFlipX(false)
+							} else {
+								instance.setFlipX(true)
+							}
 							this.layer_2.add(instance);
 							list = this.boardCharacters
 							list.push(instance);
@@ -2030,7 +2057,8 @@ class Level extends Phaser.Scene {
 							console.log("HELLO " + this.boardCharacters.push)
 							console.log(instance + " " + selectedChar);
 						}
-
+						
+						console.log("teamLeft " + teamLeft + "teamOwner " + teamOwner + "flipX " + char.flipX)
 						console.log("char: " + char.x + " " + char.y);
 						console.log("boardCharacters: " + this.boardCharacters.length)
 
@@ -2039,14 +2067,18 @@ class Level extends Phaser.Scene {
 						} else {
 							this.text_char_stats_hp = "HP: ---"
 						}
+
+						console.log("char: " + char.x + " " + char.y);
+						console.log("boardCharacters: " + this.boardCharacters.length)
 					}
 				}
 			}
 
 			// Send a GET request to the server to all info about a specific match
-			xhttp.open("GET", "/match/thisMPC", true);
+			xhttp.open("GET", "/match/thisMatchAndMPC", true);
 			xhttp.send();
 	}
+
 
 	getGameInvState() {
 		var xhttp = new XMLHttpRequest();
