@@ -82,6 +82,9 @@ router.put("/place/:chaID/:placeY", (req, res) => {
                     console.log(n_cha)
                     connection.execute("SELECT "+ n_cha +" AS cha_invnumber FROM inventory WHERE inv_player_id = ? AND inv_match_id = ?",
                         [playerID, matchID],
+                    console.log(n_cha)
+                    connection.execute("SELECT "+ n_cha +" AS cha_invnumber FROM inventory WHERE inv_player_id = ? AND inv_match_id = ?",
+                        [playerID, matchID],
                         function (error, rows, fields){
                             if (error){
                                 res.send(error);
@@ -200,3 +203,4 @@ router.put("/place/:chaID/:placeY", (req, res) => {
 });
 
 module.exports = router;
+
