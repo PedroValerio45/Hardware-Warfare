@@ -322,6 +322,7 @@ class Initial extends Phaser.Scene {
 
 	matchState = null;
 	intervalID = null;
+	playerReady = false;
 
 	// Write your code here
 
@@ -382,14 +383,12 @@ class Initial extends Phaser.Scene {
 		})
 
 		this.done.on("pointerdown", () => {
-			clearInterval(this.intervalID);
 			// var newLevelScene =this.scene.switch("Level");
 			// console.log(newLevelScene);
 
-			this.scene.switch("Level");
-			this.scene.shutdown("Initial");
+			// this.scene.switch("Level");
+			// this.scene.shutdown("Initial");
 
-			this.updateMatchState(4);
 			this.clickDone();
 		})
 
@@ -481,6 +480,8 @@ class Initial extends Phaser.Scene {
 
 		this.done.visible = false;
 
+		this.playerReady = true;
+
 		// buttons.forEach(text => {
 		// 	text.visible = false;
 		// });
@@ -490,19 +491,16 @@ class Initial extends Phaser.Scene {
 			this.updateMatchState(4)
 			this.bits.text = "Waiting for other player...";
 		} else if (this.matchState == 4) {
-			console.log("match state (done): "+ this.matchState + "OK")
-			// this.updateMatchState(5, () => {
-            //     this.scene.switch("Level");
-            // })
-
-			this.updateMatchState(5);
-			this.scene.switch("Level");
+			clearInterval(this.intervalID);
+			this.updateMatchState(5, () => {
+				this.scene.switch("Level");
+			});
 		} else {
 			console.log("unexpected match state value: " + this.matchState)
 		}
 	}
 
-	updateMatchState(stateNumber) {
+	updateMatchState(stateNumber, callback) {
 		var xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = () => {
 				if (xhttp.readyState == 4) {
@@ -512,8 +510,11 @@ class Initial extends Phaser.Scene {
 					var data = JSON.parse(xhttp.responseText);
 					console.log(data);
 
-					  // Adicionei esta linha que vai chamar o callback APENAS quando nós recebermos a resposta do servidor.
-    				// callback(); 
+					// Adicionei esta linha que vai chamar o callback APENAS quando nós recebermos a resposta do servidor.
+    				if (callback){
+						console.log("Running callback");
+						callback();
+					}
 
 					// NOTE: because this is commented, the game will softlock if both players press "Done" too quickly, due to the global variable this.matchState not changing from 3 to 4 in time! (We commented this because it was causing another error in the website's console)
 					// this.matchState = data[0].match_state_id;
@@ -549,6 +550,7 @@ class Initial extends Phaser.Scene {
 					// }
 
 					if (this.matchState == 5) {
+						clearInterval(this.intervalID);
 						var newLevelScene = this.scene.switch("Level");
 						console.log(newLevelScene);
 					}
@@ -585,7 +587,9 @@ class Initial extends Phaser.Scene {
 					console.log("invDecibelle: " + invDecibelle)
 					console.log("invRommy: " + invRommy)
 
-					if (this.matchState != 4) {
+					if (this.playerReady) {
+						this.bits.text = "Waiting for other player...";
+					} else {
 						this.bits.text = "Bits: " + invBits;
 					}
 

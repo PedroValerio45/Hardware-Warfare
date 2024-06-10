@@ -80,7 +80,7 @@ app.post('/register', (req, res) => {
     }
 
     function createTheAccount() {
-        connection.execute("INSERT INTO player (player_wins, player_losses, player_username, player_email, player_password) VALUES (0, 0, ?, 0, ?)",
+        connection.execute("INSERT INTO player (player_wins, player_losses, player_username, player_password) VALUES (0, 0, ?, ?)",
         [username, password],
         function (err, results, fields) {
             if (err) {

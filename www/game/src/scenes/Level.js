@@ -1,5 +1,6 @@
 // You can write more code here
-var selectedChar = null	
+var selectedChar = null
+var list = null
 
 /* START OF COMPILED CODE */
 
@@ -403,134 +404,134 @@ class Level extends Phaser.Scene {
 		const layer_2 = this.add.layer();
 
 		// inv_text_ignore
-		const inv_text_ignore = this.add.text(185, 180, "", {});
+		const inv_text_ignore = this.add.text(190, 180, "", {});
 		inv_text_ignore.setOrigin(0.5, 0.5);
-		inv_text_ignore.text = "Your Inventory";
+		inv_text_ignore.text = "Inventory";
 		inv_text_ignore.setStyle({ "align": "center", "fontSize": "30px" });
 		layer_2.add(inv_text_ignore);
 
 		// player_slot1
-		const player_slot1 = this.add.image(185, 235, "empty");
+		const player_slot1 = this.add.image(190, 235, "empty");
 		player_slot1.scaleX = 1.3;
 		player_slot1.scaleY = 1.3;
 		layer_2.add(player_slot1);
 
 		// player_slot2
-		const player_slot2 = this.add.image(185, 310, "empty");
+		const player_slot2 = this.add.image(190, 310, "empty");
 		player_slot2.scaleX = 1.3;
 		player_slot2.scaleY = 1.3;
 		layer_2.add(player_slot2);
 
 		// player_slot3
-		const player_slot3 = this.add.image(185, 385, "empty");
+		const player_slot3 = this.add.image(190, 385, "empty");
 		player_slot3.scaleX = 1.3;
 		player_slot3.scaleY = 1.3;
 		layer_2.add(player_slot3);
 
 		// player_slot5
-		const player_slot5 = this.add.image(185, 535, "empty");
+		const player_slot5 = this.add.image(190, 535, "empty");
 		player_slot5.scaleX = 1.3;
 		player_slot5.scaleY = 1.3;
 		layer_2.add(player_slot5);
 
 		// player_slot4
-		const player_slot4 = this.add.image(185, 460, "empty");
+		const player_slot4 = this.add.image(190, 460, "empty");
 		player_slot4.scaleX = 1.3;
 		player_slot4.scaleY = 1.3;
 		layer_2.add(player_slot4);
 
 		// player1
-		const player1 = this.add.text(150, 115, "", {});
+		const player1 = this.add.text(360, 600, "", {});
 		player1.setOrigin(0.5, 0.5);
-		player1.text = "Your Name";
+		player1.text = "Your Name...";
 		player1.setStyle({ "align": "center", "fontSize": "35px" });
 		layer_2.add(player1);
 
 		// player2
-		const player2 = this.add.text(1140, 115, "", {});
+		const player2 = this.add.text(920, 600, "", {});
 		player2.setOrigin(0.5, 0.5);
-		player2.text = "Waiting for P2...";
+		player2.text = "Waiting for Player 2...";
 		player2.setStyle({ "align": "center", "fontSize": "35px" });
 		layer_2.add(player2);
 
 		// rambow_sprite_inv
-		const rambow_sprite_inv = this.add.image(185, 235, "rambow_sprite");
+		const rambow_sprite_inv = this.add.image(190, 235, "rambow_sprite");
 		rambow_sprite_inv.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
 		layer_2.add(rambow_sprite_inv);
 
 		// gipio_sprite_inv
-		const gipio_sprite_inv = this.add.image(185, 384, "gipio_sprite");
+		const gipio_sprite_inv = this.add.image(190, 385, "gipio_sprite");
 		gipio_sprite_inv.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
 		layer_2.add(gipio_sprite_inv);
 
 		// decibelle_sprite_inv
-		const decibelle_sprite_inv = this.add.image(185, 460, "decibelle_sprite");
+		const decibelle_sprite_inv = this.add.image(190, 460, "decibelle_sprite");
 		decibelle_sprite_inv.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
 		layer_2.add(decibelle_sprite_inv);
 
 		// rommy_sprite_inv
-		const rommy_sprite_inv = this.add.image(185, 535, "rommy_sprite");
+		const rommy_sprite_inv = this.add.image(190, 535, "rommy_sprite");
 		rommy_sprite_inv.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
 		layer_2.add(rommy_sprite_inv);
 
 		// inv_rambow_number
-		const inv_rambow_number = this.add.text(245, 240, "", {});
+		const inv_rambow_number = this.add.text(250, 240, "", {});
 		inv_rambow_number.setOrigin(0.5, 0.5);
 		inv_rambow_number.text = "0";
 		inv_rambow_number.setStyle({ "fontSize": "30px" });
 		layer_2.add(inv_rambow_number);
 
 		// inv_elventito_number
-		const inv_elventito_number = this.add.text(245, 310, "", {});
+		const inv_elventito_number = this.add.text(250, 310, "", {});
 		inv_elventito_number.setOrigin(0.5, 0.5);
 		inv_elventito_number.text = "0";
 		inv_elventito_number.setStyle({ "fontSize": "30px" });
 		layer_2.add(inv_elventito_number);
 
 		// inv_gipio_number
-		const inv_gipio_number = this.add.text(245, 385, "", {});
+		const inv_gipio_number = this.add.text(250, 385, "", {});
 		inv_gipio_number.setOrigin(0.5, 0.5);
 		inv_gipio_number.text = "0";
 		inv_gipio_number.setStyle({ "fontSize": "30px" });
 		layer_2.add(inv_gipio_number);
 
 		// inv_decibelle_number
-		const inv_decibelle_number = this.add.text(245, 460, "", {});
+		const inv_decibelle_number = this.add.text(250, 460, "", {});
 		inv_decibelle_number.setOrigin(0.5, 0.5);
 		inv_decibelle_number.text = "0";
 		inv_decibelle_number.setStyle({ "fontSize": "30px" });
 		layer_2.add(inv_decibelle_number);
 
 		// inv_rommy_number
-		const inv_rommy_number = this.add.text(245, 535, "", {});
+		const inv_rommy_number = this.add.text(250, 535, "", {});
 		inv_rommy_number.setOrigin(0.5, 0.5);
 		inv_rommy_number.text = "0";
 		inv_rommy_number.setStyle({ "fontSize": "30px" });
 		layer_2.add(inv_rommy_number);
 
 		// player1_wins
-		const player1_wins = this.add.text(220, 610, "", {});
+		const player1_wins = this.add.text(360, 645, "", {});
 		player1_wins.setOrigin(0.5, 0.5);
-		player1_wins.text = "Your Wins:";
+		player1_wins.text = "Your Wins...";
 		player1_wins.setStyle({ "align": "center", "fontSize": "30px" });
 		layer_2.add(player1_wins);
 
 		// player1_losses
-		const player1_losses = this.add.text(220, 655, "", {});
+		const player1_losses = this.add.text(360, 690, "", {});
 		player1_losses.setOrigin(0.5, 0.5);
-		player1_losses.text = "Your Losses:";
+		player1_losses.text = "Your Losses:...";
 		player1_losses.setStyle({ "align": "center", "fontSize": "30px" });
 		layer_2.add(player1_losses);
 
 		// player2_losses
-		const player2_losses = this.add.text(1060, 655, "", {});
+		const player2_losses = this.add.text(920, 690, "", {});
 		player2_losses.setOrigin(0.5, 0.5);
 		player2_losses.text = "Opponent's Losses...";
 		player2_losses.setStyle({ "align": "center", "fontSize": "30px" });
 		layer_2.add(player2_losses);
 
 		// player2_wins
-		const player2_wins = this.add.text(1060, 610, "", {});
+		const player2_wins = this.add.text(920, 645, "", {});
 		player2_wins.setOrigin(0.5, 0.5);
 		player2_wins.text = "Opponent's Wins...";
 		player2_wins.setStyle({ "align": "center", "fontSize": "30px" });
@@ -544,7 +545,7 @@ class Level extends Phaser.Scene {
 		layer_2.add(turn);
 
 		// elventito_sprite_inv
-		const elventito_sprite_inv = this.add.image(185, 310, "elventito_sprite");
+		const elventito_sprite_inv = this.add.image(190, 310, "elventito_sprite");
 		elventito_sprite_inv.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
 		layer_2.add(elventito_sprite_inv);
 
@@ -1052,6 +1053,48 @@ class Level extends Phaser.Scene {
 		place_square_7_1.visible = false;
 		layer_5.add(place_square_7_1);
 
+		// place_square_1_2
+		const place_square_1_2 = new Prefab(this, 880, 180);
+		place_square_1_2.removeInteractive();
+		place_square_1_2.setInteractive(new Phaser.Geom.Rectangle(0, 0, 128, 128), Phaser.Geom.Rectangle.Contains);
+		place_square_1_2.visible = false;
+		layer_5.add(place_square_1_2);
+
+		// place_square_7_2
+		const place_square_7_2 = new Prefab(this, 880, 540);
+		place_square_7_2.removeInteractive();
+		place_square_7_2.setInteractive(new Phaser.Geom.Rectangle(0, 0, 128, 128), Phaser.Geom.Rectangle.Contains);
+		place_square_7_2.visible = false;
+		layer_5.add(place_square_7_2);
+
+		// place_square_6_2
+		const place_square_6_2 = new Prefab(this, 880, 480);
+		place_square_6_2.removeInteractive();
+		place_square_6_2.setInteractive(new Phaser.Geom.Rectangle(0, 0, 128, 128), Phaser.Geom.Rectangle.Contains);
+		place_square_6_2.visible = false;
+		layer_5.add(place_square_6_2);
+
+		// place_square_5_2
+		const place_square_5_2 = new Prefab(this, 880, 420);
+		place_square_5_2.removeInteractive();
+		place_square_5_2.setInteractive(new Phaser.Geom.Rectangle(0, 0, 128, 128), Phaser.Geom.Rectangle.Contains);
+		place_square_5_2.visible = false;
+		layer_5.add(place_square_5_2);
+
+		// place_square_3_2
+		const place_square_3_2 = new Prefab(this, 880, 300);
+		place_square_3_2.removeInteractive();
+		place_square_3_2.setInteractive(new Phaser.Geom.Rectangle(0, 0, 128, 128), Phaser.Geom.Rectangle.Contains);
+		place_square_3_2.visible = false;
+		layer_5.add(place_square_3_2);
+
+		// place_square_2_2
+		const place_square_2_2 = new Prefab(this, 880, 240);
+		place_square_2_2.removeInteractive();
+		place_square_2_2.setInteractive(new Phaser.Geom.Rectangle(0, 0, 128, 128), Phaser.Geom.Rectangle.Contains);
+		place_square_2_2.visible = false;
+		layer_5.add(place_square_2_2);
+
 		// lists
 		const listOfTiles = [tile45, tile65, tile72, tile73, tile74, tile79, tile78, tile67, tile63, tile64, tile69, tile68, tile62, tile61, tile71, tile75, tile76, tile77, tile66, tile15, tile22, tile23, tile24, tile29, tile28, tile17, tile13, tile14, tile19, tile18, tile12, tile11, tile21, tile25, tile26, tile27, tile16, tile32, tile38, tile39, tile34, tile33, tile37, tile36, tile35, tile31, tile52, tile58, tile59, tile54, tile53, tile57, tile56, tile55, tile51, tile42, tile48, tile44, tile43, tile47, tile46, tile41, tile49];
 		const place_squares = [place_square_3_1, place_square_1_1, place_square_5_1, place_square_6_1, place_square_7_1, place_square_2_1];
@@ -1232,6 +1275,12 @@ class Level extends Phaser.Scene {
 		this.place_square_5_1 = place_square_5_1;
 		this.place_square_6_1 = place_square_6_1;
 		this.place_square_7_1 = place_square_7_1;
+		this.place_square_1_2 = place_square_1_2;
+		this.place_square_7_2 = place_square_7_2;
+		this.place_square_6_2 = place_square_6_2;
+		this.place_square_5_2 = place_square_5_2;
+		this.place_square_3_2 = place_square_3_2;
+		this.place_square_2_2 = place_square_2_2;
 		this.layer_5 = layer_5;
 		this.listOfTiles = listOfTiles;
 		this.place_squares = place_squares;
@@ -1575,6 +1624,18 @@ class Level extends Phaser.Scene {
 	place_square_6_1;
 	/** @type {Prefab} */
 	place_square_7_1;
+	/** @type {Prefab} */
+	place_square_1_2;
+	/** @type {Prefab} */
+	place_square_7_2;
+	/** @type {Prefab} */
+	place_square_6_2;
+	/** @type {Prefab} */
+	place_square_5_2;
+	/** @type {Prefab} */
+	place_square_3_2;
+	/** @type {Prefab} */
+	place_square_2_2;
 	/** @type {Phaser.GameObjects.Layer} */
 	layer_5;
 	/** @type {Phaser.GameObjects.Image[]} */
@@ -1665,14 +1726,48 @@ class Level extends Phaser.Scene {
 			});
 		});
 
+		this.updateMatchState(5);
+
+		// call function every 2 seconds (TIME_BETWEEN_SYNC milliseconds)
+		setInterval(() => {
+			this.getGamePlayerState();
+			this.getGameInvState();
+			this.getGameTurnState();
+			this.getMPC();
+			this.boardCharacters();
+		}, TIME_BETWEEN_SYNC)
+	}
+
+	//set the placement squares visible or not
+	regginFunction(charID) {
+		console.log("reggin selectedChar: " + selectedChar)
+		var whiteSquare = this.children.list[this.children.list.length - 1];
+
+		if(selectedChar == charID){
+			for (let i = 0; i < whiteSquare.length; i++){
+				whiteSquare.list[i].visible = false;
+			}
+			selectedChar = null
+		}else{
+			for (let i = 0; i < whiteSquare.length; i++){
+				whiteSquare.list[i].visible = true;
+			}
+			selectedChar = charID
+		}
+	}
+
+	boardCharacters() {
+		console.log("mafalda :" , list)
 		this.boardCharacters.forEach((char) => {
+			// char.setInteractive();
+			console.log("ola")
 			char.on("pointerdown", () => {
-			console.log(char.name + " pressed");
+			// console.log(char.name + " pressed");
 
 			var character = this.children.list[this.children.list.length - 1]
 
 			for (let i = 0; i < character.length; i++){
-
+				console.log("not sure about this")
 			}
 
 			var charY = null
@@ -1713,51 +1808,11 @@ class Level extends Phaser.Scene {
 				charX = 9
 			}
 
-			console.log("whiteSquare.y: " + tile.y)
-			console.log("tileY: " + tileY)
+			console.log("char.x: " + char.x);
+			console.log("charY: " + charY);
+			})
 		});
-	});
-
-		this.updateMatchState(5);
-
-		// call function every 2 seconds (TIME_BETWEEN_SYNC milliseconds)
-		setInterval(() => {
-			this.getGamePlayerState();
-			this.getGameInvState();
-			this.getGameTurnState();
-			this.getMPC();
-		}, TIME_BETWEEN_SYNC)
 	}
-
-	//set the placement squares visible or not
-	regginFunction(charID) {	
-		var whiteSquare = this.children.list[this.children.list.length - 1];
-
-		if(selectedChar == charID){
-			for (let i = 0; i < whiteSquare.length; i++){
-				whiteSquare.list[i].visible = false;
-			}
-			selectedChar = null
-		}else{
-			for (let i = 0; i < whiteSquare.length; i++){
-				whiteSquare.list[i].visible = true;
-			}
-			selectedChar = charID
-		}
-	}	
-
-	// extractNumber(name) {
-	// 	//var extractedNumbers = name.match(/_(\d+)_(\d+)$/);
-	// 	var extractedNumbers = name.match("1" || "2" || "3" || "4" | "5" || "6" || "7" || "8" || "9");
-	// 	if (extractedNumbers) {
-	// 		return {
-	// 			firstNumber: parseInt(extractedNumbers[1], 10),
-	// 			secondNumber: parseInt(extractedNumbers[2], 10)
-	// 		};
-	// 	} else {
-	// 		return null;
-	// 	}
-	// }
 
 	updatePlacement(selectedChar, tileY) {
 		var xhttp = new XMLHttpRequest();
@@ -1912,6 +1967,9 @@ class Level extends Phaser.Scene {
 						var charX = data[i].mpc_tile_x
 						var charY = data[i].mpc_tile_y
 
+						var teamSide = data[i].match_player1_id
+						var teamOwner = data[i].mpc_mp_id
+
 						var char = {}
 						if (charY == 1) {
 							char.y = 180
@@ -1965,7 +2023,11 @@ class Level extends Phaser.Scene {
 						if (instance) {
 							instance.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
 							this.layer_2.add(instance);
-							this.boardCharacters.push(instance);
+							list = this.boardCharacters
+							list.push(instance);
+							console.log("lista: " , list)
+							console.log("asasasasas" + instance)
+							console.log("HELLO " + this.boardCharacters.push)
 							console.log(instance + " " + selectedChar);
 						}
 
@@ -2012,58 +2074,58 @@ class Level extends Phaser.Scene {
 
 				// NOTE: THIS DOESNT WORK RIGHT NOW!!!
 				if (selectedChar == 1) {
-					this.text_char_name = "Rambow"
-		
-					this.text_char_stats_atk = "ATK: 2"
-					this.text_char_stats_spd = "SPD: 2"
-					this.text_char_stats_range = "Range: 2"
-					this.text_char_stats_target = "Target: Single"
-		
-					this.text_char_desc = "ram desc, add later"
+					this.text_char_name.text = "Rambow"
+
+					this.text_char_stats_atk.text = "ATK: 2"
+					this.text_char_stats_spd.text = "SPD: 2"
+					this.text_char_stats_range.text = "Range: 2"
+					this.text_char_stats_target.text = "Target: Single"
+
+					this.text_char_desc.text = "ram desc, add later"
 				} else if (selectedChar == 2) {
-					this.text_char_name = "El Ventito"
-		
-					this.text_char_stats_atk = "ATK: 0 (Push enemies back!)"
-					this.text_char_stats_spd = "SPD: 1"
-					this.text_char_stats_range = "Range: 1"
-					this.text_char_stats_target = "Target: Single"
-		
-					this.text_char_desc = "fan desc, add later"
+					this.text_char_name.text = "El Ventito"
+
+					this.text_char_stats_atk.text = "ATK: 0 (Push enemies back!)"
+					this.text_char_stats_spd.text = "SPD: 1"
+					this.text_char_stats_range.text = "Range: 1"
+					this.text_char_stats_target.text = "Target: Single"
+
+					this.text_char_desc.text = "fan desc, add later"
 				} else if (selectedChar == 2) {
-					this.text_char_name = "Gipio"
-		
-					this.text_char_stats_atk = "ATK: 1"
-					this.text_char_stats_spd = "SPD: 2"
-					this.text_char_stats_range = "Range: 3"
-					this.text_char_stats_target = "Target: Single"
-		
-					this.text_char_desc = "gpu desc, add later"
+					this.text_char_name.text = "Gipio"
+
+					this.text_char_stats_atk.text = "ATK: 1"
+					this.text_char_stats_spd.text = "SPD: 2"
+					this.text_char_stats_range.text = "Range: 3"
+					this.text_char_stats_target.text = "Target: Single"
+
+					this.text_char_desc.text = "gpu desc, add later"
 				} else if (selectedChar == 2) {
-					this.text_char_name = "Decibelle"
-		
+					this.text_char_name.text = "Decibelle"
+
 					this.text_char_stats_atk = "ATK: 1"
 					this.text_char_stats_spd = "SPD: 1"
 					this.text_char_stats_range = "Range: 2"
 					this.text_char_stats_target = "Target: Area"
-		
+
 					this.text_char_desc = "sound card desc, add later"
 				} else if (selectedChar == 2) {
 					this.text_char_name = "Rommy"
-		
+
 					this.text_char_stats_atk = "ATK: 2"
 					this.text_char_stats_spd = "SPD: 4"
 					this.text_char_stats_range = "Range: 1"
 					this.text_char_stats_target = "Target: Single"
-		
+
 					this.text_char_desc = "rom desc, add later"
 				} else {
 					this.text_char_name = "-----"
-		
+
 					this.text_char_stats_atk = "ATK: ---"
 					this.text_char_stats_spd = "SPD: ---"
 					this.text_char_stats_range = "Range: ---"
 					this.text_char_stats_target = "Target: ---"
-		
+
 					this.text_char_desc = "-----"
 				}
 			}
@@ -2073,21 +2135,6 @@ class Level extends Phaser.Scene {
 		xhttp.open("GET", "/store/checkInv", true);
 		xhttp.send();
 	}
-
-	// 💩 Disclaimer: If you found this hard to understand/handle, add the tiles manually in the editor and use them!
-	// Function that receives x and y amount of tiles and generates a map.
-	// generateMap(xAmount, yAmount){
-	// 	// 7 (horizontal) x 9 (vertical) tiles
-	// 	for (var x = 0; x < xAmount; x++){
-	// 		for (var y = 0; y < yAmount; y++){
-	// 			const tile = this.add.image(100 + x * 50, 100 + y * 50, "empty");
-
-	// 			// We store the tile in an array for later use.
-	// 			this.tiles[x + y * xAmount] = tile;
-	// 		}
-	// 	}
-	// }
-
 	/* END-USER-CODE */
 }
 
