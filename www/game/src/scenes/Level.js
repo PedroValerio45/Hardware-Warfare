@@ -402,39 +402,39 @@ class Level extends Phaser.Scene {
 		// layer_2
 		const layer_2 = this.add.layer();
 
-		// inv
-		const inv = this.add.text(150, 185, "", {});
-		inv.setOrigin(0.5, 0.5);
-		inv.text = "INV";
-		inv.setStyle({ "align": "center", "fontFamily": "Arial", "fontSize": "30px" });
-		layer_2.add(inv);
+		// inv_text_ignore
+		const inv_text_ignore = this.add.text(185, 180, "", {});
+		inv_text_ignore.setOrigin(0.5, 0.5);
+		inv_text_ignore.text = "Your Inventory";
+		inv_text_ignore.setStyle({ "align": "center", "fontSize": "30px" });
+		layer_2.add(inv_text_ignore);
 
 		// player_slot1
-		const player_slot1 = this.add.image(150, 235, "empty");
+		const player_slot1 = this.add.image(185, 235, "empty");
 		player_slot1.scaleX = 1.3;
 		player_slot1.scaleY = 1.3;
 		layer_2.add(player_slot1);
 
 		// player_slot2
-		const player_slot2 = this.add.image(150, 310, "empty");
+		const player_slot2 = this.add.image(185, 310, "empty");
 		player_slot2.scaleX = 1.3;
 		player_slot2.scaleY = 1.3;
 		layer_2.add(player_slot2);
 
 		// player_slot3
-		const player_slot3 = this.add.image(150, 385, "empty");
+		const player_slot3 = this.add.image(185, 385, "empty");
 		player_slot3.scaleX = 1.3;
 		player_slot3.scaleY = 1.3;
 		layer_2.add(player_slot3);
 
 		// player_slot5
-		const player_slot5 = this.add.image(150, 535, "empty");
+		const player_slot5 = this.add.image(185, 535, "empty");
 		player_slot5.scaleX = 1.3;
 		player_slot5.scaleY = 1.3;
 		layer_2.add(player_slot5);
 
 		// player_slot4
-		const player_slot4 = this.add.image(150, 460, "empty");
+		const player_slot4 = this.add.image(185, 460, "empty");
 		player_slot4.scaleX = 1.3;
 		player_slot4.scaleY = 1.3;
 		layer_2.add(player_slot4);
@@ -442,109 +442,109 @@ class Level extends Phaser.Scene {
 		// player1
 		const player1 = this.add.text(150, 115, "", {});
 		player1.setOrigin(0.5, 0.5);
-		player1.text = "%Player1Name%";
-		player1.setStyle({ "align": "center", "fontFamily": "Arial", "fontSize": "35px" });
+		player1.text = "Your Name";
+		player1.setStyle({ "align": "center", "fontSize": "35px" });
 		layer_2.add(player1);
 
 		// player2
 		const player2 = this.add.text(1140, 115, "", {});
 		player2.setOrigin(0.5, 0.5);
 		player2.text = "Waiting for P2...";
-		player2.setStyle({ "align": "center", "fontFamily": "Arial", "fontSize": "35px" });
+		player2.setStyle({ "align": "center", "fontSize": "35px" });
 		layer_2.add(player2);
 
 		// rambow_sprite_inv
-		const rambow_sprite_inv = this.add.image(150, 235, "rambow_sprite");
+		const rambow_sprite_inv = this.add.image(185, 235, "rambow_sprite");
 		rambow_sprite_inv.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
 		layer_2.add(rambow_sprite_inv);
 
 		// gipio_sprite_inv
-		const gipio_sprite_inv = this.add.image(150, 384, "gipio_sprite");
+		const gipio_sprite_inv = this.add.image(185, 384, "gipio_sprite");
 		gipio_sprite_inv.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
 		layer_2.add(gipio_sprite_inv);
 
 		// decibelle_sprite_inv
-		const decibelle_sprite_inv = this.add.image(150, 460, "decibelle_sprite");
+		const decibelle_sprite_inv = this.add.image(185, 460, "decibelle_sprite");
 		decibelle_sprite_inv.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
 		layer_2.add(decibelle_sprite_inv);
 
 		// rommy_sprite_inv
-		const rommy_sprite_inv = this.add.image(150, 535, "rommy_sprite");
+		const rommy_sprite_inv = this.add.image(185, 535, "rommy_sprite");
 		rommy_sprite_inv.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
 		layer_2.add(rommy_sprite_inv);
 
 		// inv_rambow_number
-		const inv_rambow_number = this.add.text(210, 240, "", {});
+		const inv_rambow_number = this.add.text(245, 240, "", {});
 		inv_rambow_number.setOrigin(0.5, 0.5);
 		inv_rambow_number.text = "0";
-		inv_rambow_number.setStyle({ "fontFamily": "Arial", "fontSize": "30px" });
+		inv_rambow_number.setStyle({ "fontSize": "30px" });
 		layer_2.add(inv_rambow_number);
 
 		// inv_elventito_number
-		const inv_elventito_number = this.add.text(210, 310, "", {});
+		const inv_elventito_number = this.add.text(245, 310, "", {});
 		inv_elventito_number.setOrigin(0.5, 0.5);
 		inv_elventito_number.text = "0";
-		inv_elventito_number.setStyle({ "fontFamily": "Arial", "fontSize": "30px" });
+		inv_elventito_number.setStyle({ "fontSize": "30px" });
 		layer_2.add(inv_elventito_number);
 
 		// inv_gipio_number
-		const inv_gipio_number = this.add.text(210, 385, "", {});
+		const inv_gipio_number = this.add.text(245, 385, "", {});
 		inv_gipio_number.setOrigin(0.5, 0.5);
 		inv_gipio_number.text = "0";
-		inv_gipio_number.setStyle({ "fontFamily": "Arial", "fontSize": "30px" });
+		inv_gipio_number.setStyle({ "fontSize": "30px" });
 		layer_2.add(inv_gipio_number);
 
 		// inv_decibelle_number
-		const inv_decibelle_number = this.add.text(210, 460, "", {});
+		const inv_decibelle_number = this.add.text(245, 460, "", {});
 		inv_decibelle_number.setOrigin(0.5, 0.5);
 		inv_decibelle_number.text = "0";
-		inv_decibelle_number.setStyle({ "fontFamily": "Arial", "fontSize": "30px" });
+		inv_decibelle_number.setStyle({ "fontSize": "30px" });
 		layer_2.add(inv_decibelle_number);
 
 		// inv_rommy_number
-		const inv_rommy_number = this.add.text(210, 535, "", {});
+		const inv_rommy_number = this.add.text(245, 535, "", {});
 		inv_rommy_number.setOrigin(0.5, 0.5);
 		inv_rommy_number.text = "0";
-		inv_rommy_number.setStyle({ "fontFamily": "Arial", "fontSize": "30px" });
+		inv_rommy_number.setStyle({ "fontSize": "30px" });
 		layer_2.add(inv_rommy_number);
 
 		// player1_wins
-		const player1_wins = this.add.text(150, 610, "", {});
+		const player1_wins = this.add.text(220, 610, "", {});
 		player1_wins.setOrigin(0.5, 0.5);
-		player1_wins.text = "%Player1Wins%";
-		player1_wins.setStyle({ "align": "center", "fontFamily": "Arial", "fontSize": "30px" });
+		player1_wins.text = "Your Wins:";
+		player1_wins.setStyle({ "align": "center", "fontSize": "30px" });
 		layer_2.add(player1_wins);
 
 		// player1_losses
-		const player1_losses = this.add.text(150, 655, "", {});
+		const player1_losses = this.add.text(220, 655, "", {});
 		player1_losses.setOrigin(0.5, 0.5);
-		player1_losses.text = "%Player1Losses%";
-		player1_losses.setStyle({ "align": "center", "fontFamily": "Arial", "fontSize": "30px" });
+		player1_losses.text = "Your Losses:";
+		player1_losses.setStyle({ "align": "center", "fontSize": "30px" });
 		layer_2.add(player1_losses);
 
 		// player2_losses
-		const player2_losses = this.add.text(1140, 655, "", {});
+		const player2_losses = this.add.text(1060, 655, "", {});
 		player2_losses.setOrigin(0.5, 0.5);
-		player2_losses.text = "%Player2Losses%";
-		player2_losses.setStyle({ "align": "center", "fontFamily": "Arial", "fontSize": "30px" });
+		player2_losses.text = "Opponent's Losses...";
+		player2_losses.setStyle({ "align": "center", "fontSize": "30px" });
 		layer_2.add(player2_losses);
 
 		// player2_wins
-		const player2_wins = this.add.text(1140, 610, "", {});
+		const player2_wins = this.add.text(1060, 610, "", {});
 		player2_wins.setOrigin(0.5, 0.5);
-		player2_wins.text = "%Player2Wins%";
-		player2_wins.setStyle({ "align": "center", "fontFamily": "Arial", "fontSize": "30px" });
+		player2_wins.text = "Opponent's Wins...";
+		player2_wins.setStyle({ "align": "center", "fontSize": "30px" });
 		layer_2.add(player2_wins);
 
 		// turn
-		const turn = this.add.text(640, 120, "", {});
+		const turn = this.add.text(640, 125, "", {});
 		turn.setOrigin(0.5, 0.5);
 		turn.text = "Turn: 0";
-		turn.setStyle({ "align": "center", "fontFamily": "Arial", "fontSize": "35px" });
+		turn.setStyle({ "align": "center", "fontSize": "35px" });
 		layer_2.add(turn);
 
 		// elventito_sprite_inv
-		const elventito_sprite_inv = this.add.image(150, 310, "elventito_sprite");
+		const elventito_sprite_inv = this.add.image(185, 310, "elventito_sprite");
 		elventito_sprite_inv.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
 		layer_2.add(elventito_sprite_inv);
 
@@ -552,24 +552,24 @@ class Level extends Phaser.Scene {
 		const layer_3 = this.add.layer();
 
 		// rec_desc_hover
-		const rec_desc_hover = this.add.rectangle(1439, 441, 128, 128);
+		const rec_desc_hover = this.add.rectangle(1090, 360, 128, 128);
 		rec_desc_hover.scaleX = 2;
-		rec_desc_hover.scaleY = 1.3;
+		rec_desc_hover.scaleY = 3;
 		rec_desc_hover.isFilled = true;
-		rec_desc_hover.fillColor = 3552822;
-		rec_desc_hover.fillAlpha = 0.75;
+		rec_desc_hover.fillColor = 2171169;
+		rec_desc_hover.fillAlpha = 0.45;
 		layer_3.add(rec_desc_hover);
 
-		// text_desc_hover
-		const text_desc_hover = this.add.text(1325, 372, "", {});
-		text_desc_hover.text = "desc";
-		layer_3.add(text_desc_hover);
+		// text_char_name_ignore
+		const text_char_name_ignore = this.add.text(975, 185, "", {});
+		text_char_name_ignore.text = "Character Name:";
+		layer_3.add(text_char_name_ignore);
 
 		// title
 		const title = this.add.text(640, 70, "", {});
 		title.setOrigin(0.5, 0.5);
 		title.text = "HARDWARE WARFARE";
-		title.setStyle({ "align": "center", "fontFamily": "Arial", "fontSize": "60px" });
+		title.setStyle({ "align": "center", "fontSize": "60px", "fontStyle": "bold italic" });
 		layer_3.add(title);
 
 		// onAwakeScript_1
@@ -578,361 +578,485 @@ class Level extends Phaser.Scene {
 		// fadeActionScript
 		const fadeActionScript = new FadeActionScript(onAwakeScript_1);
 
+		// glowFx
+		title.preFX.addGlow(2789689, 4, 0, false);
+
+		// text_char_stats
+		const text_char_stats = this.add.text(975, 245, "", {});
+		text_char_stats.text = "Character Stats:";
+		layer_3.add(text_char_stats);
+
+		// text_char_desc_ignore
+		const text_char_desc_ignore = this.add.text(975, 370, "", {});
+		text_char_desc_ignore.text = "Character Description:";
+		layer_3.add(text_char_desc_ignore);
+
+		// text_char_name
+		const text_char_name = this.add.text(975, 200, "", {});
+		text_char_name.text = "-----";
+		layer_3.add(text_char_name);
+
+		// text_char_stats_hp
+		const text_char_stats_hp = this.add.text(975, 265, "", {});
+		text_char_stats_hp.text = "HP: ---";
+		layer_3.add(text_char_stats_hp);
+
+		// text_char_stats_atk
+		const text_char_stats_atk = this.add.text(975, 280, "", {});
+		text_char_stats_atk.text = "ATK: ---";
+		layer_3.add(text_char_stats_atk);
+
+		// text_char_stats_spd
+		const text_char_stats_spd = this.add.text(975, 295, "", {});
+		text_char_stats_spd.text = "SPD: ---";
+		layer_3.add(text_char_stats_spd);
+
+		// text_char_stats_range
+		const text_char_stats_range = this.add.text(975, 310, "", {});
+		text_char_stats_range.text = "Range: ---";
+		layer_3.add(text_char_stats_range);
+
+		// text_char_stats_target
+		const text_char_stats_target = this.add.text(975, 325, "", {});
+		text_char_stats_target.text = "Target: ---";
+		layer_3.add(text_char_stats_target);
+
+		// text_char_desc
+		const text_char_desc = this.add.text(975, 385, "", {});
+		text_char_desc.text = "-----";
+		layer_3.add(text_char_desc);
+
 		// layer_4
 		const layer_4 = this.add.layer();
-
-		// place_square_11
-		const place_square_11 = new Prefab(this, 400, 180);
-		place_square_11.visible = false;
-		layer_4.add(place_square_11);
-
-		// place_square_21
-		const place_square_21 = new Prefab(this, 400, 240);
-		place_square_21.visible = false;
-		layer_4.add(place_square_21);
-
-		// place_square_31
-		const place_square_31 = new Prefab(this, 400, 300);
-		place_square_31.visible = false;
-		layer_4.add(place_square_31);
-
-		// place_square_51
-		const place_square_51 = new Prefab(this, 400, 420);
-		place_square_51.visible = false;
-		layer_4.add(place_square_51);
-
-		// place_square_61
-		const place_square_61 = new Prefab(this, 400, 480);
-		place_square_61.visible = false;
-		layer_4.add(place_square_61);
-
-		// place_square_71
-		const place_square_71 = new Prefab(this, 400, 540);
-		place_square_71.visible = false;
-		layer_4.add(place_square_71);
 
 		// layer_5
 		const layer_5 = this.add.layer();
 
 		// moveOrRange_square_71
-		const moveOrRange_square_71 = new Prefab(this, 400, 540);
+		const moveOrRange_square_71 = this.add.rectangle(400, 540, 0, 0);
+		moveOrRange_square_71.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_71.visible = false;
 		layer_5.add(moveOrRange_square_71);
 
 		// moveOrRange_square_61
-		const moveOrRange_square_61 = new Prefab(this, 400, 480);
+		const moveOrRange_square_61 = this.add.rectangle(400, 480, 0, 0);
+		moveOrRange_square_61.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_61.visible = false;
 		layer_5.add(moveOrRange_square_61);
 
 		// moveOrRange_square_51
-		const moveOrRange_square_51 = new Prefab(this, 400, 420);
+		const moveOrRange_square_51 = this.add.rectangle(400, 420, 0, 0);
+		moveOrRange_square_51.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_51.visible = false;
 		layer_5.add(moveOrRange_square_51);
 
 		// moveOrRange_square_31
-		const moveOrRange_square_31 = new Prefab(this, 400, 300);
+		const moveOrRange_square_31 = this.add.rectangle(400, 300, 0, 0);
+		moveOrRange_square_31.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_31.visible = false;
 		layer_5.add(moveOrRange_square_31);
 
 		// moveOrRange_square_21
-		const moveOrRange_square_21 = new Prefab(this, 400, 240);
+		const moveOrRange_square_21 = this.add.rectangle(400, 240, 0, 0);
+		moveOrRange_square_21.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_21.visible = false;
 		layer_5.add(moveOrRange_square_21);
 
 		// moveOrRange_square_11
-		const moveOrRange_square_11 = new Prefab(this, 400, 180);
+		const moveOrRange_square_11 = this.add.rectangle(400, 180, 0, 0);
+		moveOrRange_square_11.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_11.visible = false;
 		layer_5.add(moveOrRange_square_11);
 
 		// moveOrRange_square_41
-		const moveOrRange_square_41 = new Prefab(this, 400, 360);
+		const moveOrRange_square_41 = this.add.rectangle(400, 360, 0, 0);
+		moveOrRange_square_41.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_41.visible = false;
 		layer_5.add(moveOrRange_square_41);
 
 		// moveOrRange_square_72
-		const moveOrRange_square_72 = new Prefab(this, 460, 540);
+		const moveOrRange_square_72 = this.add.rectangle(460, 540, 0, 0);
+		moveOrRange_square_72.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_72.visible = false;
 		layer_5.add(moveOrRange_square_72);
 
 		// moveOrRange_square_42
-		const moveOrRange_square_42 = new Prefab(this, 460, 360);
+		const moveOrRange_square_42 = this.add.rectangle(460, 360, 0, 0);
+		moveOrRange_square_42.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_42.visible = false;
 		layer_5.add(moveOrRange_square_42);
 
 		// moveOrRange_square_12
-		const moveOrRange_square_12 = new Prefab(this, 460, 180);
+		const moveOrRange_square_12 = this.add.rectangle(460, 180, 0, 0);
+		moveOrRange_square_12.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_12.visible = false;
 		layer_5.add(moveOrRange_square_12);
 
 		// moveOrRange_square_22
-		const moveOrRange_square_22 = new Prefab(this, 460, 240);
+		const moveOrRange_square_22 = this.add.rectangle(460, 240, 0, 0);
+		moveOrRange_square_22.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_22.visible = false;
 		layer_5.add(moveOrRange_square_22);
 
 		// moveOrRange_square_32
-		const moveOrRange_square_32 = new Prefab(this, 460, 300);
+		const moveOrRange_square_32 = this.add.rectangle(460, 300, 0, 0);
+		moveOrRange_square_32.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_32.visible = false;
 		layer_5.add(moveOrRange_square_32);
 
 		// moveOrRange_square_52
-		const moveOrRange_square_52 = new Prefab(this, 460, 420);
+		const moveOrRange_square_52 = this.add.rectangle(460, 420, 0, 0);
+		moveOrRange_square_52.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_52.visible = false;
 		layer_5.add(moveOrRange_square_52);
 
 		// moveOrRange_square_62
-		const moveOrRange_square_62 = new Prefab(this, 460, 480);
+		const moveOrRange_square_62 = this.add.rectangle(460, 480, 0, 0);
+		moveOrRange_square_62.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_62.visible = false;
 		layer_5.add(moveOrRange_square_62);
 
 		// moveOrRange_square_73
-		const moveOrRange_square_73 = new Prefab(this, 520, 540);
+		const moveOrRange_square_73 = this.add.rectangle(520, 540, 0, 0);
+		moveOrRange_square_73.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_73.visible = false;
 		layer_5.add(moveOrRange_square_73);
 
 		// moveOrRange_square_43
-		const moveOrRange_square_43 = new Prefab(this, 520, 360);
+		const moveOrRange_square_43 = this.add.rectangle(520, 360, 0, 0);
+		moveOrRange_square_43.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_43.visible = false;
 		layer_5.add(moveOrRange_square_43);
 
 		// moveOrRange_square_13
-		const moveOrRange_square_13 = new Prefab(this, 520, 180);
+		const moveOrRange_square_13 = this.add.rectangle(520, 180, 0, 0);
+		moveOrRange_square_13.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_13.visible = false;
 		layer_5.add(moveOrRange_square_13);
 
 		// moveOrRange_square_23
-		const moveOrRange_square_23 = new Prefab(this, 520, 240);
+		const moveOrRange_square_23 = this.add.rectangle(520, 240, 0, 0);
+		moveOrRange_square_23.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_23.visible = false;
 		layer_5.add(moveOrRange_square_23);
 
 		// moveOrRange_square_33
-		const moveOrRange_square_33 = new Prefab(this, 520, 300);
+		const moveOrRange_square_33 = this.add.rectangle(520, 300, 0, 0);
+		moveOrRange_square_33.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_33.visible = false;
 		layer_5.add(moveOrRange_square_33);
 
 		// moveOrRange_square_53
-		const moveOrRange_square_53 = new Prefab(this, 520, 420);
+		const moveOrRange_square_53 = this.add.rectangle(520, 420, 0, 0);
+		moveOrRange_square_53.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_53.visible = false;
 		layer_5.add(moveOrRange_square_53);
 
 		// moveOrRange_square_63
-		const moveOrRange_square_63 = new Prefab(this, 520, 480);
+		const moveOrRange_square_63 = this.add.rectangle(520, 480, 0, 0);
+		moveOrRange_square_63.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_63.visible = false;
 		layer_5.add(moveOrRange_square_63);
 
 		// moveOrRange_square_76
-		const moveOrRange_square_76 = new Prefab(this, 700, 540);
+		const moveOrRange_square_76 = this.add.rectangle(700, 540, 0, 0);
+		moveOrRange_square_76.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_76.visible = false;
 		layer_5.add(moveOrRange_square_76);
 
 		// moveOrRange_square_46
-		const moveOrRange_square_46 = new Prefab(this, 700, 360);
+		const moveOrRange_square_46 = this.add.rectangle(700, 360, 0, 0);
+		moveOrRange_square_46.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_46.visible = false;
 		layer_5.add(moveOrRange_square_46);
 
 		// moveOrRange_square_16
-		const moveOrRange_square_16 = new Prefab(this, 700, 180);
+		const moveOrRange_square_16 = this.add.rectangle(700, 180, 0, 0);
+		moveOrRange_square_16.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_16.visible = false;
 		layer_5.add(moveOrRange_square_16);
 
 		// moveOrRange_square_26
-		const moveOrRange_square_26 = new Prefab(this, 700, 240);
+		const moveOrRange_square_26 = this.add.rectangle(700, 240, 0, 0);
+		moveOrRange_square_26.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_26.visible = false;
 		layer_5.add(moveOrRange_square_26);
 
 		// moveOrRange_square_36
-		const moveOrRange_square_36 = new Prefab(this, 700, 300);
+		const moveOrRange_square_36 = this.add.rectangle(700, 300, 0, 0);
+		moveOrRange_square_36.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_36.visible = false;
 		layer_5.add(moveOrRange_square_36);
 
 		// moveOrRange_square_56
-		const moveOrRange_square_56 = new Prefab(this, 700, 420);
+		const moveOrRange_square_56 = this.add.rectangle(700, 420, 0, 0);
+		moveOrRange_square_56.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_56.visible = false;
 		layer_5.add(moveOrRange_square_56);
 
 		// moveOrRange_square_66
-		const moveOrRange_square_66 = new Prefab(this, 700, 480);
+		const moveOrRange_square_66 = this.add.rectangle(700, 480, 0, 0);
+		moveOrRange_square_66.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_66.visible = false;
 		layer_5.add(moveOrRange_square_66);
 
 		// moveOrRange_square_65
-		const moveOrRange_square_65 = new Prefab(this, 640, 480);
+		const moveOrRange_square_65 = this.add.rectangle(640, 480, 0, 0);
+		moveOrRange_square_65.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_65.visible = false;
 		layer_5.add(moveOrRange_square_65);
 
 		// moveOrRange_square_55
-		const moveOrRange_square_55 = new Prefab(this, 640, 420);
+		const moveOrRange_square_55 = this.add.rectangle(640, 420, 0, 0);
+		moveOrRange_square_55.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_55.visible = false;
 		layer_5.add(moveOrRange_square_55);
 
 		// moveOrRange_square_35
-		const moveOrRange_square_35 = new Prefab(this, 640, 300);
+		const moveOrRange_square_35 = this.add.rectangle(640, 300, 0, 0);
+		moveOrRange_square_35.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_35.visible = false;
 		layer_5.add(moveOrRange_square_35);
 
 		// moveOrRange_square_25
-		const moveOrRange_square_25 = new Prefab(this, 640, 240);
+		const moveOrRange_square_25 = this.add.rectangle(640, 240, 0, 0);
+		moveOrRange_square_25.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_25.visible = false;
 		layer_5.add(moveOrRange_square_25);
 
 		// moveOrRange_square_15
-		const moveOrRange_square_15 = new Prefab(this, 640, 180);
+		const moveOrRange_square_15 = this.add.rectangle(640, 180, 0, 0);
+		moveOrRange_square_15.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_15.visible = false;
 		layer_5.add(moveOrRange_square_15);
 
 		// moveOrRange_square_45
-		const moveOrRange_square_45 = new Prefab(this, 640, 360);
+		const moveOrRange_square_45 = this.add.rectangle(640, 360, 0, 0);
+		moveOrRange_square_45.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_45.visible = false;
 		layer_5.add(moveOrRange_square_45);
 
 		// moveOrRange_square_75
-		const moveOrRange_square_75 = new Prefab(this, 640, 540);
+		const moveOrRange_square_75 = this.add.rectangle(640, 540, 0, 0);
+		moveOrRange_square_75.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_75.visible = false;
 		layer_5.add(moveOrRange_square_75);
 
 		// moveOrRange_square_44
-		const moveOrRange_square_44 = new Prefab(this, 580, 360);
+		const moveOrRange_square_44 = this.add.rectangle(580, 360, 0, 0);
+		moveOrRange_square_44.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_44.visible = false;
 		layer_5.add(moveOrRange_square_44);
 
 		// moveOrRange_square_14
-		const moveOrRange_square_14 = new Prefab(this, 580, 180);
+		const moveOrRange_square_14 = this.add.rectangle(580, 180, 0, 0);
+		moveOrRange_square_14.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_14.visible = false;
 		layer_5.add(moveOrRange_square_14);
 
 		// moveOrRange_square_24
-		const moveOrRange_square_24 = new Prefab(this, 580, 240);
+		const moveOrRange_square_24 = this.add.rectangle(580, 240, 0, 0);
+		moveOrRange_square_24.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_24.visible = false;
 		layer_5.add(moveOrRange_square_24);
 
 		// moveOrRange_square_34
-		const moveOrRange_square_34 = new Prefab(this, 580, 300);
+		const moveOrRange_square_34 = this.add.rectangle(580, 300, 0, 0);
+		moveOrRange_square_34.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_34.visible = false;
 		layer_5.add(moveOrRange_square_34);
 
 		// moveOrRange_square_54
-		const moveOrRange_square_54 = new Prefab(this, 580, 420);
+		const moveOrRange_square_54 = this.add.rectangle(580, 420, 0, 0);
+		moveOrRange_square_54.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_54.visible = false;
 		layer_5.add(moveOrRange_square_54);
 
 		// moveOrRange_square_64
-		const moveOrRange_square_64 = new Prefab(this, 580, 480);
+		const moveOrRange_square_64 = this.add.rectangle(580, 480, 0, 0);
+		moveOrRange_square_64.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_64.visible = false;
 		layer_5.add(moveOrRange_square_64);
 
 		// moveOrRange_square_74
-		const moveOrRange_square_74 = new Prefab(this, 580, 540);
+		const moveOrRange_square_74 = this.add.rectangle(580, 540, 0, 0);
+		moveOrRange_square_74.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_74.visible = false;
 		layer_5.add(moveOrRange_square_74);
 
 		// moveOrRange_square_79
-		const moveOrRange_square_79 = new Prefab(this, 880, 540);
+		const moveOrRange_square_79 = this.add.rectangle(880, 540, 0, 0);
+		moveOrRange_square_79.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_79.visible = false;
 		layer_5.add(moveOrRange_square_79);
 
 		// moveOrRange_square_49
-		const moveOrRange_square_49 = new Prefab(this, 880, 360);
+		const moveOrRange_square_49 = this.add.rectangle(880, 360, 0, 0);
+		moveOrRange_square_49.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_49.visible = false;
 		layer_5.add(moveOrRange_square_49);
 
 		// moveOrRange_square_19
-		const moveOrRange_square_19 = new Prefab(this, 880, 180);
+		const moveOrRange_square_19 = this.add.rectangle(880, 180, 0, 0);
+		moveOrRange_square_19.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_19.visible = false;
 		layer_5.add(moveOrRange_square_19);
 
 		// moveOrRange_square_29
-		const moveOrRange_square_29 = new Prefab(this, 880, 240);
+		const moveOrRange_square_29 = this.add.rectangle(880, 240, 0, 0);
+		moveOrRange_square_29.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_29.visible = false;
 		layer_5.add(moveOrRange_square_29);
 
 		// moveOrRange_square_39
-		const moveOrRange_square_39 = new Prefab(this, 880, 300);
+		const moveOrRange_square_39 = this.add.rectangle(880, 300, 0, 0);
+		moveOrRange_square_39.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_39.visible = false;
 		layer_5.add(moveOrRange_square_39);
 
 		// moveOrRange_square_59
-		const moveOrRange_square_59 = new Prefab(this, 880, 420);
+		const moveOrRange_square_59 = this.add.rectangle(880, 420, 0, 0);
+		moveOrRange_square_59.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_59.visible = false;
 		layer_5.add(moveOrRange_square_59);
 
 		// moveOrRange_square_69
-		const moveOrRange_square_69 = new Prefab(this, 880, 480);
+		const moveOrRange_square_69 = this.add.rectangle(880, 480, 0, 0);
+		moveOrRange_square_69.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_69.visible = false;
 		layer_5.add(moveOrRange_square_69);
 
 		// moveOrRange_square_68
-		const moveOrRange_square_68 = new Prefab(this, 820, 480);
+		const moveOrRange_square_68 = this.add.rectangle(820, 480, 0, 0);
+		moveOrRange_square_68.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_68.visible = false;
 		layer_5.add(moveOrRange_square_68);
 
 		// moveOrRange_square_58
-		const moveOrRange_square_58 = new Prefab(this, 820, 420);
+		const moveOrRange_square_58 = this.add.rectangle(820, 420, 0, 0);
+		moveOrRange_square_58.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_58.visible = false;
 		layer_5.add(moveOrRange_square_58);
 
 		// moveOrRange_square_38
-		const moveOrRange_square_38 = new Prefab(this, 820, 300);
+		const moveOrRange_square_38 = this.add.rectangle(820, 300, 0, 0);
+		moveOrRange_square_38.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_38.visible = false;
 		layer_5.add(moveOrRange_square_38);
 
 		// moveOrRange_square_28
-		const moveOrRange_square_28 = new Prefab(this, 820, 240);
+		const moveOrRange_square_28 = this.add.rectangle(820, 240, 0, 0);
+		moveOrRange_square_28.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_28.visible = false;
 		layer_5.add(moveOrRange_square_28);
 
 		// moveOrRange_square_18
-		const moveOrRange_square_18 = new Prefab(this, 820, 180);
+		const moveOrRange_square_18 = this.add.rectangle(820, 180, 0, 0);
+		moveOrRange_square_18.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_18.visible = false;
 		layer_5.add(moveOrRange_square_18);
 
 		// moveOrRange_square_48
-		const moveOrRange_square_48 = new Prefab(this, 820, 360);
+		const moveOrRange_square_48 = this.add.rectangle(820, 360, 0, 0);
+		moveOrRange_square_48.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_48.visible = false;
 		layer_5.add(moveOrRange_square_48);
 
 		// moveOrRange_square_78
-		const moveOrRange_square_78 = new Prefab(this, 820, 540);
+		const moveOrRange_square_78 = this.add.rectangle(820, 540, 0, 0);
+		moveOrRange_square_78.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_78.visible = false;
 		layer_5.add(moveOrRange_square_78);
 
 		// moveOrRange_square_47
-		const moveOrRange_square_47 = new Prefab(this, 760, 360);
+		const moveOrRange_square_47 = this.add.rectangle(760, 360, 0, 0);
+		moveOrRange_square_47.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_47.visible = false;
 		layer_5.add(moveOrRange_square_47);
 
 		// moveOrRange_square_17
-		const moveOrRange_square_17 = new Prefab(this, 760, 180);
+		const moveOrRange_square_17 = this.add.rectangle(760, 180, 0, 0);
+		moveOrRange_square_17.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_17.visible = false;
 		layer_5.add(moveOrRange_square_17);
 
 		// moveOrRange_square_27
-		const moveOrRange_square_27 = new Prefab(this, 760, 240);
+		const moveOrRange_square_27 = this.add.rectangle(760, 240, 0, 0);
+		moveOrRange_square_27.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_27.visible = false;
 		layer_5.add(moveOrRange_square_27);
 
 		// moveOrRange_square_37
-		const moveOrRange_square_37 = new Prefab(this, 760, 300);
+		const moveOrRange_square_37 = this.add.rectangle(760, 300, 0, 0);
+		moveOrRange_square_37.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_37.visible = false;
 		layer_5.add(moveOrRange_square_37);
 
 		// moveOrRange_square_57
-		const moveOrRange_square_57 = new Prefab(this, 760, 420);
+		const moveOrRange_square_57 = this.add.rectangle(760, 420, 0, 0);
+		moveOrRange_square_57.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_57.visible = false;
 		layer_5.add(moveOrRange_square_57);
 
 		// moveOrRange_square_67
-		const moveOrRange_square_67 = new Prefab(this, 760, 480);
+		const moveOrRange_square_67 = this.add.rectangle(760, 480, 0, 0);
+		moveOrRange_square_67.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_67.visible = false;
 		layer_5.add(moveOrRange_square_67);
 
 		// moveOrRange_square_77
-		const moveOrRange_square_77 = new Prefab(this, 760, 540);
+		const moveOrRange_square_77 = this.add.rectangle(760, 540, 0, 0);
+		moveOrRange_square_77.setInteractive(new Phaser.Geom.Rectangle(0, 0, 0, 0), Phaser.Geom.Rectangle.Contains);
 		moveOrRange_square_77.visible = false;
 		layer_5.add(moveOrRange_square_77);
 
+		// place_square_1_1
+		const place_square_1_1 = new Prefab(this, 400, 180);
+		place_square_1_1.removeInteractive();
+		place_square_1_1.setInteractive(new Phaser.Geom.Rectangle(0, 0, 128, 128), Phaser.Geom.Rectangle.Contains);
+		place_square_1_1.visible = false;
+		layer_5.add(place_square_1_1);
+
+		// place_square_2_1
+		const place_square_2_1 = new Prefab(this, 400, 240);
+		place_square_2_1.removeInteractive();
+		place_square_2_1.setInteractive(new Phaser.Geom.Rectangle(0, 0, 128, 128), Phaser.Geom.Rectangle.Contains);
+		place_square_2_1.visible = false;
+		layer_5.add(place_square_2_1);
+
+		// place_square_3_1
+		const place_square_3_1 = new Prefab(this, 400, 300);
+		place_square_3_1.removeInteractive();
+		place_square_3_1.setInteractive(new Phaser.Geom.Rectangle(0, 0, 128, 128), Phaser.Geom.Rectangle.Contains);
+		place_square_3_1.visible = false;
+		layer_5.add(place_square_3_1);
+
+		// place_square_5_1
+		const place_square_5_1 = new Prefab(this, 400, 420);
+		place_square_5_1.removeInteractive();
+		place_square_5_1.setInteractive(new Phaser.Geom.Rectangle(0, 0, 128, 128), Phaser.Geom.Rectangle.Contains);
+		place_square_5_1.visible = false;
+		layer_5.add(place_square_5_1);
+
+		// place_square_6_1
+		const place_square_6_1 = new Prefab(this, 400, 480);
+		place_square_6_1.removeInteractive();
+		place_square_6_1.setInteractive(new Phaser.Geom.Rectangle(0, 0, 128, 128), Phaser.Geom.Rectangle.Contains);
+		place_square_6_1.visible = false;
+		layer_5.add(place_square_6_1);
+
+		// place_square_7_1
+		const place_square_7_1 = new Prefab(this, 400, 540);
+		place_square_7_1.removeInteractive();
+		place_square_7_1.setInteractive(new Phaser.Geom.Rectangle(0, 0, 128, 128), Phaser.Geom.Rectangle.Contains);
+		place_square_7_1.visible = false;
+		layer_5.add(place_square_7_1);
+
 		// lists
 		const listOfTiles = [tile45, tile65, tile72, tile73, tile74, tile79, tile78, tile67, tile63, tile64, tile69, tile68, tile62, tile61, tile71, tile75, tile76, tile77, tile66, tile15, tile22, tile23, tile24, tile29, tile28, tile17, tile13, tile14, tile19, tile18, tile12, tile11, tile21, tile25, tile26, tile27, tile16, tile32, tile38, tile39, tile34, tile33, tile37, tile36, tile35, tile31, tile52, tile58, tile59, tile54, tile53, tile57, tile56, tile55, tile51, tile42, tile48, tile44, tile43, tile47, tile46, tile41, tile49];
-		const place_squares = [place_square_31, place_square_11, place_square_51, place_square_61, place_square_71, place_square_21];
+		const place_squares = [place_square_3_1, place_square_1_1, place_square_5_1, place_square_6_1, place_square_7_1, place_square_2_1];
 		const moreOrRange_tiles = [moveOrRange_square_71, moveOrRange_square_77, moveOrRange_square_67, moveOrRange_square_57, moveOrRange_square_37, moveOrRange_square_27, moveOrRange_square_17, moveOrRange_square_47, moveOrRange_square_78, moveOrRange_square_48, moveOrRange_square_18, moveOrRange_square_28, moveOrRange_square_38, moveOrRange_square_58, moveOrRange_square_68, moveOrRange_square_69, moveOrRange_square_59, moveOrRange_square_39, moveOrRange_square_29, moveOrRange_square_19, moveOrRange_square_49, moveOrRange_square_79, moveOrRange_square_74, moveOrRange_square_64, moveOrRange_square_54, moveOrRange_square_34, moveOrRange_square_24, moveOrRange_square_14, moveOrRange_square_44, moveOrRange_square_75, moveOrRange_square_45, moveOrRange_square_15, moveOrRange_square_25, moveOrRange_square_35, moveOrRange_square_55, moveOrRange_square_65, moveOrRange_square_66, moveOrRange_square_56, moveOrRange_square_36, moveOrRange_square_26, moveOrRange_square_16, moveOrRange_square_46, moveOrRange_square_76, moveOrRange_square_63, moveOrRange_square_53, moveOrRange_square_33, moveOrRange_square_23, moveOrRange_square_13, moveOrRange_square_43, moveOrRange_square_73, moveOrRange_square_62, moveOrRange_square_52, moveOrRange_square_32, moveOrRange_square_22, moveOrRange_square_12, moveOrRange_square_42, moveOrRange_square_72, moveOrRange_square_41, moveOrRange_square_11, moveOrRange_square_21, moveOrRange_square_31, moveOrRange_square_51, moveOrRange_square_61];
+		const boardCharacters = [];
 
 		// fadeActionScript (prefab fields)
 		fadeActionScript.fadeDirection = "FadeIn";
@@ -1006,7 +1130,7 @@ class Level extends Phaser.Scene {
 		this.tile72 = tile72;
 		this.tile65 = tile65;
 		this.layer_1 = layer_1;
-		this.inv = inv;
+		this.inv_text_ignore = inv_text_ignore;
 		this.player_slot1 = player_slot1;
 		this.player_slot2 = player_slot2;
 		this.player_slot3 = player_slot3;
@@ -1030,14 +1154,14 @@ class Level extends Phaser.Scene {
 		this.turn = turn;
 		this.elventito_sprite_inv = elventito_sprite_inv;
 		this.layer_2 = layer_2;
-		this.title = title;
+		this.text_char_name = text_char_name;
+		this.text_char_stats_hp = text_char_stats_hp;
+		this.text_char_stats_atk = text_char_stats_atk;
+		this.text_char_stats_spd = text_char_stats_spd;
+		this.text_char_stats_range = text_char_stats_range;
+		this.text_char_stats_target = text_char_stats_target;
+		this.text_char_desc = text_char_desc;
 		this.layer_3 = layer_3;
-		this.place_square_11 = place_square_11;
-		this.place_square_21 = place_square_21;
-		this.place_square_31 = place_square_31;
-		this.place_square_51 = place_square_51;
-		this.place_square_61 = place_square_61;
-		this.place_square_71 = place_square_71;
 		this.layer_4 = layer_4;
 		this.moveOrRange_square_71 = moveOrRange_square_71;
 		this.moveOrRange_square_61 = moveOrRange_square_61;
@@ -1102,9 +1226,17 @@ class Level extends Phaser.Scene {
 		this.moveOrRange_square_57 = moveOrRange_square_57;
 		this.moveOrRange_square_67 = moveOrRange_square_67;
 		this.moveOrRange_square_77 = moveOrRange_square_77;
+		this.place_square_1_1 = place_square_1_1;
+		this.place_square_2_1 = place_square_2_1;
+		this.place_square_3_1 = place_square_3_1;
+		this.place_square_5_1 = place_square_5_1;
+		this.place_square_6_1 = place_square_6_1;
+		this.place_square_7_1 = place_square_7_1;
+		this.layer_5 = layer_5;
 		this.listOfTiles = listOfTiles;
 		this.place_squares = place_squares;
 		this.moreOrRange_tiles = moreOrRange_tiles;
+		this.boardCharacters = boardCharacters;
 
 		this.events.emit("scene-awake");
 	}
@@ -1240,7 +1372,7 @@ class Level extends Phaser.Scene {
 	/** @type {Phaser.GameObjects.Layer} */
 	layer_1;
 	/** @type {Phaser.GameObjects.Text} */
-	inv;
+	inv_text_ignore;
 	/** @type {Phaser.GameObjects.Image} */
 	player_slot1;
 	/** @type {Phaser.GameObjects.Image} */
@@ -1288,155 +1420,171 @@ class Level extends Phaser.Scene {
 	/** @type {Phaser.GameObjects.Layer} */
 	layer_2;
 	/** @type {Phaser.GameObjects.Text} */
-	title;
+	text_char_name;
+	/** @type {Phaser.GameObjects.Text} */
+	text_char_stats_hp;
+	/** @type {Phaser.GameObjects.Text} */
+	text_char_stats_atk;
+	/** @type {Phaser.GameObjects.Text} */
+	text_char_stats_spd;
+	/** @type {Phaser.GameObjects.Text} */
+	text_char_stats_range;
+	/** @type {Phaser.GameObjects.Text} */
+	text_char_stats_target;
+	/** @type {Phaser.GameObjects.Text} */
+	text_char_desc;
 	/** @type {Phaser.GameObjects.Layer} */
 	layer_3;
-	/** @type {Prefab} */
-	place_square_11;
-	/** @type {Prefab} */
-	place_square_21;
-	/** @type {Prefab} */
-	place_square_31;
-	/** @type {Prefab} */
-	place_square_51;
-	/** @type {Prefab} */
-	place_square_61;
-	/** @type {Prefab} */
-	place_square_71;
 	/** @type {Phaser.GameObjects.Layer} */
 	layer_4;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_71;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_61;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_51;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_31;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_21;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_11;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_41;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_72;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_42;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_12;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_22;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_32;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_52;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_62;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_73;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_43;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_13;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_23;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_33;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_53;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_63;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_76;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_46;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_16;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_26;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_36;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_56;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_66;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_65;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_55;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_35;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_25;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_15;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_45;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_75;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_44;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_14;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_24;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_34;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_54;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_64;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_74;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_79;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_49;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_19;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_29;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_39;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_59;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_69;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_68;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_58;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_38;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_28;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_18;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_48;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_78;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_47;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_17;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_27;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_37;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_57;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_67;
-	/** @type {Prefab} */
+	/** @type {Phaser.GameObjects.Rectangle} */
 	moveOrRange_square_77;
+	/** @type {Prefab} */
+	place_square_1_1;
+	/** @type {Prefab} */
+	place_square_2_1;
+	/** @type {Prefab} */
+	place_square_3_1;
+	/** @type {Prefab} */
+	place_square_5_1;
+	/** @type {Prefab} */
+	place_square_6_1;
+	/** @type {Prefab} */
+	place_square_7_1;
+	/** @type {Phaser.GameObjects.Layer} */
+	layer_5;
 	/** @type {Phaser.GameObjects.Image[]} */
 	listOfTiles;
 	/** @type {Prefab[]} */
 	place_squares;
-	/** @type {Prefab[]} */
+	/** @type {Phaser.GameObjects.Rectangle[]} */
 	moreOrRange_tiles;
+	/** @type {Array<any>} */
+	boardCharacters;
 
 	/* START-USER-CODE */
 
@@ -1452,7 +1600,7 @@ class Level extends Phaser.Scene {
 		// Sync the game state every 2 seconds
 		var TIME_BETWEEN_SYNC = 2000;
 
-		this.place_squares.forEach((square) => {
+		this.moreOrRange_tiles.forEach((square) => {
 			square.on("pointerdown", () => {
 			console.log(square.name + "clicked");
 			});
@@ -1483,55 +1631,92 @@ class Level extends Phaser.Scene {
 			console.log("clicked on rommy_sprite_inv " + selectedChar);
 		});
 
-		this.listOfTiles.forEach((tile) => {
+		this.place_squares.forEach((tile) => {
 			tile.on("pointerdown", () => {
 			console.log(tile.name + " clicked");
 
-			var whiteSquare = this.children.list[this.children.list.length - 1];
+			var whiteSquare = this.children.list[this.children.list.length - 1]
 
 			for (let i = 0; i < whiteSquare.length; i++){
+
+				// var whiteSquare = whiteSquare[i];
 				whiteSquare.list[i].visible = false;
 			}
 
-			if (selectedChar == 1) {
-				// rambow_sprite_inv
-				const rambow_instance = this.add.image(tile.x, tile.y, "rambow_sprite");
-				rambow_instance.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
-				this.layer_2.add(rambow_instance);
-				console.log(rambow_instance + " " + selectedChar)
-
-			} else if (selectedChar == 2) {
-				// elventito_sprite_inv
-				const elventito_instance = this.add.image(tile.x, tile.y, "elventito_sprite");
-				elventito_instance.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
-				this.layer_2.add(elventito_instance);
-				console.log(elventito_instance + " " + selectedChar)
-
-			} else if (selectedChar == 3) {
-				// gipio_sprite_inv
-				const gipio_instance = this.add.image(tile.x, tile.y, "gipio_sprite");
-				gipio_instance.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
-				this.layer_2.add(gipio_instance);
-				console.log(gipio_instance + " " + selectedChar)
-
-			} else if (selectedChar == 4) {
-				// decibelle_sprite_inv
-				const decibelle_instance = this.add.image(tile.x, tile.y, "decibelle_sprite");
-				decibelle_instance.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
-				this.layer_2.add(decibelle_instance);
-				console.log(decibelle_instance + " " + selectedChar)
-
-			} else if (selectedChar == 5) {
-				// rommy_sprite_inv
-				const rommy_instance = this.add.image(tile.x, tile.y, "rommy_sprite");
-				rommy_instance.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
-				this.layer_2.add(rommy_instance);
-				console.log(rommy_instance + " " + selectedChar)
+			var tileY = null
+			if (tile.y == 180) {
+				tileY = 1
+			} else if (tile.y == 240) {
+				tileY = 2
+			} else if (tile.y == 300) {
+				tileY = 3
+			} else if (tile.y == 420) {
+				tileY = 5
+			} else if (tile.y == 480) {
+				tileY = 6
+			} else if (tile.y == 540) {
+				tileY = 7
 			}
 
+			console.log("whiteSquare.y: " + tile.y)
+			console.log("tileY: " + tileY)
+			this.updatePlacement(selectedChar, tileY);
 			selectedChar = null;
 			});
 		});
+
+		this.boardCharacters.forEach((char) => {
+			char.on("pointerdown", () => {
+			console.log(char.name + " pressed");
+
+			var character = this.children.list[this.children.list.length - 1]
+
+			for (let i = 0; i < character.length; i++){
+
+			}
+
+			var charY = null
+			if (char.y == 180) {
+				charY = 1
+			} else if (char.y == 240) {
+				charY = 2
+			} else if (char.y == 300) {
+				charY = 3
+			} else if (char.x == 360) {
+				charY = 4
+			} else if (char.y == 420) {
+				charY = 5
+			} else if (char.y == 480) {
+				charY = 6
+			} else if (char.y == 540) {
+				charY = 7
+			}
+
+			var charX = null
+			if (char.x == 400) {
+				charX = 1
+			} else if (char.x == 460) {
+				charX = 2
+			} else if (char.x == 520) {
+				charX = 3
+			} else if (char.x == 580) {
+				charX = 4
+			} else if (char.x == 640) {
+				charX = 5
+			} else if (char.x == 700) {
+				charX = 6
+			} else if (char.x == 760) {
+				charX = 7
+			} else if (char.x == 820) {
+				charX = 8
+			} else if (char.x == 880) {
+				charX = 9
+			}
+
+			console.log("whiteSquare.y: " + tile.y)
+			console.log("tileY: " + tileY)
+		});
+	});
 
 		this.updateMatchState(5);
 
@@ -1540,6 +1725,7 @@ class Level extends Phaser.Scene {
 			this.getGamePlayerState();
 			this.getGameInvState();
 			this.getGameTurnState();
+			this.getMPC();
 		}, TIME_BETWEEN_SYNC)
 	}
 
@@ -1558,6 +1744,37 @@ class Level extends Phaser.Scene {
 			}
 			selectedChar = charID
 		}
+	}	
+
+	// extractNumber(name) {
+	// 	//var extractedNumbers = name.match(/_(\d+)_(\d+)$/);
+	// 	var extractedNumbers = name.match("1" || "2" || "3" || "4" | "5" || "6" || "7" || "8" || "9");
+	// 	if (extractedNumbers) {
+	// 		return {
+	// 			firstNumber: parseInt(extractedNumbers[1], 10),
+	// 			secondNumber: parseInt(extractedNumbers[2], 10)
+	// 		};
+	// 	} else {
+	// 		return null;
+	// 	}
+	// }
+
+	updatePlacement(selectedChar, tileY) {
+		var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = () => {
+				if (xhttp.readyState == 4) {
+					console.log(xhttp.responseText)
+
+					// Parse the JSON response
+					var data = JSON.parse(xhttp.responseText);
+					console.log(data);
+				}
+			}
+
+			console.log("selectedChar, tileY: " + selectedChar + " " + tileY)
+			// Send a PUT request to the server to place a character on the board
+			xhttp.open("PUT", "/placement/place/" + selectedChar + "/" + tileY, true);
+			xhttp.send();
 	}
 
 	updateMatchState(stateNumber) {
@@ -1616,7 +1833,7 @@ class Level extends Phaser.Scene {
 					this.player2_wins.text = player2Wins;
 					this.player2_losses.text = player2Losses;
 				}
-					return;
+
 					// // !!! If the tiles were added manually in the editor, you can use the following code:
 					// this.tile1.setTexture("character_rambow_blue");
 					// this.tile8.setTexture("character_decibelle_red");
@@ -1668,6 +1885,107 @@ class Level extends Phaser.Scene {
 			xhttp.send();
 	}
 
+	getMPC() {
+		var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = () => {
+				if (xhttp.readyState == 4) {
+					console.log(xhttp.responseText)
+
+					// Parse the JSON response
+					var data = JSON.parse(xhttp.responseText);
+					console.log(data);
+					console.log("IM HERE!!!")
+
+					// this.boardCharacters.forEach(function (c) { c.kill(); });
+
+					this.boardCharacters.forEach(char => {
+						console.log("char: " + char);
+						char.destroy();  // Destroy the object (all objects inside this list, in this case)
+					});						
+					this.boardCharacters = []; // Clear the array
+
+					for(var i = 0; i < data.length; i++){
+						console.log("there's a friend inside this for loop")
+
+						var charID = data[i].mpc_cha_id
+						// var currentHP = data[0].cha_cur_hp
+						var charX = data[i].mpc_tile_x
+						var charY = data[i].mpc_tile_y
+
+						var char = {}
+						if (charY == 1) {
+							char.y = 180
+						} else if (charY == 2) {
+							char.y = 240
+						} else if (charY == 3) {
+							char.y = 300
+						} else if (charY == 4) {
+							char.y = 360
+						} else if (charY == 5) {
+							char.y = 420
+						} else if (charY == 6) {
+							char.y = 480
+						} else if (charY == 7) {
+							char.y = 540
+						}
+
+						if (charX == 1) {
+							char.x = 400
+						} else if (charX == 2) {
+							char.x = 460
+						} else if (charX == 3) {
+							char.x = 520
+						} else if (charX == 4) {
+							char.x = 580
+						} else if (charX == 5) {
+							char.x = 640
+						} else if (charX == 6) {
+							char.x = 700
+						} else if (charX == 7) {
+							char.x = 760
+						} else if (charX == 8) {
+							char.x = 820
+						} else if (charX == 9) {
+							char.x = 880
+						}
+
+						var instance;
+						if (charID == 1) {
+							instance = this.add.image(char.x, char.y, "rambow_sprite");
+						} else if (charID == 2) {
+							instance = this.add.image(char.x, char.y, "elventito_sprite");
+						} else if (charID == 3) {
+							instance = this.add.image(char.x, char.y, "gipio_sprite");
+						} else if (charID == 4) {
+							instance = this.add.image(char.x, char.y, "decibelle_sprite");
+						} else if (charID == 5) {
+							instance = this.add.image(char.x, char.y, "rommy_sprite");
+						}
+
+						if (instance) {
+							instance.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
+							this.layer_2.add(instance);
+							this.boardCharacters.push(instance);
+							console.log(instance + " " + selectedChar);
+						}
+
+						console.log("char: " + char.x + " " + char.y);
+						console.log("boardCharacters: " + this.boardCharacters.length)
+
+						if (selectedChar != null) {
+							this.text_char_stats_hp = "HP: " + data[0].cha_cur_hp // NOTE: THIS NEEDS TO BE CHANGED!!!
+						} else {
+							this.text_char_stats_hp = "HP: ---"
+						}
+					}
+				}
+			}
+
+			// Send a GET request to the server to all info about a specific match
+			xhttp.open("GET", "/match/thisMPC", true);
+			xhttp.send();
+	}
+
 	getGameInvState() {
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = () => {
@@ -1691,6 +2009,63 @@ class Level extends Phaser.Scene {
 				this.inv_gipio_number.text = invGipio;
 				this.inv_decibelle_number.text = invDecibelle;
 				this.inv_rommy_number.text = invRommy;
+
+				// NOTE: THIS DOESNT WORK RIGHT NOW!!!
+				if (selectedChar == 1) {
+					this.text_char_name = "Rambow"
+		
+					this.text_char_stats_atk = "ATK: 2"
+					this.text_char_stats_spd = "SPD: 2"
+					this.text_char_stats_range = "Range: 2"
+					this.text_char_stats_target = "Target: Single"
+		
+					this.text_char_desc = "ram desc, add later"
+				} else if (selectedChar == 2) {
+					this.text_char_name = "El Ventito"
+		
+					this.text_char_stats_atk = "ATK: 0 (Push enemies back!)"
+					this.text_char_stats_spd = "SPD: 1"
+					this.text_char_stats_range = "Range: 1"
+					this.text_char_stats_target = "Target: Single"
+		
+					this.text_char_desc = "fan desc, add later"
+				} else if (selectedChar == 2) {
+					this.text_char_name = "Gipio"
+		
+					this.text_char_stats_atk = "ATK: 1"
+					this.text_char_stats_spd = "SPD: 2"
+					this.text_char_stats_range = "Range: 3"
+					this.text_char_stats_target = "Target: Single"
+		
+					this.text_char_desc = "gpu desc, add later"
+				} else if (selectedChar == 2) {
+					this.text_char_name = "Decibelle"
+		
+					this.text_char_stats_atk = "ATK: 1"
+					this.text_char_stats_spd = "SPD: 1"
+					this.text_char_stats_range = "Range: 2"
+					this.text_char_stats_target = "Target: Area"
+		
+					this.text_char_desc = "sound card desc, add later"
+				} else if (selectedChar == 2) {
+					this.text_char_name = "Rommy"
+		
+					this.text_char_stats_atk = "ATK: 2"
+					this.text_char_stats_spd = "SPD: 4"
+					this.text_char_stats_range = "Range: 1"
+					this.text_char_stats_target = "Target: Single"
+		
+					this.text_char_desc = "rom desc, add later"
+				} else {
+					this.text_char_name = "-----"
+		
+					this.text_char_stats_atk = "ATK: ---"
+					this.text_char_stats_spd = "SPD: ---"
+					this.text_char_stats_range = "Range: ---"
+					this.text_char_stats_target = "Target: ---"
+		
+					this.text_char_desc = "-----"
+				}
 			}
 		}
 

@@ -3,10 +3,10 @@ const router = express.Router();
 const connection = require('../database');
 
 router.put("/attackCharacter", (req, res) => {
-    var playerID = req.body.playerID;
-    var attackerID = req.body.attackerID;
-    var targetID = req.body.targetID;
-    var matchID = req.body.matchID;
+    var playerID = req.session.playerID;
+    var attackerID = req.session.attackerID;
+    var targetID = req.params.targetID;
+    var matchID = req.params.matchID;
 
     if (!playerID || !attackerID || !targetID || !matchID){
         res.send("Hey sorry there's data missing I can't let u continue :(");
@@ -15,7 +15,7 @@ router.put("/attackCharacter", (req, res) => {
 
     connection.execute("SELECT match_player1_id AS player1, match_turn FROM match_ WHERE match_id = ?", 
         [matchID],
-       function (error, rows, fields){
+        function (error, rows, fields){
             if (error){
                 res.send(error)
             } else {
@@ -165,6 +165,59 @@ router.put("/attackCharacter", (req, res) => {
                                                                                                                     return;
                                                                                                                 } else {
                                                                                                                     console.log("MATOUUUU");
+                                                                                                                    connection.execute("SELECT count(mpc_board_slot) AS alive_enemies FROM match_player_character WHERE mpc_match_id = ? AND NOT mpc_mp_id = ?",
+                                                                                                                        [matchID, playerID],
+                                                                                                                        function (error, rows, fields){
+                                                                                                                            if (error){
+                                                                                                                                res.send(error);
+                                                                                                                            } else {
+                                                                                                                                console.log("Checking number of enemies on board...");
+                                                                                                                                var AliveEnemies = rows[0].alive_enemies;
+                                                                                                                                connection.execute("SELECT n_rambow, n_elventito, n_gipio, n_decibelle, n_rommy FROM inventory WHERE inv_match_id = ? AND NOT inv_player_id = ?",
+                                                                                                                                    [matchID, playerID],
+                                                                                                                                    function (error, rows, fields){
+                                                                                                                                        if (error){
+                                                                                                                                            res.send(error);
+                                                                                                                                        } else {
+                                                                                                                                            console.log("Checking the enemy's inventory...");
+                                                                                                                                            var numRambow = rows[0].n_rambow;
+                                                                                                                                            var numElventito = rows[0].n_elventito;
+                                                                                                                                            var numGipio = rows[0].n_gipio;
+                                                                                                                                            var numDecibelle = rows[0].n_decibelle;
+                                                                                                                                            var numRommy = rows[0].n_rommy;
+
+                                                                                                                                            if (!(AliveEnemies == 0 && numRambow == 0 && numElventito == 0 && numGipio == 0 && numDecibelle == 0 && numRommy == 0)){
+                                                                                                                                                console.log("Enemy still has manfire in camp. The war resides.")
+                                                                                                                                            } else {
+                                                                                                                                                connection.execute("UPDATE match_ SET match_winner = ?, match_state_id = 6 WHERE match_id = ?",
+                                                                                                                                                    [playerID, matchID],
+                                                                                                                                                    function (error, rows, fields){
+                                                                                                                                                        if (error){
+                                                                                                                                                            res.send(error);
+                                                                                                                                                        } else {
+                                                                                                                                                            res.send(rows);
+                                                                                                                                                            console.log("JOGO TERMINADO!!!");
+                                                                                                                                                            connection.execute("UPDATE player SET player_wins = player_wins + 1 WHERE player_id = ?",
+                                                                                                                                                                [playerID],
+                                                                                                                                                                function (error, rows, fields){
+                                                                                                                                                                    if (error){
+                                                                                                                                                                        res.send(error);
+                                                                                                                                                                    } else {
+                                                                                                                                                                        console.log("Toma a win player :)");
+                                                                                                                                                                        return;
+                                                                                                                                                                    }
+                                                                                                                                                                }
+                                                                                                                                                            )
+                                                                                                                                                        }
+                                                                                                                                                    }
+                                                                                                                                                );
+                                                                                                                                            };
+                                                                                                                                        };
+                                                                                                                                    }
+                                                                                                                                );
+                                                                                                                            };
+                                                                                                                        }
+                                                                                                                    );
                                                                                                                 }
                                                                                                             }
                                                                                                         )
@@ -232,11 +285,65 @@ router.put("/attackCharacter", (req, res) => {
                                                                                                                                     console.log(error);
                                                                                                                                 } else {
                                                                                                                                     console.log("MATOUUUU");
-                                                                                                                                }
+                                                                                                                                    connection.execute("SELECT count(mpc_board_slot) AS alive_enemies FROM match_player_character WHERE mpc_match_id = ? AND NOT mpc_mp_id = ?",
+                                                                                                                                        [matchID, playerID],
+                                                                                                                                        function (error, rows, fields){
+                                                                                                                                            if (error){
+                                                                                                                                                res.send(error);
+                                                                                                                                            } else {
+                                                                                                                                                console.log("Checking number of enemies on board...");
+                                                                                                                                                var AliveEnemies = rows[0].alive_enemies;
+                                                                                                                                                connection.execute("SELECT n_rambow, n_elventito, n_gipio, n_decibelle, n_rommy FROM inventory WHERE inv_match_id = ? AND NOT inv_player_id = ?",
+                                                                                                                                                    [matchID, playerID],
+                                                                                                                                                    function (error, rows, fields){
+                                                                                                                                                        if (error){
+                                                                                                                                                            res.send(error);
+                                                                                                                                                        } else {
+                                                                                                                                                            console.log("Checking the enemy's inventory...");
+                                                                                                                                                            var numRambow = rows[0].n_rambow;
+                                                                                                                                                            var numElventito = rows[0].n_elventito;
+                                                                                                                                                            var numGipio = rows[0].n_gipio;
+                                                                                                                                                            var numDecibelle = rows[0].n_decibelle;
+                                                                                                                                                            var numRommy = rows[0].n_rommy;
+
+                                                                                                                                                            if (!(AliveEnemies == 0 && numRambow == 0 && numElventito == 0 && numGipio == 0 && numDecibelle == 0 && numRommy == 0)){
+                                                                                                                                                                console.log("Enemy still has manfire in camp. The war resides.")
+                                                                                                                                                            } else {
+                                                                                                                                                                connection.execute("UPDATE match_ SET match_winner = ?, match_state_id = 6 WHERE match_id = ?",
+                                                                                                                                                                    [playerID, matchID],
+                                                                                                                                                                    function (error, rows, fields){
+                                                                                                                                                                        if (error){
+                                                                                                                                                                            res.send(error);
+                                                                                                                                                                        } else {
+                                                                                                                                                                            res.send(rows);
+                                                                                                                                                                            console.log("JOGO TERMINADO!!!");
+                                                                                                                                                                            connection.execute("UPDATE player SET player_wins = player_wins + 1 WHERE player_id = ?",
+                                                                                                                                                                                [playerID],
+                                                                                                                                                                                function (error, rows, fields){
+                                                                                                                                                                                    if (error){
+                                                                                                                                                                                        res.send(error);
+                                                                                                                                                                                    } else {
+                                                                                                                                                                                        console.log("Toma a win player :)");
+                                                                                                                                                                                        return;
+                                                                                                                                                                                    }
+                                                                                                                                                                                }
+                                                                                                                                                                            )
+                                                                                                                                                                        }
+                                                                                                                                                                    }
+                                                                                                                                                                );
+                                                                                                                                                            };
+                                                                                                                                                        };
+                                                                                                                                                    }
+                                                                                                                                                );
+                                                                                                                                            };
+                                                                                                                                        }
+                                                                                                                                    );
+                                                                                                                                };
                                                                                                                             }
-                                                                                                                        )    
+                                                                                                                        );
                                                                                                                     } else {
                                                                                                                         console.log("Não matou (ainda hehehe)")
+                                                                                                                        res.send(rows)
                                                                                                                     }
                                                                                                                 };
                                                                                                             }
@@ -383,14 +490,38 @@ router.put("/attackCPU", (req, res) => {
                                                                                                     res.send(error);
                                                                                                     //console.log(rows);
                                                                                                 } else {
+
+                                                                                                    //Verificar se o jogo acabou ao matar o CPU ou não
                                                                                                     console.log("Trocou a turn, atacou e...");
-                                                                                                    if (CPU_Health <= 0){
-                                                                                                        console.log("EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
-                                                                                                        console.log(matchID, playerID, targetID) 
-                                                                                                        res.send("PUTO GANHASTE WHAAAAAAAAAT")
-                                                                                                    } else {
+                                                                                                    if (CPU_Health > 0){
                                                                                                         console.log("Ainda n mataste o CPU (ainda hehehe)")
-                                                                                                    }
+                                                                                                        res.send(rows)                                       
+                                                                                                    } else {
+                                                                                                        console.log("EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+                                                                                                        console.log(matchID, playerID)
+                                                                                                        connection.execute("UPDATE match_ SET match_winner = ?, match_state_id = 6 WHERE match_id = ?",
+                                                                                                            [playerID, matchID],
+                                                                                                            function (error, rows, fields){
+                                                                                                                if (error){
+                                                                                                                    res.send(error);
+                                                                                                                } else {
+                                                                                                                    res.send(rows);
+                                                                                                                    console.log("JOGO TERMINADO!!!");
+                                                                                                                    connection.execute("UPDATE player SET player_wins = player_wins + 1 WHERE player_id = ?",
+                                                                                                                        [playerID],
+                                                                                                                        function (error, rows, fields){
+                                                                                                                            if (error){
+                                                                                                                                res.send(error);
+                                                                                                                            } else {
+                                                                                                                                console.log("Toma a win player :)");
+                                                                                                                                return;
+                                                                                                                            };
+                                                                                                                        }
+                                                                                                                    );
+                                                                                                                };
+                                                                                                            }
+                                                                                                        );
+                                                                                                    };
                                                                                                 };
                                                                                             }
                                                                                         );

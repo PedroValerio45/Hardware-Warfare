@@ -14,7 +14,7 @@ router.post('/createMatch', (request, response) => {
 
     // We are inserting into the table match_ the id of player1, and also setting the match state to 2 (matchmaking) and the turns to 0. match_winner and match_player2_id are currently NULL
     connection.execute('INSERT INTO match_ (match_state_id, match_player1_id, match_turn) VALUES (?,?,?)',
-        [3, playerID, 0],
+        [3, playerID, 1],
         function (err, results, fields) {
             if (err){
                 response.send(err);
@@ -273,6 +273,21 @@ router.get('/getData', (request, response) => {
             response.send(results); // We are sending the array of players.
     });
 });
+
+// get everything in match_player_character about a specific match
+router.get('/thisMPC', (request, response) => {
+    var matchID = request.session.matchID;
+
+    connection.execute('SELECT * FROM match_player_character WHERE mpc_match_id = ?',
+    [matchID],
+    function (err, results, fields) {
+        if (err) {
+            response.send(err);
+        }else{
+            response.send(results);
+        }
+    });
+})
 
 module.exports = router;
 

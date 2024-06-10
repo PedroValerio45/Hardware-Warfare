@@ -7,6 +7,7 @@ const player = require('./API/player');
 const attack = require('./API/attack');
 const movement = require('./API/movement');
 const store = require('./API/store');
+const placement = require('./API/placement');
 const port = 2000;
 
 connection.connect((err) => {
@@ -36,6 +37,7 @@ app.use('/player', player); // Same but with /player
 app.use('/attack', attack); // Same but with /attack
 app.use('/movement', movement); // Same but with /movement
 app.use('/store', store) // Same but with /store
+app.use('/placement', placement) // Same but with /store
 
 //setTimeout(index, 2000)
 

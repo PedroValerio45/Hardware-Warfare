@@ -85,7 +85,7 @@ class Initial extends Phaser.Scene {
 		rectangle_1.scaleX = 6.15;
 		rectangle_1.scaleY = 0.5;
 		rectangle_1.isFilled = true;
-		rectangle_1.fillColor = 8553090;
+		rectangle_1.fillColor = 3387392;
 		layer_3.add(rectangle_1);
 
 		// rambow_minus
@@ -383,10 +383,14 @@ class Initial extends Phaser.Scene {
 
 		this.done.on("pointerdown", () => {
 			clearInterval(this.intervalID);
-			var newLevelScene = this.scene.switch("Level");
-			console.log(newLevelScene);
-			// this.updateMatchState(4);
-			// this.clickDone();
+			// var newLevelScene =this.scene.switch("Level");
+			// console.log(newLevelScene);
+
+			this.scene.switch("Level");
+			this.scene.shutdown("Initial");
+
+			this.updateMatchState(4);
+			this.clickDone();
 		})
 
 		if (this.matchState == 4) {
@@ -487,7 +491,11 @@ class Initial extends Phaser.Scene {
 			this.bits.text = "Waiting for other player...";
 		} else if (this.matchState == 4) {
 			console.log("match state (done): "+ this.matchState + "OK")
-			this.updateMatchState(5)
+			// this.updateMatchState(5, () => {
+            //     this.scene.switch("Level");
+            // })
+
+			this.updateMatchState(5);
 			this.scene.switch("Level");
 		} else {
 			console.log("unexpected match state value: " + this.matchState)
@@ -503,6 +511,9 @@ class Initial extends Phaser.Scene {
 					// Parse the JSON response
 					var data = JSON.parse(xhttp.responseText);
 					console.log(data);
+
+					  // Adicionei esta linha que vai chamar o callback APENAS quando nós recebermos a resposta do servidor.
+    				// callback(); 
 
 					// NOTE: because this is commented, the game will softlock if both players press "Done" too quickly, due to the global variable this.matchState not changing from 3 to 4 in time! (We commented this because it was causing another error in the website's console)
 					// this.matchState = data[0].match_state_id;
@@ -565,7 +576,6 @@ class Initial extends Phaser.Scene {
 					var invGipio = data[0].n_gipio
 					var invDecibelle = data[0].n_decibelle
 					var invRommy = data[0].n_rommy
-
 
 					console.log("Bits: " + invBits)
 

@@ -330,7 +330,6 @@ router.post('/buyRommy/:quantity', (req, res) => {
 });
 
 router.get("/checkInv", (req, res) => {
-    console.log("checking inv");
     playerID = req.session.playerID;
     matchID = req.session.matchID;
 
@@ -341,6 +340,7 @@ router.get("/checkInv", (req, res) => {
             res.send(error);
         } else {
             res.send(results);
+            console.log("checking inv: " + playerID + " " + matchID);
         }
     })
 })
