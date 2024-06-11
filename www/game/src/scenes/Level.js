@@ -2246,11 +2246,7 @@ class Level extends Phaser.Scene {
 			this.currentSelectedChar = instance;
 			console.log("Trying to move " + this.currentSelectedChar);
 		} else {
-			if (this.instance.displayList == this.layer_1) {
 				this.currentSelectedChar = null;
-			} else if (this.instance.displayList == this.layer_2) {
-				attack_Character()
-			}
 
 		console.log("Stop moving " + this.currentSelectedChar);
 		}
