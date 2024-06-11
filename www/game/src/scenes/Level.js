@@ -2159,7 +2159,7 @@ class Level extends Phaser.Scene {
 
 						char.destroy();  // Destroy the object (all objects inside this list, in this case)
 					});		
-									
+
 					this.boardCharacters = []; // Clear the array
 
 					for(var i = 0; i < data.length; i++){
@@ -2251,7 +2251,7 @@ class Level extends Phaser.Scene {
 			} else if (this.instance.displayList == this.layer_2) {
 				attack_Character()
 			}
-		
+
 		console.log("Stop moving " + this.currentSelectedChar);
 		}
 	}
