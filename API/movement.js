@@ -9,11 +9,22 @@ const connection = require('../database');
 
 //MOVE CHARACTER
 router.put('/move', (req, res) => {
-    var playerID = req.body.playerID;
-    var matchID = req.body.matchID;
+    var playerID = req.session.playerID;
+    var matchID = req.session.matchID;
     var peonID = req.body.peonID;
     var newX = req.body.newX;
     var newY = req.body.newY;
+
+    console.log("Player ID: " + playerID);
+    console.log("Match ID: " + matchID);
+    console.log("Peon ID: " + peonID);
+    console.log("New X: " + newX);
+    console.log("New Y: " + newY);
+
+    if (!playerID || !matchID || !peonID || !newX || !newY){
+        res.send("Please provide all the information needed to move a character.");
+        return;
+    }
 
     connection.execute("SELECT match_player1_id AS player1, match_turn FROM match_ WHERE match_id = ?", 
         [matchID],
@@ -52,7 +63,10 @@ router.put('/move', (req, res) => {
                 if (error) {
                     res.send(error);
                 } else {
-                    console.log("Old position taken");
+                    console.log(playerID);
+                    console.log(matchID);
+                    console.log(peonID);
+                    console.log("Taking old position");
                     var oldX = rows[0].mpc_tile_x;
                     var oldY = rows[0].mpc_tile_y;
                     var tilesJumped = Math.abs(oldX - newX) + Math.abs(oldY - newY);

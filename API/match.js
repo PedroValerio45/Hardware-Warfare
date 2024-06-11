@@ -277,9 +277,10 @@ router.get('/getData', (request, response) => {
 // get everything in match_player_character about a specific match
 router.get('/thisMPC', (request, response) => {
     var matchID = request.session.matchID;
+    var playerID = request.session.playerID;
 
-    connection.execute('SELECT * FROM match_player_character WHERE mpc_match_id = ?',
-    [matchID],
+    connection.execute('SELECT * FROM match_player_character WHERE mpc_match_id = ? AND mpc_mp_id = ?',
+    [matchID, playerID],
     function (err, results, fields) {
         if (err) {
             response.send(err);
@@ -289,13 +290,6 @@ router.get('/thisMPC', (request, response) => {
     });
 })
 
-//O PINES FEZ ISTO
-//O PINES FEZ ISTO
-//O PINES FEZ ISTO
-//O PINES FEZ ISTO
-//O PINES FEZ ISTO
-//O PINES FEZ ISTO
-//O PINES FEZ ISTO
 //O PINES FEZ ISTO
 router.get('/thisMatchAndMPC', (request, response) => {
     var matchID = request.session.matchID;
@@ -310,13 +304,6 @@ router.get('/thisMatchAndMPC', (request, response) => {
         } 
     });
 })
-//O PINES FEZ ISTO
-//O PINES FEZ ISTO
-//O PINES FEZ ISTO
-//O PINES FEZ ISTO
-//O PINES FEZ ISTO
-//O PINES FEZ ISTO
-//O PINES FEZ ISTO
 //O PINES FEZ ISTO
 
 module.exports = router;

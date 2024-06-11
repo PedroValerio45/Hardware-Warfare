@@ -12,22 +12,22 @@
     },
     "displayList": [
         {
+            "type": "Image",
+            "id": "b9ff80ac-0548-4e12-b96d-a32859fac198",
+            "label": "hw_bg",
+            "scope": "CLASS",
+            "texture": {
+                "key": "hw_bg"
+            },
+            "x": 640,
+            "y": 359
+        },
+        {
             "type": "Layer",
             "id": "4b30b33a-98b8-43af-a46c-e805f31a146a",
             "label": "layer_1",
             "scope": "CLASS",
             "list": [
-                {
-                    "type": "Image",
-                    "id": "b9ff80ac-0548-4e12-b96d-a32859fac198",
-                    "label": "hw_bg",
-                    "scope": "CLASS",
-                    "texture": {
-                        "key": "hw_bg"
-                    },
-                    "x": 640,
-                    "y": 359
-                },
                 {
                     "type": "Image",
                     "id": "e8117ce7-292a-456f-ab8b-84d5bed10956",
@@ -971,8 +971,8 @@
         },
         {
             "type": "Layer",
-            "id": "ebc9bb92-986c-4e47-b011-527234ce4e4b",
-            "label": "layer_2",
+            "id": "e8103453-e329-48a4-924c-cd02356d3f36",
+            "label": "layer_4",
             "scope": "CLASS",
             "list": [
                 {
@@ -1278,6 +1278,12 @@
         },
         {
             "type": "Layer",
+            "id": "ebc9bb92-986c-4e47-b011-527234ce4e4b",
+            "label": "layer_2",
+            "scope": "CLASS"
+        },
+        {
+            "type": "Layer",
             "id": "909268d6-be36-471b-8413-722e5d6fe01f",
             "label": "layer_3",
             "scope": "CLASS",
@@ -1288,7 +1294,7 @@
                     "label": "rec_desc_hover",
                     "x": 1090,
                     "y": 360,
-                    "scaleX": 2,
+                    "scaleX": 2.1,
                     "scaleY": 3,
                     "isFilled": true,
                     "fillColor": "#212121",
@@ -1429,14 +1435,216 @@
         },
         {
             "type": "Layer",
-            "id": "e8103453-e329-48a4-924c-cd02356d3f36",
-            "label": "layer_4",
-            "scope": "CLASS"
+            "id": "00f7f4b9-7d4f-4325-acf4-cc1a4c17d6b1",
+            "label": "layer_5",
+            "scope": "CLASS",
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "f51f9e89-1748-414b-8927-9130f68e2876",
+                    "label": "place_square_1_1",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 128,
+                    "hitArea.height": 128,
+                    "x": 400,
+                    "y": 180,
+                    "visible": false,
+                    "isFilled": true,
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "392a2ef0-b08f-4faf-b66f-a8d8691ffbeb",
+                    "label": "place_square_2_1",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 128,
+                    "hitArea.height": 128,
+                    "x": 400,
+                    "y": 240,
+                    "visible": false,
+                    "isFilled": true,
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "aaf8f1b8-f111-4771-9194-26d550cda39f",
+                    "label": "place_square_3_1",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 128,
+                    "hitArea.height": 128,
+                    "x": 400,
+                    "y": 300,
+                    "visible": false,
+                    "isFilled": true,
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "9cafebaf-e8c3-4569-bbd1-867fd1123848",
+                    "label": "place_square_5_1",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 128,
+                    "hitArea.height": 128,
+                    "x": 400,
+                    "y": 420,
+                    "visible": false,
+                    "isFilled": true,
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "8c23cfe5-3114-466a-8003-20bea260a967",
+                    "label": "place_square_6_1",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 128,
+                    "hitArea.height": 128,
+                    "x": 400,
+                    "y": 480,
+                    "visible": false,
+                    "isFilled": true,
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "3f742f4f-2a08-48c1-8909-1229f1bd7555",
+                    "label": "place_square_7_1",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 128,
+                    "hitArea.height": 128,
+                    "x": 400,
+                    "y": 540,
+                    "visible": false,
+                    "isFilled": true,
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
+                }
+            ]
         },
         {
             "type": "Layer",
-            "id": "00f7f4b9-7d4f-4325-acf4-cc1a4c17d6b1",
-            "label": "layer_5",
+            "id": "5edbc7d7-fe02-432c-b794-b9c7da6b5cd5",
+            "label": "layer_7",
+            "scope": "CLASS",
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "1621042f-33e7-47d5-a2a2-bbb07cd64071",
+                    "label": "place_square_1_2",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 128,
+                    "hitArea.height": 128,
+                    "x": 880,
+                    "y": 180,
+                    "visible": false,
+                    "isFilled": true,
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "0b2b571f-60b5-4464-a46a-b55887f5287d",
+                    "label": "place_square_7_2",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 128,
+                    "hitArea.height": 128,
+                    "x": 880,
+                    "y": 540,
+                    "visible": false,
+                    "isFilled": true,
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "6694b2f1-40e7-4f82-9d7e-6fb0b757a840",
+                    "label": "place_square_6_2",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 128,
+                    "hitArea.height": 128,
+                    "x": 880,
+                    "y": 480,
+                    "visible": false,
+                    "isFilled": true,
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "745b68ed-a103-42ea-899c-2d5fd6cf4bc5",
+                    "label": "place_square_5_2",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 128,
+                    "hitArea.height": 128,
+                    "x": 880,
+                    "y": 420,
+                    "visible": false,
+                    "isFilled": true,
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "c9a0516e-bd83-4fe0-be30-de007abb475a",
+                    "label": "place_square_3_2",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 128,
+                    "hitArea.height": 128,
+                    "x": 880,
+                    "y": 300,
+                    "visible": false,
+                    "isFilled": true,
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "250f24d4-1f88-4414-ba2f-12e48e5a1813",
+                    "label": "place_square_2_2",
+                    "scope": "CLASS",
+                    "hitArea.shape": "RECTANGLE",
+                    "hitArea.width": 128,
+                    "hitArea.height": 128,
+                    "x": 880,
+                    "y": 240,
+                    "visible": false,
+                    "isFilled": true,
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
+                }
+            ]
+        },
+        {
+            "type": "Layer",
+            "id": "94c26622-a984-4c0f-8de5-e8eedcbab179",
+            "label": "layer_6",
             "scope": "CLASS",
             "list": [
                 {
@@ -1447,7 +1655,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 400,
                     "y": 540,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1457,7 +1670,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 400,
                     "y": 480,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1467,7 +1685,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 400,
                     "y": 420,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1477,7 +1700,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 400,
                     "y": 300,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1487,7 +1715,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 400,
                     "y": 240,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1497,7 +1730,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 400,
                     "y": 180,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1507,7 +1745,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 400,
                     "y": 360,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1517,7 +1760,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 460,
                     "y": 540,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1527,7 +1775,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 460,
                     "y": 360,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1537,7 +1790,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 460,
                     "y": 180,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1547,7 +1805,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 460,
                     "y": 240,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1557,7 +1820,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 460,
                     "y": 300,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1567,7 +1835,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 460,
                     "y": 420,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1577,7 +1850,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 460,
                     "y": 480,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1587,7 +1865,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 520,
                     "y": 540,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1597,7 +1880,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 520,
                     "y": 360,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1607,7 +1895,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 520,
                     "y": 180,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1617,7 +1910,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 520,
                     "y": 240,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1627,7 +1925,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 520,
                     "y": 300,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1637,7 +1940,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 520,
                     "y": 420,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1647,7 +1955,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 520,
                     "y": 480,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1657,7 +1970,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 700,
                     "y": 540,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1667,7 +1985,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 700,
                     "y": 360,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1677,7 +2000,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 700,
                     "y": 180,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1687,7 +2015,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 700,
                     "y": 240,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1697,7 +2030,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 700,
                     "y": 300,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1707,7 +2045,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 700,
                     "y": 420,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1717,7 +2060,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 700,
                     "y": 480,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1727,7 +2075,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 640,
                     "y": 480,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1737,7 +2090,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 640,
                     "y": 420,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1747,7 +2105,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 640,
                     "y": 300,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1757,7 +2120,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 640,
                     "y": 240,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1767,7 +2135,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 640,
                     "y": 180,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1777,7 +2150,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 640,
                     "y": 360,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1787,7 +2165,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 640,
                     "y": 540,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1797,7 +2180,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 580,
                     "y": 360,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1807,7 +2195,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 580,
                     "y": 180,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1817,7 +2210,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 580,
                     "y": 240,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1827,7 +2225,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 580,
                     "y": 300,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1837,7 +2240,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 580,
                     "y": 420,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1847,7 +2255,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 580,
                     "y": 480,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1857,7 +2270,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 580,
                     "y": 540,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1867,7 +2285,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 880,
                     "y": 540,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1877,7 +2300,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 880,
                     "y": 360,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1887,7 +2315,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 880,
                     "y": 180,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1897,7 +2330,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 880,
                     "y": 240,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1907,7 +2345,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 880,
                     "y": 300,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1917,7 +2360,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 880,
                     "y": 420,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1927,7 +2375,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 880,
                     "y": 480,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1937,7 +2390,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 820,
                     "y": 480,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1947,7 +2405,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 820,
                     "y": 420,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1957,7 +2420,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 820,
                     "y": 300,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1967,7 +2435,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 820,
                     "y": 240,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1977,7 +2450,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 820,
                     "y": 180,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1987,7 +2465,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 820,
                     "y": 360,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -1997,7 +2480,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 820,
                     "y": 540,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -2007,7 +2495,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 760,
                     "y": 360,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -2017,7 +2510,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 760,
                     "y": 180,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -2027,7 +2525,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 760,
                     "y": 240,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -2037,7 +2540,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 760,
                     "y": 300,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -2047,7 +2555,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 760,
                     "y": 420,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -2057,7 +2570,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 760,
                     "y": 480,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 },
                 {
                     "type": "Rectangle",
@@ -2067,331 +2585,12 @@
                     "hitArea.shape": "RECTANGLE",
                     "x": 760,
                     "y": 540,
-                    "visible": false
-                },
-                {
-                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
-                    "id": "f51f9e89-1748-414b-8927-9130f68e2876",
-                    "unlock": [
-                        "x",
-                        "y",
-                        "visible",
-                        "hitArea.shape",
-                        "hitArea.x",
-                        "hitArea.y",
-                        "hitArea.width",
-                        "hitArea.height",
-                        "hitArea.radius",
-                        "hitArea.points",
-                        "hitArea.alphaTolerance"
-                    ],
-                    "label": "place_square_1_1",
-                    "scope": "CLASS",
-                    "hitArea.shape": "RECTANGLE",
-                    "hitArea.x": 0,
-                    "hitArea.y": 0,
-                    "hitArea.width": 128,
-                    "hitArea.height": 128,
-                    "x": 400,
-                    "y": 180,
-                    "visible": false
-                },
-                {
-                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
-                    "id": "392a2ef0-b08f-4faf-b66f-a8d8691ffbeb",
-                    "unlock": [
-                        "x",
-                        "y",
-                        "visible",
-                        "hitArea.shape",
-                        "hitArea.x",
-                        "hitArea.y",
-                        "hitArea.width",
-                        "hitArea.height",
-                        "hitArea.radius",
-                        "hitArea.points",
-                        "hitArea.alphaTolerance"
-                    ],
-                    "label": "place_square_2_1",
-                    "scope": "CLASS",
-                    "hitArea.shape": "RECTANGLE",
-                    "hitArea.x": 0,
-                    "hitArea.y": 0,
-                    "hitArea.width": 128,
-                    "hitArea.height": 128,
-                    "x": 400,
-                    "y": 240,
-                    "visible": false
-                },
-                {
-                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
-                    "id": "aaf8f1b8-f111-4771-9194-26d550cda39f",
-                    "unlock": [
-                        "x",
-                        "y",
-                        "visible",
-                        "hitArea.shape",
-                        "hitArea.x",
-                        "hitArea.y",
-                        "hitArea.width",
-                        "hitArea.height",
-                        "hitArea.radius",
-                        "hitArea.points",
-                        "hitArea.alphaTolerance"
-                    ],
-                    "label": "place_square_3_1",
-                    "scope": "CLASS",
-                    "hitArea.shape": "RECTANGLE",
-                    "hitArea.x": 0,
-                    "hitArea.y": 0,
-                    "hitArea.width": 128,
-                    "hitArea.height": 128,
-                    "x": 400,
-                    "y": 300,
-                    "visible": false
-                },
-                {
-                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
-                    "id": "9cafebaf-e8c3-4569-bbd1-867fd1123848",
-                    "unlock": [
-                        "x",
-                        "y",
-                        "visible",
-                        "hitArea.shape",
-                        "hitArea.x",
-                        "hitArea.y",
-                        "hitArea.width",
-                        "hitArea.height",
-                        "hitArea.radius",
-                        "hitArea.points",
-                        "hitArea.alphaTolerance"
-                    ],
-                    "label": "place_square_5_1",
-                    "scope": "CLASS",
-                    "hitArea.shape": "RECTANGLE",
-                    "hitArea.x": 0,
-                    "hitArea.y": 0,
-                    "hitArea.width": 128,
-                    "hitArea.height": 128,
-                    "x": 400,
-                    "y": 420,
-                    "visible": false
-                },
-                {
-                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
-                    "id": "8c23cfe5-3114-466a-8003-20bea260a967",
-                    "unlock": [
-                        "x",
-                        "y",
-                        "visible",
-                        "hitArea.shape",
-                        "hitArea.x",
-                        "hitArea.y",
-                        "hitArea.width",
-                        "hitArea.height",
-                        "hitArea.radius",
-                        "hitArea.points",
-                        "hitArea.alphaTolerance"
-                    ],
-                    "label": "place_square_6_1",
-                    "scope": "CLASS",
-                    "hitArea.shape": "RECTANGLE",
-                    "hitArea.x": 0,
-                    "hitArea.y": 0,
-                    "hitArea.width": 128,
-                    "hitArea.height": 128,
-                    "x": 400,
-                    "y": 480,
-                    "visible": false
-                },
-                {
-                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
-                    "id": "3f742f4f-2a08-48c1-8909-1229f1bd7555",
-                    "unlock": [
-                        "x",
-                        "y",
-                        "visible",
-                        "hitArea.shape",
-                        "hitArea.x",
-                        "hitArea.y",
-                        "hitArea.width",
-                        "hitArea.height",
-                        "hitArea.radius",
-                        "hitArea.points",
-                        "hitArea.alphaTolerance"
-                    ],
-                    "label": "place_square_7_1",
-                    "scope": "CLASS",
-                    "hitArea.shape": "RECTANGLE",
-                    "hitArea.x": 0,
-                    "hitArea.y": 0,
-                    "hitArea.width": 128,
-                    "hitArea.height": 128,
-                    "x": 400,
-                    "y": 540,
-                    "visible": false
-                },
-                {
-                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
-                    "id": "1621042f-33e7-47d5-a2a2-bbb07cd64071",
-                    "unlock": [
-                        "x",
-                        "y",
-                        "visible",
-                        "hitArea.shape",
-                        "hitArea.x",
-                        "hitArea.y",
-                        "hitArea.width",
-                        "hitArea.height",
-                        "hitArea.radius",
-                        "hitArea.points",
-                        "hitArea.alphaTolerance"
-                    ],
-                    "label": "place_square_1_2",
-                    "scope": "CLASS",
-                    "hitArea.shape": "RECTANGLE",
-                    "hitArea.x": 0,
-                    "hitArea.y": 0,
-                    "hitArea.width": 128,
-                    "hitArea.height": 128,
-                    "x": 880,
-                    "y": 180,
-                    "visible": false
-                },
-                {
-                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
-                    "id": "0b2b571f-60b5-4464-a46a-b55887f5287d",
-                    "unlock": [
-                        "x",
-                        "y",
-                        "visible",
-                        "hitArea.shape",
-                        "hitArea.x",
-                        "hitArea.y",
-                        "hitArea.width",
-                        "hitArea.height",
-                        "hitArea.radius",
-                        "hitArea.points",
-                        "hitArea.alphaTolerance"
-                    ],
-                    "label": "place_square_7_2",
-                    "scope": "CLASS",
-                    "hitArea.shape": "RECTANGLE",
-                    "hitArea.x": 0,
-                    "hitArea.y": 0,
-                    "hitArea.width": 128,
-                    "hitArea.height": 128,
-                    "x": 880,
-                    "y": 540,
-                    "visible": false
-                },
-                {
-                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
-                    "id": "6694b2f1-40e7-4f82-9d7e-6fb0b757a840",
-                    "unlock": [
-                        "x",
-                        "y",
-                        "visible",
-                        "hitArea.shape",
-                        "hitArea.x",
-                        "hitArea.y",
-                        "hitArea.width",
-                        "hitArea.height",
-                        "hitArea.radius",
-                        "hitArea.points",
-                        "hitArea.alphaTolerance"
-                    ],
-                    "label": "place_square_6_2",
-                    "scope": "CLASS",
-                    "hitArea.shape": "RECTANGLE",
-                    "hitArea.x": 0,
-                    "hitArea.y": 0,
-                    "hitArea.width": 128,
-                    "hitArea.height": 128,
-                    "x": 880,
-                    "y": 480,
-                    "visible": false
-                },
-                {
-                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
-                    "id": "745b68ed-a103-42ea-899c-2d5fd6cf4bc5",
-                    "unlock": [
-                        "x",
-                        "y",
-                        "visible",
-                        "hitArea.shape",
-                        "hitArea.x",
-                        "hitArea.y",
-                        "hitArea.width",
-                        "hitArea.height",
-                        "hitArea.radius",
-                        "hitArea.points",
-                        "hitArea.alphaTolerance"
-                    ],
-                    "label": "place_square_5_2",
-                    "scope": "CLASS",
-                    "hitArea.shape": "RECTANGLE",
-                    "hitArea.x": 0,
-                    "hitArea.y": 0,
-                    "hitArea.width": 128,
-                    "hitArea.height": 128,
-                    "x": 880,
-                    "y": 420,
-                    "visible": false
-                },
-                {
-                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
-                    "id": "c9a0516e-bd83-4fe0-be30-de007abb475a",
-                    "unlock": [
-                        "x",
-                        "y",
-                        "visible",
-                        "hitArea.shape",
-                        "hitArea.x",
-                        "hitArea.y",
-                        "hitArea.width",
-                        "hitArea.height",
-                        "hitArea.radius",
-                        "hitArea.points",
-                        "hitArea.alphaTolerance"
-                    ],
-                    "label": "place_square_3_2",
-                    "scope": "CLASS",
-                    "hitArea.shape": "RECTANGLE",
-                    "hitArea.x": 0,
-                    "hitArea.y": 0,
-                    "hitArea.width": 128,
-                    "hitArea.height": 128,
-                    "x": 880,
-                    "y": 300,
-                    "visible": false
-                },
-                {
-                    "prefabId": "7309062c-74ae-492e-ab81-43dc82fea429",
-                    "id": "250f24d4-1f88-4414-ba2f-12e48e5a1813",
-                    "unlock": [
-                        "x",
-                        "y",
-                        "visible",
-                        "hitArea.shape",
-                        "hitArea.x",
-                        "hitArea.y",
-                        "hitArea.width",
-                        "hitArea.height",
-                        "hitArea.radius",
-                        "hitArea.points",
-                        "hitArea.alphaTolerance"
-                    ],
-                    "label": "place_square_2_2",
-                    "scope": "CLASS",
-                    "hitArea.shape": "RECTANGLE",
-                    "hitArea.x": 0,
-                    "hitArea.y": 0,
-                    "hitArea.width": 128,
-                    "hitArea.height": 128,
-                    "x": 880,
-                    "y": 240,
-                    "visible": false
+                    "visible": false,
+                    "isFilled": true,
+                    "fillColor": "#ffffff",
+                    "fillAlpha": 0.5,
+                    "width": 51,
+                    "height": 51
                 }
             ]
         }
@@ -2482,7 +2681,13 @@
                 "9cafebaf-e8c3-4569-bbd1-867fd1123848",
                 "8c23cfe5-3114-466a-8003-20bea260a967",
                 "3f742f4f-2a08-48c1-8909-1229f1bd7555",
-                "392a2ef0-b08f-4faf-b66f-a8d8691ffbeb"
+                "392a2ef0-b08f-4faf-b66f-a8d8691ffbeb",
+                "250f24d4-1f88-4414-ba2f-12e48e5a1813",
+                "c9a0516e-bd83-4fe0-be30-de007abb475a",
+                "745b68ed-a103-42ea-899c-2d5fd6cf4bc5",
+                "6694b2f1-40e7-4f82-9d7e-6fb0b757a840",
+                "0b2b571f-60b5-4464-a46a-b55887f5287d",
+                "1621042f-33e7-47d5-a2a2-bbb07cd64071"
             ]
         },
         {

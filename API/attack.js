@@ -4,8 +4,8 @@ const connection = require('../database');
 
 router.put("/attackCharacter", (req, res) => {
     var playerID = req.session.playerID;
-    var attackerID = req.session.attackerID;
-    var targetID = req.params.targetID;
+    var attackerID = req.body.attackerID;
+    var targetID = req.body.targetID;
     var matchID = req.params.matchID;
 
     if (!playerID || !attackerID || !targetID || !matchID){
