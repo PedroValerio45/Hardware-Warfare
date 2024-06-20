@@ -3,10 +3,11 @@ const router = express.Router();
 const connection = require('../database');
 
 router.put("/attackCharacter", (req, res) => {
-    var playerID = req.body.playerID;
+    var playerID = req.session.playerID;
+    var matchID = req.session.matchID;
+
     var attackerID = req.body.attackerID;
     var targetID = req.body.targetID;
-    var matchID = req.body.matchID;
 
     if (!playerID || !attackerID || !targetID || !matchID){
         res.send("Hey sorry there's data missing I can't let u continue :(");

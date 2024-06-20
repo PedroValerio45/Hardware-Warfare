@@ -396,12 +396,16 @@ class Initial extends Phaser.Scene {
 			this.bits.text = "Waiting for other player...";
 		}
 
+		this.updateLobbyState();
 		// call function every 2 seconds (TIME_BETWEEN_SYNC milliseconds)
-
 		this.intervalID = setInterval(() => {
-			this.getMatchState();
-			this.getGameInvState();
+			this.updateLobbyState();
 		}, TIME_BETWEEN_SYNC)
+	}
+
+	updateLobbyState(){
+		this.getMatchState();
+		this.getGameInvState();
 	}
 
 	rambowBuy(quantity) {
@@ -565,6 +569,13 @@ class Initial extends Phaser.Scene {
 		var xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = () => {
 				if (xhttp.readyState == 4) {
+					if (xhttp.status == 403){
+						// redirect to login page
+						window.location.href = "/login.html";
+						return;
+					}
+
+
 					console.log(xhttp.responseText)
 
 					// Parse the JSON response

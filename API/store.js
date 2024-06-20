@@ -333,6 +333,11 @@ router.get("/checkInv", (req, res) => {
     playerID = req.session.playerID;
     matchID = req.session.matchID;
 
+    if (!playerID || !matchID) {
+        res.status(403).send("Not logged in")
+        return;
+    }
+
     connection.execute("SELECT * FROM inventory WHERE inv_match_id = ? AND inv_player_id = ?",
     [matchID, playerID],
     function (error, results, fields) {

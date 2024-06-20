@@ -238,6 +238,11 @@ router.get('/allMatches', (request, response) => {
 // Endpoint for getting a specific match (:id is a parameter that we can use to get the matchID from the URL - e.g. http://localhost:2000/matches/1)
 router.get('/thisMatch', (request, response) => {
     var matchID = request.session.matchID;
+
+    if (!matchID){
+        response.status(403).send("Not logged in")
+    }
+
     connection.execute('SELECT * FROM match_ WHERE match_id = ?',
     [matchID],
     function (err, results, fields) {
@@ -293,6 +298,51 @@ router.get('/thisMPC', (request, response) => {
 //O PINES FEZ ISTO
 router.get('/thisMatchAndMPC', (request, response) => {
     var matchID = request.session.matchID;
+    var playerID = request.session.playerID;
+    var data = {
+        characters: [],
+        cpu1_health: -1,
+        cpu2_health: -1
+    }
+
+    if (!matchID || !playerID){
+        response.status(403).send("Not logged in");
+        return;
+    }
+
+    // function chaStats(){
+    //     connection.execute('SELECT * FROM character_ ',
+    //     function (err, results) {
+    //         if (err) {
+    //             response.send(err);
+    //         } else {
+    //             response.send(results);
+    //         } 
+    //     })
+    // }
+
+    function getPlayerCPUHealth(){
+        connection.execute('SELECT mp_player_id, mp_current_cpu_hp FROM match_player WHERE mp_match_id = ?',
+            [matchID],
+            function (err, results, fields) {
+                if (err){
+                    response.status(400).send(err);
+                    return;
+                }
+
+                if (results.length != 2){
+                    console.log("Not enough players in the match???");
+                    response.status(400).send("Not enough players in the match");
+                    return;
+                }
+                
+                data.cpu1_health = results[0].mp_current_cpu_hp;
+                data.cpu2_health = results[1].mp_current_cpu_hp;
+                
+                console.log(data);
+                response.send(data);
+            });
+    }
 
     connection.execute('SELECT * FROM match_, match_player_character WHERE mpc_match_id = ? AND mpc_match_id = match_id',
     [matchID],
@@ -300,11 +350,32 @@ router.get('/thisMatchAndMPC', (request, response) => {
         if (err) {
             response.send(err);
         } else {
-            response.send(results);
+            results.forEach((char) => {
+                char.isOwner = char.mpc_mp_id == playerID;
+                data.characters.push(char);
+            })
+
+            getPlayerCPUHealth();
         } 
     });
 })
 //O PINES FEZ ISTO
+
+// router.get("/victoryCheck", (req, res) => {
+//     var matchID = req.session.matchID;
+//     var playerID = req.session.playerID;
+
+//     connection.execute('select mpc_mp_id, inv_player_id FROM match_player_character, inventory WHERE mpc_match_id = ? AND inv_match_id = ?',
+//     [matchID],
+//     function (err, results, fields) {
+//         if (err){
+//             res.status(400).send(err);s
+//             return;
+//         } else {
+//             res.send(results)
+//         }
+//     })
+// })
 
 module.exports = router;
 

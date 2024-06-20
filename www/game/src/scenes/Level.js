@@ -7,6 +7,8 @@ var teamOwner = null
 
 var turn = 0
 
+
+
 /* START OF COMPILED CODE */
 
 class Level extends Phaser.Scene {
@@ -552,6 +554,10 @@ class Level extends Phaser.Scene {
 		const elventito_sprite_inv = this.add.image(190, 310, "elventito_sprite");
 		elventito_sprite_inv.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
 		layer_4.add(elventito_sprite_inv);
+
+		// stateText
+		const stateText = this.add.text(149, -75, "", {});
+		layer_4.add(stateText);
 
 		// layer_2
 		const layer_2 = this.add.layer();
@@ -1344,6 +1350,7 @@ class Level extends Phaser.Scene {
 		this.player2_wins = player2_wins;
 		this.turn = turn;
 		this.elventito_sprite_inv = elventito_sprite_inv;
+		this.stateText = stateText;
 		this.layer_4 = layer_4;
 		this.layer_2 = layer_2;
 		this.text_char_name = text_char_name;
@@ -1616,6 +1623,8 @@ class Level extends Phaser.Scene {
 	turn;
 	/** @type {Phaser.GameObjects.Image} */
 	elventito_sprite_inv;
+	/** @type {Phaser.GameObjects.Text} */
+	stateText;
 	/** @type {Phaser.GameObjects.Layer} */
 	layer_4;
 	/** @type {Phaser.GameObjects.Layer} */
@@ -1818,6 +1827,7 @@ class Level extends Phaser.Scene {
 		this.listOfTiles.forEach((tile) => {
 			tile.on("pointerdown", () => {
 				if (this.currentSelectedChar) {
+					this.stateText.text = "Character Moving";
 					this.moveCharacter(this.currentSelectedChar, tile);
 				} else {
 					console.log("No character selected");
@@ -1837,20 +1847,7 @@ class Level extends Phaser.Scene {
 				whiteSquare.list[i].visible = false;
 			}
 
-			var tileY = null
-			if (tile.y == 180) {
-				tileY = 1
-			} else if (tile.y == 240) {
-				tileY = 2
-			} else if (tile.y == 300) {
-				tileY = 3
-			} else if (tile.y == 420) {
-				tileY = 5
-			} else if (tile.y == 480) {
-				tileY = 6
-			} else if (tile.y == 540) {
-				tileY = 7
-			}
+			var tileY = this.worldToTilePosition(tile.x, tile.y).y;
 
 			//console.log("whiteSquare.y: " + tile.y)
 			//console.log("tileY: " + tileY)
@@ -1896,39 +1893,36 @@ class Level extends Phaser.Scene {
 				whiteSquare.list[i].visible = false;
 			}
 
-			var tileY = null
-			if (tile.y == 180) {
-				tileY = 1
-			} else if (tile.y == 240) {
-				tileY = 2
-			} else if (tile.y == 300) {
-				tileY = 3
-			} else if (tile.y == 420) {
-				tileY = 5
-			} else if (tile.y == 480) {
-				tileY = 6
-			} else if (tile.y == 540) {
-				tileY = 7
-			}
+			var tilePosition = this.worldToTilePosition(tile.x, tile.y);
 
-			//console.log("whiteSquare.y: " + tile.y)
-			//console.log("tileY: " + tileY)
-			this.updatePlacement(selectedChar, tileY);
+			console.log(tilePosition)
+			this.updatePlacement(selectedChar, tilePosition.y);
 			selectedChar = null;
 			});
 		});
 
 		this.updateMatchState(5);
 
+		// Update right away.
+		this.UpdateGameData();
 		// call function every 2 seconds (TIME_BETWEEN_SYNC milliseconds)
 		setInterval(() => {
-			this.getGamePlayerState();
-			this.getGameInvState();
-			this.getGameTurnState();
-			// this.getMPC();
-			this.getMatchAndMPC();
-			this.board_Characters()
+			this.UpdateGameData();
 		}, TIME_BETWEEN_SYNC)
+	}
+
+	UpdateGameData(){
+		// Update text
+		this.getGamePlayerState();
+
+		// Update inventory
+		this.getGameInvState();
+
+		// Update turn
+		this.getGameTurnState();
+
+		// Update match state (board characters)
+		this.getMatchAndMPC();
 	}
 
 	//set the placement squares visible or not
@@ -1952,87 +1946,6 @@ class Level extends Phaser.Scene {
 			}
 			selectedChar = charID
 		}
-	}
-
-	// regginFunctionAttackMove(charID) {
-	// 	//console.log("reggin selectedChar: " + selectedChar)
-
-	// 		var whiteSquare = this.children.list[this.children.list.length - 1];
-
-	// 	if(selectedChar == charID){
-	// 		for (let i = 0; i < whiteSquare.length; i++){
-	// 			whiteSquare.list[i].visible = false;
-	// 		}
-	// 		selectedChar = null
-	// 	}else{
-	// 		for (let i = 0; i < whiteSquare.length; i++){
-	// 			whiteSquare.list[i].visible = true;
-	// 		}
-	// 		selectedChar = charID
-	// 	}
-	// }
-
-	board_Characters() {
-		return;
-		//console.log("mafalda :" , list)
-		this.boardCharacters.forEach((char) => {
-				// char.setInteractive();
-				//console.log("ola")
-				char.on("pointerdown", () => {
-				// //console.log(char.name + " pressed");
-
-				var character = this.children.list[0]
-
-				for (let i = 0; i < character.length; i++){
-					//console.log("not sure about this")
-				}
-
-				var CharName = char.name
-
-				var charY = null
-				if (char.y == 180) {
-					charY = 1
-				} else if (char.y == 240) {
-					charY = 2
-				} else if (char.y == 300) {
-					charY = 3
-				} else if (char.x == 360) {
-					charY = 4
-				} else if (char.y == 420) {
-					charY = 5
-				} else if (char.y == 480) {
-					charY = 6
-				} else if (char.y == 540) {
-					charY = 7
-				}
-
-				var charX = null
-				if (char.x == 400) {
-					charX = 1
-				} else if (char.x == 460) {
-					charX = 2
-				} else if (char.x == 520) {
-					charX = 3
-				} else if (char.x == 580) {
-					charX = 4
-				} else if (char.x == 640) {
-					charX = 5
-				} else if (char.x == 700) {
-					charX = 6
-				} else if (char.x == 760) {
-					charX = 7
-				} else if (char.x == 820) {
-					charX = 8
-				} else if (char.x == 880) {
-					charX = 9
-				}
-
-				regginFunctionAttackMove(CharName)
-
-				//console.log("char.x: " + char.x);
-				//console.log("charY: " + charY);
-			})
-		});
 	}
 
 	updatePlacement(selectedChar, tileY) {
@@ -2113,6 +2026,12 @@ class Level extends Phaser.Scene {
 					this.player2.text = player2Name;
 					this.player2_wins.text = player2Wins;
 					this.player2_losses.text = player2Losses;
+
+					// Know whos turn it is
+					if (turn % 2 == 0) this.turn.text = "Turn: " + turn + " (It's " + player2Name + "'s turn)"
+					else this.turn.text = "Turn: " + turn + " (It's " + player1Name + "'s turn)"
+					//console.log("turn: " + turn)
+
 				}}
 			};
 
@@ -2133,9 +2052,7 @@ class Level extends Phaser.Scene {
 
 					turn = data[0].match_turn
 
-					//console.log("turn: " + turn)
 
-					this.turn.text = "Turn: " + turn;
 				}
 			}
 
@@ -2144,95 +2061,112 @@ class Level extends Phaser.Scene {
 			xhttp.send();
 	}
 
+	worldToTilePosition(x, y){
+		var position = {};
+
+		if (x == 400) position.x = 1
+		else if (x == 460) position.x = 2
+		else if (x == 520)	position.x = 3
+		else if (x == 580)	position.x = 4
+		else if (x == 640)	position.x = 5
+		else if (x == 700)	position.x = 6
+		else if (x == 760) position.x = 7
+		else if (x == 820)	position.x = 8
+		else if (x == 880)	position.x = 9
+
+		if (y == 180) position.y = 1
+		else if (y == 240)	position.y = 2
+		else if (y == 300)	position.y = 3
+		else if (y == 360) position.y = 4
+		else if (y == 420)	position.y = 5
+		else if (y == 480)	position.y = 6
+		else if (y == 540) position.y = 7
+
+		return position;
+	}
+
+	tileToWorldPosition(x, y){
+		var position = {};
+
+		if (x == 1) position.x = 400
+		else if (x == 2) position.x = 460
+		else if (x == 3) position.x = 520
+		else if (x == 4) position.x = 580
+		else if (x == 5) position.x = 640
+		else if (x == 6) position.x = 700
+		else if (x == 7) position.x = 760
+		else if (x == 8) position.x = 820
+		else if (x == 9) position.x = 880
+
+		if (y == 1) position.y = 180
+		else if (y == 2) position.y = 240
+		else if (y == 3) position.y = 300
+		else if (y == 4) position.y = 360
+		else if (y == 5) position.y = 420
+		else if (y == 6) position.y = 480
+		else if (y == 7) position.y = 540
+
+		return position;
+	}
+
+	getCharacterSprite(charID){
+		if (charID == 1) return "rambow_sprite";
+		else if (charID == 2) return "elventito_sprite";
+		else if (charID == 3) return "gipio_sprite";
+		else if (charID == 4) return "decibelle_sprite";
+		else if (charID == 5) return 	"rommy_sprite";
+	}
+
 	getMatchAndMPC() {
 		var xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = () => {
 				if (xhttp.readyState == 4) {
-					//console.log(xhttp.responseText)
+					if (xhttp.status == 403){
+						document.location.href = "/login.html";
+						return;
+					}
 
-					// Parse the JSON response
 					var data = JSON.parse(xhttp.responseText);
-					//console.log(data);
-					//console.log("IM HERE!!!!!!")
+					console.log(data);
 
 					this.boardCharacters.forEach(char => {
-
 						char.destroy();  // Destroy the object (all objects inside this list, in this case)
 					});		
 
 					this.boardCharacters = []; // Clear the array
 
-					for(var i = 0; i < data.length; i++){
-						//console.log("there's a friend inside this for loop")
+					data.characters.forEach((char) => {
+						var position = this.tileToWorldPosition(char.mpc_tile_x, char.mpc_tile_y);
 
-						var charID = data[i].mpc_cha_id
-						// var currentHP = data[0].cha_cur_hp
-						var charX = data[i].mpc_tile_x
-						var charY = data[i].mpc_tile_y
+						var characterData = {
+							characterID: char.mpc_cha_id, // Type of character
+							playerID: char.mpc_mp_id,
+							mpc_board_slot: char.mpc_board_slot, // Actual ID of the character
+							x: position.x,
+							y: position.y,
+							isOwner: char.isOwner, 
+							speed: null
+							// We need some variable from the server that tell us if the character is mine or not
+						};
 
-						teamLeft = data[i].match_player1_id
-						teamOwner = data[i].mpc_mp_id
+						if (characterData.characterID == 1 || characterData.characterID == 3) characterData.speed = 2
+						else if (characterData.characterID == 2 || characterData.characterID == 4) characterData.speed = 1
+						else if (characterData.characterID == 5) characterData.speed = 3
 
-						var char = {}
-						if (charY == 1) char.y = 180
-						else if (charY == 2) char.y = 240
-						else if (charY == 3) char.y = 300
-						else if (charY == 4) char.y = 360
-						else if (charY == 5) char.y = 420
-						else if (charY == 6) char.y = 480
-						else if (charY == 7) char.y = 540
+						teamLeft = char.match_player1_id
 
+						var charSprite = this.add.image(characterData.x, characterData.y, this.getCharacterSprite(characterData.characterID));
+						charSprite.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
+						charSprite.setFlipX(teamLeft != characterData.playerID);
 
-						if (charX == 1) char.x = 400
-						else if (charX == 2) char.x = 460
-						else if (charX == 3) char.x = 520
-						else if (charX == 4) char.x = 580
-						else if (charX == 5) char.x = 640
-						else if (charX == 6) char.x = 700
-						else if (charX == 7) char.x = 760
-						else if (charX == 8) char.x = 820
-						else if (charX == 9) char.x = 880
+						charSprite.on("pointerdown", () => {
+							this.tryInteractWithCharacter(characterData);
+						});
 
-						var instance;
-						if (charID == 1) instance = this.add.image(char.x, char.y, "rambow_sprite");
-						else if (charID == 2) instance = this.add.image(char.x, char.y, "elventito_sprite");
-						else if (charID == 3) instance = this.add.image(char.x, char.y, "gipio_sprite");
-						else if (charID == 4) instance = this.add.image(char.x, char.y, "decibelle_sprite");
-						else if (charID == 5) instance = this.add.image(char.x, char.y, "rommy_sprite");
+						this.layer_2.add(charSprite);
+						this.boardCharacters.push(charSprite);
+					});
 
-						if (instance) {
-							instance.setInteractive(new Phaser.Geom.Rectangle(0, 0, 51, 51), Phaser.Geom.Rectangle.Contains);
-							if (teamLeft == teamOwner) {
-								instance.setFlipX(false)
-							} else {
-								instance.setFlipX(true)
-							}
-							this.layer_2.add(instance);
-							list = this.boardCharacters
-							list.push(instance);
-							//console.log(instance + " " + selectedChar);
-
-							instance.mpc_board_slot = data[i].mpc_board_slot;
-							instance.mpc_tile_x = data[i].mpc_tile_x;
-							instance.mpc_tile_y = data[i].mpc_tile_y;
-							instance.on("pointerdown", () => {
-								this.tryMove(instance);
-							});
-						}
-
-						//console.log("teamLeft " + teamLeft + "teamOwner " + teamOwner + "flipX " + char.flipX)
-						//console.log("char: " + char.x + " " + char.y);
-						//console.log("boardCharacters: " + this.boardCharacters.length)
-
-						// if (selectedChar != null) {
-						// 	this.text_char_stats_hp.setText("HP: " + currentSelectedChar.cha_cur_hp) // NOTE: THIS NEEDS TO BE CHANGED!!!
-						// } else {
-						// 	this.text_char_stats_hp.setText("HP: ---")
-						// }
-
-						//console.log("char: " + char.x + " " + char.y);
-						//console.log("boardCharacters: " + this.boardCharacters.length)
-					}
 				}
 			}
 
@@ -2241,15 +2175,66 @@ class Level extends Phaser.Scene {
 			xhttp.send();
 	}
 
-	tryMove(instance){
-		if (this.currentSelectedChar == null) {
-			this.currentSelectedChar = instance;
-			console.log("Trying to move " + this.currentSelectedChar);
-		} else {
-				this.currentSelectedChar = null;
+	tryInteractWithCharacter(characterData){
+		console.log(characterData);
+		this.stateText.text = "";
 
-		console.log("Stop moving " + this.currentSelectedChar);
+		// If none selected AND the character is mine
+		if (this.currentSelectedChar == null && (characterData != null && characterData.isOwner)){
+			this.currentSelectedChar = characterData;
+			// This is highlighting the tiles around.
+			this.moreOrRange_tiles.forEach((square) => {
+				// set visible to true for all squares with range (-1,1) on x and y
+				var characterPosition = this.worldToTilePosition(characterData.x, characterData.y);
+				var tilePosition = this.worldToTilePosition(square.x, square.y);
+
+				var minX = characterPosition.x - characterData.speed;
+				var maxX = characterPosition.x + characterData.speed;
+				var minY = characterPosition.y - characterData.speed;
+				var maxY = characterPosition.y + characterData.speed;
+
+				var chaX = characterPosition.x 
+				var tileX = tilePosition.x 
+				var chaY = characterPosition.y 
+				var tileY = tilePosition.y 
+
+
+				// console log the tile position
+				console.log("tilePosition: " + tilePosition.x + " " + tilePosition.y)
+				console.log("minX: " + minX + " maxX: " + maxX + " minY: " + minY + " maxY: " + maxY)
+
+				// if tilePosition inside the range of the square
+				// if (tilePosition.x >= minX && tilePosition.x <= maxX && tilePosition.y >= minY && tilePosition.y <= maxY){
+				// 	square.visible = true;
+				// }
+
+				// if tilePosition inside the range of the square
+				if (Math.abs(chaX - tileX) + Math.abs(chaY - tileY) <= characterData.speed){
+					square.visible = true;
+				}
+
+			});
+			this.stateText.text = "Selected character";
+			return;
 		}
+
+		// if the character I'm clicking IS NOT mine then attack
+		if (this.currentSelectedChar != null && (characterData != null && !characterData.isOwner)){
+			this.stateText.text = "ATTACK!!";
+			this.attack_Character(this.currentSelectedChar, characterData);
+			return;
+		}
+
+		if (this.currentSelectedChar.characterID == characterData.characterID && this.currentSelectedChar.playerID == characterData.playerID && (characterData != null && characterData.isOwner)){
+			this.currentSelectedChar = null;
+			this.moreOrRange_tiles.forEach((square) => {
+				square.visible = false;
+			})
+			this.stateText.text = "Deselected character";
+			return;
+		}
+
+
 	}
 
 	getGameInvState() {
@@ -2347,28 +2332,8 @@ class Level extends Phaser.Scene {
 		xhttp.send();
 	}
 
-	moveCharacter(currentSelectedChar, tile) {
-		var x = -1;
-		var y = -1;
-
-		if (tile.y == 180) y = 1
-		else if (tile.y == 240)	y = 2
-		else if (tile.y == 300)	y = 3
-		else if (tile.y == 420)	y = 5
-		else if (tile.y == 480)	y = 6
-		else if (tile.y == 540)	y = 7
-
-		if (tile.x == 400) x = 1
-		else if (tile.x == 460) x = 2
-		else if (tile.x == 520)	x = 3
-		else if (tile.x == 580)	x = 4
-		else if (tile.x == 640)	x = 5
-		else if (tile.x == 700)	x = 6
-		else if (tile.x == 760) x = 7
-		else if (tile.x == 820)	x = 8
-		else if (tile.x == 880)	x = 9
-
-		console.log("Trying to move " + currentSelectedChar.mpc_board_slot + " to " + x + " " + y);
+	moveCharacter(selectedChar, tile) {
+		var position = this.worldToTilePosition(tile.x, tile.y);
 
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = () => {
@@ -2378,39 +2343,24 @@ class Level extends Phaser.Scene {
 		}
 
 		var data = {
-			"peonID": currentSelectedChar.mpc_board_slot,
-			"newX": x,
-			"newY": y
+			"peonID": selectedChar.mpc_board_slot,
+			"newX": position.x,
+			"newY": position.y
 		}
+
+		console.log("%cTrying to move:", "color: yellow;");
+		console.log(data);
 
 		xhttp.open("PUT", "/movement/move", true);
 		xhttp.setRequestHeader("Content-Type", "application/json");
 		xhttp.send(JSON.stringify(data));
+		this.currentSelectedChar = null;
+		this.moreOrRange_tiles.forEach((square) => {
+			square.visible = false;
+		})
 	}
 
-	attack_Character(currentSelectedChar, tile){
-		var x = -1;
-		var y = -1;
-
-		if (tile.y == 180) y = 1
-		else if (tile.y == 240)	y = 2
-		else if (tile.y == 300)	y = 3
-		else if (tile.y == 420)	y = 5
-		else if (tile.y == 480)	y = 6
-		else if (tile.y == 540)	y = 7
-
-		if (tile.x == 400) x = 1
-		else if (tile.x == 460) x = 2
-		else if (tile.x == 520)	x = 3
-		else if (tile.x == 580)	x = 4
-		else if (tile.x == 640)	x = 5
-		else if (tile.x == 700)	x = 6
-		else if (tile.x == 760) x = 7
-		else if (tile.x == 820)	x = 8
-		else if (tile.x == 880)	x = 9
-
-		console.log("Trying to move " + currentSelectedChar.mpc_board_slot + " to " + x + " " + y);
-
+	attack_Character(attacker, defender){
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = () => {
 			if (xhttp.readyState == 4) {
@@ -2419,13 +2369,20 @@ class Level extends Phaser.Scene {
 		}
 
 		var data = {
-			"attackerID": currentSelectedChar.mpc_board_slot,
-			"targetID": x,
+			"attackerID": attacker.mpc_board_slot,
+			"targetID": defender.mpc_board_slot
 		}
 
-		xhttp.open("PUT", "/movement/move", true);
+		console.log("%cTrying to attack:", "color: red;");
+		console.log(data);
+
+		xhttp.open("PUT", "/attack/attackCharacter", true);
 		xhttp.setRequestHeader("Content-Type", "application/json");
 		xhttp.send(JSON.stringify(data));
+		this.currentSelectedChar = null;
+		this.moreOrRange_tiles.forEach((square) => {
+			square.visible = false;
+		})
 	}
 	/* END-USER-CODE */
 }

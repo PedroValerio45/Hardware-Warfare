@@ -63,6 +63,11 @@ router.put('/move', (req, res) => {
                 if (error) {
                     res.send(error);
                 } else {
+                    if (rows.length == 0){
+                        res.send("Opsi dopsi");
+                        return;
+                    }
+
                     console.log(playerID);
                     console.log(matchID);
                     console.log(peonID);
